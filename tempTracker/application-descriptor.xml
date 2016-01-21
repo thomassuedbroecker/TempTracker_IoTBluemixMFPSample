@@ -1,0 +1,36 @@
+<!-- *************************************************-->
+<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<?xml version='1.0' encoding='utf-8'?>
+<application id="com_ibm_temptracker" platformVersion="7.1.0.00.20151114-1616" xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <displayName>temptracker</displayName>
+    <description>A sample Apache Cordova application that responds to the deviceready event.</description>
+    <author>
+        <name>IBM MobileFirst Team</name>
+        <email>mobileb@us.ibm.com</email>
+        <copyright>Copyright My Company</copyright>
+        <homepage>https://developer.ibm.com/mobilefirstplatform/documentation/getting-started</homepage>
+    </author>
+    <mainFile>index.html</mainFile>
+    <thumbnailImage>www/img/temptracker.png</thumbnailImage>
+    <accessTokenExpiration>3600</accessTokenExpiration>
+    <userIdentityRealms />
+    <licenseAppType>APPLICATION</licenseAppType>
+    <targetCategory>UNDEFINED</targetCategory>
+    <android version="1.0.9">
+        <worklightSettings include="false" />
+        <security>
+            <encryptWebResources enabled="false" />
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+            <publicSigningKey />
+        </security>
+    </android>
+    <iphone bundleId="com.ibm.temptracker" version="1.0.9">
+        <worklightSettings include="false" />
+        <security>
+            <encryptWebResources enabled="false" />
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3" />
+        </security>
+    </iphone>
+</application>
