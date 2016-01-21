@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:interpolator="@android:anim/linear_interpolator">
+    <alpha
+        android:duration="200"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+    <scale android:fromXScale="0.0" android:fromYScale="0.0"
+           android:toXScale="1.0" android:toYScale="1.0"
+           android:duration="200" android:fillBefore="false"
+           android:pivotX="50%p"
+           android:pivotY="50%p"/>
+
+</set><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/anim/applause_login_fadein.xml -->

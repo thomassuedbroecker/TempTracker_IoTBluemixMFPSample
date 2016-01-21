@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/applause_tutorial_bottom_bar_height">
+
+        <TextView
+            style="@style/applause_tutorial_label"
+            android:text="@string/applause_tutorial_step4_label" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent">
+
+        <com.applause.android.dialog.tutorial.LandscapeTutorialLayout
+            android:id="@+id/applause_tutorial_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/applause_problem_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.applause.android.dialog.tutorial.LandscapeTutorialLayout>
+
+    </FrameLayout>
+
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout-land/applause_tutorial_step_4.xml -->

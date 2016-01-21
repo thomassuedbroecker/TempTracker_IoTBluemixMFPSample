@@ -1,0 +1,29 @@
+<!-- ****************************************************************-->
+<!--                     Photo                                       -->
+<!-- Source http://learn.ionicframework.com/formulas/cordova-camera/ -->
+<!-- ****************************************************************-->
+<ion-view title="Report Problem">
+      <ion-content padding="true" class="has-header">
+        <ion-list>
+            <ion-item>
+                <button ng-click="getPhoto(currentCloudant)" class="button button-block button-primary">Take Picture</button>
+                <img ng-src="{{image}}">
+            </ion-item>
+            <ion-item class="item-thumbnail-left">
+                <img ng-src='{{currentCloudant.doc.sensordatavalue.sensorImage}}'>
+                <h2> Device: {{currentCloudant.doc.sensordatavalue.deviceId}}</h2>
+                <p> State: {{currentCloudant.doc.sensordatavalue.status}}</p>
+            </ion-item>
+            <ion-item>
+              <label style="" class="item item-input">
+                  <span class="input-label">Comment</span>
+                  <input placeholder="{{currentCloudant.doc.sensordatavalue.comment}}"
+                         type="text"
+                         ng-model="problem.comment">
+              </label>
+            </ion-item>
+        </ion-list>
+        <div style="height: 40px;" class="spacer"></div>
+        <a style="" class="button button-positive button-block " ng-click="storeComment(currentCloudant, problem )">Update Comment</a>
+      </ion-content>
+</ion-view>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/applause_tutorial_next_steps_background">
+
+    <com.applause.android.dialog.tutorial.TutorialViewPager
+        android:id="@+id/applause_tutorial_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/applause_tutorial_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/applause_tutorial_bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/applause_tutorial_bottom_bar_background"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/applause_tutorial_bottom_button"
+            android:id="@+id/applause_tutorial_skip_button"
+            android:text="@string/applause_tutorial_skip" />
+
+        <ext.com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/applause_tutorial_page_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp" />
+
+        <TextView
+            style="@style/applause_tutorial_bottom_button"
+            android:id="@+id/applause_tutorial_next_button"
+            android:text="@string/applause_tutorial_done" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/applause_tutorial_darkGray"
+        android:layout_above="@id/applause_tutorial_bottom_bar"/>
+</RelativeLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_tutorial.xml -->

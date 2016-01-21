@@ -1,0 +1,17 @@
+<ion-view style="" title={{chartHeadline}}>
+  <ion-content padding="true" class="has-header">
+      <ion-list>
+          <ion-item ng-show="showChartDetail">
+             <p>DeviceID: {{cloudant.fields.theDeviceId}}</p>
+             <p>Status: {{cloudant.fields.theStatus}} </p>
+             <p>Comment: {{cloudant.fields.theComment}} </p>
+          </ion-item>
+          <ion-item>
+            <canvas id="line" class="chart chart-line" chart-data="data"
+              chart-labels="labels" chart-legend="true" chart-series="series"
+              chart-click="onClick" >
+            </canvas>
+          </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>

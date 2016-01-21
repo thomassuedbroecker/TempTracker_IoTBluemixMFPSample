@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/applause_testcycles_header"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/applause_subheader_bg"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="16dp"
+        android:text="@string/applause_select_test_cycle_desc"
+        android:textColor="@color/applause_subheader_text"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/applause_testcycles_users_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/applause_dialog_bg"
+        android:cacheColorHint="@color/applause_dialog_bg"
+        android:divider="@color/applause_user_list_divider"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/applause_testcycle" />
+
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_testcycles_list.xml -->

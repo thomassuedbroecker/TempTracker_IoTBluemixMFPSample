@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/circle_indicator_defaults.xml -->
+    <eat-comment/>
+    <bool name="applause_default_circle_indicator_centered">true</bool>
+    <bool name="applause_default_circle_indicator_snap">false</bool>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_beta_forgot_passcode">@color/applause_blue</color>
+    <color name="applause_beta_title">@color/applause_black</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_black">#10181F</color>
+    <color name="applause_blue">#2196f3</color>
+    <color name="applause_brightRed">#ff3a1d</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_button_bg" type="color">@color/applause_ibm_blue</item>
+    <item name="applause_button_bg_disabled" type="color">@color/applause_lightSteel</item>
+    <item name="applause_button_bg_pressed" type="color">@color/applause_ibm_blue_dark</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_button_dark_bg">@color/applause_paleBlack</color>
+    <color name="applause_button_dark_bg_disabled">@color/applause_lightSteel</color>
+    <color name="applause_button_dark_bg_pressed">@color/applause_black</color>
+    <color name="applause_button_dark_text">@color/applause_white</color>
+    <color name="applause_button_feedback_bg">@color/applause_lime</color>
+    <color name="applause_button_feedback_bg_disabled">@color/applause_lightSteel</color>
+    <color name="applause_button_feedback_bg_pressed">@color/applause_darkLime</color>
+    <color name="applause_button_feedback_text">@color/applause_white</color>
+    <color name="applause_button_problem_bg">@color/applause_yellow</color>
+    <color name="applause_button_problem_bg_disabled">@color/applause_lightSteel</color>
+    <color name="applause_button_problem_bg_pressed">@color/applause_darkYellow</color>
+    <color name="applause_button_problem_text">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_button_text" type="color">@color/applause_white</item>
+    <item name="applause_button_text_shadow" type="color">@color/applause_lightBlack</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_darkBlack">#000</color>
+    <color name="applause_darkBlue">#005eb8</color>
+    <color name="applause_darkGreen">#27ae60</color>
+    <color name="applause_darkGrey">#999</color>
+    <color name="applause_darkLime">#16a085</color>
+    <color name="applause_darkOrange">#f07f07</color>
+    <color name="applause_darkRed">#c56d6a</color>
+    <color name="applause_darkSteel">#4e5c69</color>
+    <color name="applause_darkWhite">#fafafa</color>
+    <color name="applause_darkYellow">#ce9202</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/circle_indicator_defaults.xml -->
+    <eat-comment/>
+    <color name="applause_default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="applause_default_circle_indicator_page_color">#00000000</color>
+    <color name="applause_default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_dialog_bg">@color/applause_white</color>
+    <color name="applause_dialog_button_bg">@color/applause_transparent</color>
+    <color name="applause_dialog_button_bg_pressed">@color/applause_lightGrey</color>
+    <color name="applause_dialog_button_text">@color/applause_darkGrey</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_dialog_button_text_primary" type="color">@color/applause_ibm_blue</item>
+    <item name="applause_dialog_divider" type="color">@color/applause_lightGrey</item>
+    <item name="applause_dialog_panel_bg" type="color">@color/applause_paleGrey</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_dialog_panel_header">@color/applause_darkSteel</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_dialog_panel_text" type="color">@color/applause_darkGrey</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_dialog_shadow">@color/applause_lightGrey</color>
+    <color name="applause_dialog_text">@color/applause_paleBlack</color>
+    <color name="applause_dialog_title">@color/applause_paleBlack</color>
+    <color name="applause_editor_bg">@color/applause_darkBlack</color>
+    <color name="applause_editor_footer_bg">@color/applause_paleBlack</color>
+    <color name="applause_editor_header_bg">@color/applause_paleBlack</color>
+    <color name="applause_editor_header_text">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_error_bg" type="color">@color/applause_ibm_error</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_error_text">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_feedback_dialog_bug_circle_color">@color/applause_ibm_blue</color>
+    <color name="applause_feedback_dialog_bug_circle_color_pressed">@color/applause_ibm_blue_dark</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_feedback_header_bg">@color/applause_lime</color>
+    <color name="applause_feedback_header_text">@color/applause_white</color>
+    <color name="applause_footer_text">@color/applause_steel</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_green">#47cb65</color>
+    <color name="applause_grey">#ddd</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_header_2_text" type="color">@color/applause_darkBlack</item>
+    <item name="applause_header_bg" type="color">@color/applause_ibm_blue</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_header_button_bg">@color/applause_transparent</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_header_button_bg_pressed" type="color">@color/applause_ibm_blue_dark</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_header_text">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_ibm_active">#f19027</color>
+    <color name="applause_ibm_blue">#0d82b0</color>
+    <color name="applause_ibm_blue_dark">#1a5a7d</color>
+    <color name="applause_ibm_error">#e27c5c</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_input_bg">@color/applause_white</color>
+    <color name="applause_input_border">@color/applause_lightGrey</color>
+    <color name="applause_input_border_active">@color/applause_orange</color>
+    <color name="applause_input_hint">@color/applause_grey</color>
+    <color name="applause_input_text">@color/applause_paleBlack</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_lightBlack">#242D39</color>
+    <color name="applause_lightBlue">#6bbdf4</color>
+    <color name="applause_lightGreen">#53ea75</color>
+    <color name="applause_lightGrey">#e4e4e4</color>
+    <color name="applause_lightRed">#ffe7e4</color>
+    <color name="applause_lightSteel">#eff1f4</color>
+    <color name="applause_lightYellow">#fff3c4</color>
+    <color name="applause_lime">#1abc9c</color>
+    <color name="applause_material_grey">#b1b1b1</color>
+    <color name="applause_material_light_grey">#eee</color>
+    <color name="applause_material_line_grey">#c2c2c2</color>
+    <color name="applause_mediumGrey">#b0bec5</color>
+    <color name="applause_orange">#ffa02c</color>
+    <color name="applause_paleBlack">#383e4b</color>
+    <color name="applause_paleBlue">#e3f4ff</color>
+    <color name="applause_paleGrey">#f4f4f4</color>
+    <color name="applause_paleSteel">#f6f7f9</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_problem_header_bg" type="color">@color/applause_white</item>
+    <item name="applause_problem_header_text" type="color">@color/applause_white</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_red">#e1594c</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_report_attachment">@color/applause_material_grey</color>
+    <color name="applause_report_bg_bottom">@color/applause_material_light_grey</color>
+    <color name="applause_report_bg_top">@color/applause_dialog_bg</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_report_dialog_bug_circle_color">@color/applause_ibm_blue</color>
+    <color name="applause_report_dialog_bug_circle_color_pressed">@color/applause_ibm_blue_dark</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_report_second_text">@color/applause_steel</color>
+    <color name="applause_report_text">@color/applause_paleBlack</color>
+    <color name="applause_severity_inner_circle">@color/applause_white</color>
+    <color name="applause_severity_line_color">@color/applause_grey</color>
+    <color name="applause_severity_normal_color">@color/applause_grey</color>
+    <color name="applause_severity_selected_color">@color/applause_yellow</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_steel">#9ca5b9</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_subheader_bg">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_subheader_text" type="color">@color/applause_darkGrey</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_transparent">#00000000</color>
+    <color name="applause_transparent_darkGrey">#cc56666f</color>
+    <color name="applause_transparent_grey">#55e4e4e4</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_tutorial_bottom_bar_background">@color/applause_mediumGrey</color>
+    <color name="applause_tutorial_buttons_text">@color/applause_tutorial_darkGray</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_tutorial_darkGray">#56666f</color>
+    <color name="applause_tutorial_gray">#92a1a8</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_tutorial_next_steps_background">@color/applause_mediumGrey</color>
+    <color name="applause_tutorial_step2_main_font_color">@color/applause_darkWhite</color>
+    <color name="applause_tutorial_step2_secondary_font_color">@color/applause_black</color>
+    <color name="applause_tutorial_step3_font_color">@color/applause_darkWhite</color>
+    <color name="applause_user_list_bg">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/refs.xml -->
+    <eat-comment/>
+    <item name="applause_user_list_bg_pressed" type="color">@color/applause_ibm_blue</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_user_list_divider">@color/applause_paleGrey</color>
+    <color name="applause_user_list_text">@color/applause_black</color>
+    <color name="applause_user_list_text_pressed">@color/applause_white</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_violet">#9b59b6</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/refs.xml -->
+    <eat-comment/>
+    <color name="applause_welcome_content_text">@color/applause_footer_text</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="applause_white">#FFFFFF</color>
+    <color name="applause_yellow">#f1c40f</color>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/circle_indicator_defaults.xml -->
+    <eat-comment/>
+    <dimen name="applause_default_circle_indicator_radius">5dp</dimen>
+    <dimen name="applause_default_circle_indicator_stroke_width">1dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_dialog_horizontal_margin">20dp</dimen>
+    <dimen name="applause_dialog_vertical_margin">20dp</dimen>
+    <dimen name="applause_report_dialog_buttons_distance">12dp</dimen>
+    <dimen name="applause_screenshot_height">180dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_screenshot_thumbnail_edit_button_height">17dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_screenshot_width">180dp</dimen>
+    <dimen name="applause_severity_dot_radius">18dp</dimen>
+    <dimen name="applause_severity_label_top_padding">18dp</dimen>
+    <dimen name="applause_severity_line_height">2dp</dimen>
+    <dimen name="applause_severity_line_top_margin">10dp</dimen>
+    <dimen name="applause_severity_slider_height">32dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/tutorial_layout_modifiers.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_bottom_bar_height">56dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_label_padding">16dp</dimen>
+    <dimen name="applause_tutorial_label_text_size">24sp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/tutorial_layout_modifiers.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_side_bar_size">24dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_step2_image_margin_top">10dp</dimen>
+    <dimen name="applause_tutorial_step2_image_width">240dp</dimen>
+    <dimen name="applause_tutorial_step2_label2_margin_top">10dp</dimen>
+    <dimen name="applause_tutorial_step2_labels_padding">30dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/tutorial_layout_modifiers.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_top_bar_size">64dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/circle_indicator_defaults.xml -->
+    <eat-comment/>
+    <integer name="applause_default_circle_indicator_orientation">0</integer>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_accept_icon">Done</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_add_screenshot_icon">\uf1a3</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_adding_from_gallery_error">Remote media attachments not supported</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_bug_icon">\uf188</string>
+    <string name="applause_close_icon">\uf00d</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_copyright">© IBM Corp. 2001, 2013</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/version.xml -->
+    <eat-comment/>
+    <string name="applause_default_variant">QA</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_delete_screenshot_negative">Cancel</string>
+    <string name="applause_delete_screenshot_positive">Delete</string>
+    <string name="applause_delete_screenshot_title">Are you sure you want to delete this screenshot?</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_dialog_info">\uf05a</string>
+    <string name="applause_dialog_or">OR</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_disabled_build_body">If you feel this is incorrect, please contact the application\'s administrator.</string>
+    <string name="applause_disabled_build_kill_button">Exit Application</string>
+    <string name="applause_disabled_build_title">This build is no longer active.</string>
+    <string name="applause_edit_screenshot">Edit the Screenshot</string>
+    <string name="applause_edit_screenshot_short">EDIT</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_eraser_icon">\uf1a2</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_feedback_desc">Share your thoughts with us.</string>
+    <string name="applause_feedback_header_title">Give feedback</string>
+    <string name="applause_feedback_hint">Enter feedback</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_feedback_icon">\uf123</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_feedback_no_rating_store">it will not be sent to Google Play.</string>
+    <string name="applause_feedback_title">Do you like our app?</string>
+    <string name="applause_feedback_toast_no_message">Please enter comment</string>
+    <string name="applause_feedback_toast_no_rating">Please add the rating.</string>
+    <string name="applause_give_feedback">Give Feedback</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_hide_icon">\uf00c</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_include_screenshot">Include screenshot</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_library_name">IBM Mobile Quality Assurance client library %s</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/build/generated/res/generated/ibm/release/values/generated.xml -->
+    <eat-comment/>
+    <item name="applause_library_version" type="string">2.9.6</item>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_login_anon_login_button">Anonymous Login</string>
+    <string name="applause_login_app_version">App version: %1$s (%2$d)</string>
+    <string name="applause_login_beta_get_passcode_button">Get Passcode</string>
+    <string name="applause_login_beta_get_passcode_failure">Failed to reset passcode. Check your email and retry.</string>
+    <string name="applause_login_beta_get_passcode_label">Please provide your email address to receive a new passcode</string>
+    <string name="applause_login_beta_get_passcode_success">A new passcode was sent to your email</string>
+    <string name="applause_login_beta_go_back">Back to login</string>
+    <string name="applause_login_beta_hint">Passcode</string>
+    <string name="applause_login_beta_subtitle">Please enter the email address used to register for the beta and the passcode that was emailed you.</string>
+    <string name="applause_login_beta_title">Beta Login</string>
+    <string name="applause_login_choose_from_list" ns1:ignore="UnusedResources">Select your name from the list.</string>
+    <string name="applause_login_error_API_EXCEPTION">Cannot log in to Applause. Please check your connectivity.</string>
+    <string name="applause_login_error_APPLICATION_INACTIVE">Account Inactive. Please contact your IT Helpdesk</string>
+    <string name="applause_login_error_BAD_APPLICATION">Application unavailable, please contact your Product Manager.</string>
+    <string name="applause_login_error_BAD_CREDENTIALS">Check credentials and retry.</string>
+    <string name="applause_login_error_BAD_ENVIRONMENT">Device not recognized. Please contact your IT Helpdesk</string>
+    <string name="applause_login_error_TOO_MANY_DEVICES">Number of allowed devices exceeded. Please contact your Product Manager.</string>
+    <string name="applause_login_error_box_title">ERROR:</string>
+    <string name="applause_login_failed">Login failed</string>
+    <string name="applause_login_forgot_passcode">I forgot my passcode</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_login_identifyProgress">Contacting IBM MQA server…</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_login_login_button">Login</string>
+    <string name="applause_login_password_hint">Password</string>
+    <string name="applause_login_progress">Logging in...</string>
+    <string name="applause_login_quick_subtitle">Select your name from the list</string>
+    <string name="applause_login_subtitle">Provide your Applause credentials</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_login_title">IBM Mobile Quality Assurance,</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_login_username_hint">E-mail</string>
+    <string name="applause_login_wrong_credentials">Invalid credentials.</string>
+    <string name="applause_missing_permission">Please add the SYSTEM_ALERT_WINDOW permission to Manifest</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_next_screenshot_icon">\uf105</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_notification_text_anonymous_user">Anonymous Tester</string>
+    <string name="applause_notification_text_auto_login">Logged in as %s</string>
+    <string name="applause_notification_text_login">Logging in - please wait...</string>
+    <string name="applause_notification_text_report">Tap to report problem</string>
+    <string name="applause_notification_text_report_with_feedback">Tap to report problem or give feedback</string>
+    <string name="applause_notification_update_text">Tap to install version %1$d (%2$s)</string>
+    <string name="applause_notification_update_ticker">Update available</string>
+    <string name="applause_notification_update_title">Update for %s</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_pencil_icon">\uf1a1</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_problem_action_performed_hint">Tell us the steps that caused the bug</string>
+    <string name="applause_problem_action_performed_label">What did you do?</string>
+    <string name="applause_problem_actual_result_hint">Describe the issue in detail</string>
+    <string name="applause_problem_actual_result_label">What is the problem?</string>
+    <string name="applause_problem_add_from_camera">TAKE PHOTO</string>
+    <string name="applause_problem_add_from_gallery">ADD FROM GALLERY</string>
+    <string name="applause_problem_add_screenshot">TAKE SCREENSHOT</string>
+    <string name="applause_problem_attachments_label">Attachments</string>
+    <string name="applause_problem_backward_compatibility_template">1) TITLE: %1$s, 2) PROBLEM: %2$s, 3) ACTION PERFORMED: %3$s, 4) SEVERITY: %4$s.</string>
+    <string name="applause_problem_bug_title_hint">Title</string>
+    <string name="applause_problem_bug_title_label">Title</string>
+    <string name="applause_problem_desc">Let us know about it.</string>
+    <string name="applause_problem_header_test_cycle">Test Cycle: %s</string>
+    <string name="applause_problem_header_title">Report a bug</string>
+    <string name="applause_problem_hint">Describe the problem</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_problem_includes">Following bug will be reported to IBM Rational.</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_problem_severity_label">Severity</string>
+    <string name="applause_problem_title">Having a problem?</string>
+    <string name="applause_problem_toast_no_message">Please enter the title for your bug</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_production_feedback_dialog_hint">Write your feedback here</string>
+    <string name="applause_production_feedback_dialog_negative_button">Cancel</string>
+    <string name="applause_production_feedback_dialog_positive_button">Send</string>
+    <string name="applause_production_feedback_dialog_subtitle">Please provide us the feedback</string>
+    <string name="applause_production_feedback_dialog_title">Feedback</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_rate_this_application">RATE THIS APP</string>
+    <string name="applause_report_a_bug">Report a Bug</string>
+    <string name="applause_select_picture">Select picture</string>
+    <string name="applause_select_test_cycle_desc">Select your Test Cycle from the list</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_send_icon">Send</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_send_screenshot_desc">Send screenshot of the last screen.</string>
+    <string name="applause_severity_level_critical">CRITICAL</string>
+    <string name="applause_severity_level_high">HIGH</string>
+    <string name="applause_severity_level_low">LOW</string>
+    <string name="applause_severity_level_medium">MEDIUM</string>
+    <string name="applause_shake_for_next_screenshot">Shake the device to add another screenshot</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_spray_icon">\uf1a0</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_test_cycle_hint">Test Cycle ID</string>
+    <string name="applause_test_cycles_manual">Please provide your Test Cycle ID.</string>
+    <string name="applause_test_cycles_select">Select Test Cycle</string>
+    <string name="applause_test_cycles_title">Test Cycles</string>
+    <string name="applause_toast_application_blocked">Your application has expired and can not be run at this time.</string>
+    <string name="applause_toast_application_inactive">This application does not have an active subscription set up. Please contact application\'s owners.</string>
+    <string name="applause_toast_bad_application">Application unavailable, please contact product managers</string>
+    <string name="applause_toast_bad_credentials">Could not login to Applause - invalid credentials.</string>
+    <string name="applause_toast_cant_identify">Cannot connect to server %s please check connectivity</string>
+    <string name="applause_toast_mandatory_update">Your version (%s) is known to be unstable. Tap the notification to install a stable one.</string>
+    <string name="applause_toast_recommended_update">Your version (%s) is outdated. Tap the notification to install a new one.</string>
+    <string name="applause_toast_too_many_devices">Maximum number of devices has been reached. Please contact application\'s owners.</string>
+    <string name="applause_toast_unknown_recommended_update">Your version (%s) is outdated. Please contact development team to a get a new version.</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="applause_trash_icon">\uf014</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="applause_tutorial_done">DONE</string>
+    <string name="applause_tutorial_next">NEXT</string>
+    <string name="applause_tutorial_skip">SKIP</string>
+    <string name="applause_tutorial_step2_label1">How to report bugs or feedback?</string>
+    <string name="applause_tutorial_step2_label2">It\'s very simple.\nFirst - <b>shake your device</b>.</string>
+    <string name="applause_tutorial_step3_label">Then choose one\nof the options.</string>
+    <string name="applause_tutorial_step4_label">Found a bug?\nGood! Let us know.</string>
+    <string name="applause_tutorial_step5_label">Provide insightful\nfeedback for developers.</string>
+    <string name="applause_welcome_screen_confirm">Confirm</string>
+    <string name="applause_welcome_screen_header">Welcome</string>
+    <string name="applause_welcome_screen_temp_text"><![CDATA[ <strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. in turpis pulvinar facilisis. Ut felis. ]]></string>
+    <string name="applause_wrong_manifest">%s could not be started. Please check logs for more details.</string>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="applause_alert_dialog" parent="@android:style/Theme.Dialog"/>
+    <style name="applause_blue_rating_bar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/applause_rating</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="applause_button">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:textColor">@color/applause_button_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="applause_button_parent" parent="applause_button_parent_parent">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/applause_button_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="applause_dialog" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+    </style>
+    <style name="applause_editor_button">
+        <item name="android:shadowColor">@color/applause_button_text_shadow</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:textColor">@color/applause_button_text</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:background">@drawable/applause_editor_button</item>
+    </style>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="applause_input">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/applause_input</item>
+        <item name="android:padding">12dip</item>
+
+        <item name="android:textColor">@color/applause_input_text</item>
+        <item name="android:textColorHint">@color/applause_input_hint</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="applause_or_text_divider">
+        <item name="android:background">@color/applause_dialog_bg</item>
+        <item name="android:textColor">@color/applause_dialog_divider</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:text">@string/applause_dialog_or</item>
+
+    </style>
+    <style name="applause_report_attachments_bar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/applause_material_line_grey</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="applause_report_input" parent="applause_report_input_parnet">
+
+    </style>
+    <style name="applause_report_input_parnet">
+        <item name="android:textColor">@color/applause_input_text</item>
+        <item name="android:textColorHint">@color/applause_input_hint</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
+    </style>
+    <style name="applause_report_inputs_bar">
+        <item name="android:background">@color/applause_grey</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="applause_report_label">
+        <item name="android:textColor">@color/applause_input_text</item>
+        <item name="android:textColorHint">@color/applause_input_hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">22dp</item>
+    </style>
+    <style name="applause_severity_slider_label">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/applause_severity_normal_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="applause_tutorial_bottom_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/applause_tutorial_buttons_text</item>
+        <item name="android:background">@drawable/applause_tutorial_button_background</item>
+    </style>
+    <style name="applause_tutorial_label">
+        <item name="android:maxLines">2</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/applause_tutorial_label_padding</item>
+        <item name="android:textColor">@color/applause_tutorial_step3_font_color</item>
+        <item name="android:textSize">@dimen/applause_tutorial_label_text_size</item>
+    </style>
+    <style name="applause_tutorial_tooltip">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

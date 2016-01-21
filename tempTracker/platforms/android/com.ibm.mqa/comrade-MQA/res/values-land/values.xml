@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values-land/dimens.xml -->
+    <eat-comment/>
+    <dimen name="applause_report_dialog_buttons_distance">36dp</dimen>
+    <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/values-land/tutorial_layout_modifiers.xml -->
+    <eat-comment/>
+    <dimen name="applause_tutorial_bottom_bar_height">46dp</dimen>
+</resources>

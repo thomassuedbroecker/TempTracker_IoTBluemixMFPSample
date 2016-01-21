@@ -1,0 +1,32 @@
+<!-- *************************************************-->
+<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<!-- *************************************************-->
+<!--                     LOGIN                        -->
+<!-- <i style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;" class="icon ion-image"></i> -->
+<!-- <div style="line-height: 250px; background-color: rgb(255, 255, 255); border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; width: 100%; height: auto;"> -->
+<!-- <a style="" ng-click="doLogin(username,password)" or "doLoginFake()" class="button button-positive button-block ">Log in</a> -->
+<!-- *************************************************-->
+<ion-view style="background-color: black" title="Login">
+    <ion-content class="has-header" padding="true">
+        <div style="line-height: 250px; background-color: black; border: 1px solid black; border-radius: 3px; text-align: center; width: 100%; height: auto;">
+             <center><img src="img/successWithIBM.jpg" alt="IBM" height="150" width="200"></center>
+        </div>
+        <form style="background-color: black">
+            <ion-list style="">
+                <label style="" class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input placeholder="" type="text" ng-model="username">
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input placeholder="" type="password" ng-model="password">
+                </label>
+            </ion-list>
+            <div style="height: 40px;" class="spacer"></div>
+            <a style="" ng-click="doLoginFake()" class="button button-positive button-block ">Log in</a>
+            <div class="assertive" ng-show="displayError"><font color="red">{{displayErrorMessage}}</div>
+        </form>
+    </ion-content>
+</ion-view>

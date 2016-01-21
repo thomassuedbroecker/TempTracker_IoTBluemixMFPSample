@@ -1,0 +1,149 @@
+<!-- *************************************************-->
+<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- ++++++++++++++++ -->
+    <!-- Google Maps Libs -->
+    <!-- ++++++++++++++++ -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_HTTP_API_KEY&sensor=true"></script>
+
+    <script src='lib/bower_components/lodash/lodash.js'></script>
+    <script src='lib/bower_components/angular/angular.js'></script>
+    <script src='lib/bower_components/angular-simple-logger/dist/angular-simple-logger.js'></script>
+    <script src='lib/bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+
+    <!-- ++++++++++++++++ -->
+    <!-- Chart Libs       -->
+    <!-- ++++++++++++++++ -->
+    <script src='lib/bower_components/Chart.js/Chart.js'></script>
+    <script src='lib/bower_components/angular-chart.js/dist/angular-chart.js'></script>
+
+    <!-- ++++++++++++++++ -->
+    <!-- App Libs: Ionic  -->
+    <!-- ++++++++++++++++ -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- ++++++++++++++++ -->
+    <!--   ngCordova Libs -->
+    <!--  Sample: http://www.joshmorony.com/integrating-google-maps-with-an-ionic-application/ -->
+    <!--  *********************
+          Include ng-cordova.js or ng-cordova.min.js in your index.html file before cordova.js
+          and after your AngularJS / Ionic file (since ngCordova depends on AngularJS).
+          <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+          <script src="cordova.js"></script>
+          *********************
+    -->
+    <!-- ++++++++++++++++ -->
+    <script src='lib/bower_components/ngCordova/dist/ng-cordova.js'></script>
+
+    <!-- ++++++++++++++++ -->
+    <!-- App Libs: App    -->
+    <!-- ++++++++++++++++ -->
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <!-- ++++++++++++++++ -->
+    <!-- App Libs: MQA    -->
+    <!-- ++++++++++++++++ -->
+
+
+    <!-- ++++++++++++++++++++++++ -->
+    <!-- App Libs: Controllers    -->
+    <!-- ++++++++++++++++++++++++ -->
+    <script src="js/controllers.js"></script>
+    <script src="js/ctrl-cloudant-details.js"></script>
+    <script src="js/ctrl-drivers.js"></script>
+    <script src="js/ctrl-find.js"></script>
+    <script src="js/ctrl-chart.js"></script>
+    <script src="js/ctrl-intro.js"></script>
+    <script src="js/ctrl-map.js"></script>
+    <script src="js/ctrl-photo.js"></script>
+    <script src="js/ctrl-login.js"></script>
+    <script src="js/ctrl-logout.js"></script>
+    <script src="js/ctrl-store-device-location.js"></script>
+    <script src="js/ctrl-watson-output.js"></script>
+    <script src="js/sharedata.js"></script>
+
+    <!-- ++++++++++++++++ -->
+    <!-- Link CSS styles  -->
+    <!-- ++++++++++++++++ -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/bower_components/angular-chart.js/dist/angular-chart.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    -->
+</head>
+<body ng-app="app" animation="slide-left-right-ios7">
+<div style="">
+    <div style="">
+        <!-- NAVIGATION BAR -->
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <!-- BASIC VIEW -->
+        <ion-nav-view></ion-nav-view>
+    </div>
+</div>
+
+
+<!-- *************************************************-->
+<!--                     DETAILS Driver              -->
+<!-- *************************************************-->
+<script id="details.html" type="text/ng-template">
+<ion-view title="Driver detail">
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <ion-item class="item-thumbnail-left">
+                <img src="{{currentComrade.user.picture.thumbnail}}">
+                <h2>{{currentComrade.user.name.first}} {{currentComrade.user.name.last}}</h2>
+                <p>Department in {{currentComrade.user.location.city}}</p>
+            </ion-item>
+            <ion-item>Send email
+            <p>{{currentComrade.user.email}}</p>
+            </ion-item>
+            <ion-item>Call to the office
+            <p>{{currentComrade.user.phone}}</p></ion-item>
+            <ion-item>Call to mobile
+            <p>{{currentComrade.user.cell}}</p></ion-item>
+            <ion-item>Send sms
+            <p>{{currentComrade.user.cell}}</p></ion-item>
+        </ion-list>
+    </ion-content>
+  </ion-view></script>
+  <script src="js/index.js"></script>
+  <!-- *************************************************-->
+  <!--                     MAIN Cloudant                -->
+  <!-- *************************************************-->
+  <script id="maincloudant.html" type="text/ng-template">
+  <ion-view style="" title="Sensor Information">
+      <ion-content class="has-header" padding="true">
+          <div style="height: 5px;" class="spacer"></div>
+          <img ng-src='img/live.news.png' alt="Get Live News" ng-click="gotoWatsonOutput()">
+          <div style="height: 5px;" class="spacer"></div>
+          <ion-list style="">
+              <label style="" class="item item-input">
+                  <i class="icon ion-search placeholder-icon"></i>
+                  <input placeholder="" type="search" ng-model="searchText">>
+              </label>
+              <ion-item style="" class="item-thumbnail-left" ng-repeat="cloudant in cloudants | filter:searchText" ng-click="gotoDetail(cloudant)">
+                  <img ng-src='{{cloudant.doc.sensordatavalue.deviceImageURI}}'>
+                  <h2>{{cloudant.doc.sensordatavalue.message}}</h2>
+                  <p>Time: {{cloudant.doc.sensordatavalue.time}}</p>
+              </ion-item>
+          </ion-list>
+      </ion-content>
+      <div class="bar bar-footer">
+          <div class="title"></div>
+          <button class="button button-clear button-positive" ng-click="gotoLogout()">Logout</button>
+      </div>
+  </ion-view></script>
+  <script src="js/index.js"></script>
+  </body>
+</html>

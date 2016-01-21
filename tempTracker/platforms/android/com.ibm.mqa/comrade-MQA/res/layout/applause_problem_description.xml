@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    tools:showIn="@layout/applause_problem">
+
+    <!-- it's important to have layout_height and _weight here set to 0dp/1 -->
+
+    <EditText
+        android:id="@+id/applause_report_message_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/applause_textbox"
+        android:gravity="top|left"
+        android:hint="@string/applause_problem_hint"
+        android:inputType="text|textMultiLine|textShortMessage|textCapSentences"
+        android:padding="16dp"
+        android:textCursorDrawable="@drawable/applause_color_cursor"
+        android:textColor="@color/applause_input_text"
+        android:textColorHint="@color/applause_input_hint"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/applause_report_bug_edit_tooltip_hook"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        tools:background="@android:color/black"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/applause_report_feedback_edit_tooltip_hook"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        tools:background="@android:color/black"
+        tools:visibility="visible" />
+
+</RelativeLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_problem_description.xml -->

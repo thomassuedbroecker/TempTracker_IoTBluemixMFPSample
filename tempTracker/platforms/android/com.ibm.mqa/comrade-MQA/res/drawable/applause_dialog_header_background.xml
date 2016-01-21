@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="-90" android:startColor="@color/applause_ibm_blue"
+                android:endColor="@color/applause_ibm_blue_dark" />
+
+        </shape>
+    </item>
+</layer-list><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/drawable/applause_dialog_header_background.xml -->

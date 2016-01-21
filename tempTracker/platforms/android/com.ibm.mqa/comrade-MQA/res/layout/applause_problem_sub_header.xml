@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/applause_report_bg_bottom">
+
+
+    <TextView
+        android:id="@+id/applause_report_bug_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_problem_includes"
+        android:textColor="@color/applause_dialog_panel_text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/applause_report_bug_test_cycle_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/applause_dialog_panel_text"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="TestCycle"
+        tools:visibility="visible" />
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_problem_sub_header.xml -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <gradient
+        android:type="radial"
+        android:gradientRadius="1200"
+        android:startColor="#cc3d4244"
+        android:endColor="#dd111821"
+    />
+</shape>
+<!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/drawable/applause_background.xml -->

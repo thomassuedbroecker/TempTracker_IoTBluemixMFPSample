@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.applause.android.dialog.LoginErrorBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/applause_login_error_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/applause_error_bg"
+    android:padding="10dp"
+    android:visibility="gone"
+    tools:showIn="@layout/applause_login_normal"
+    tools:visibility="visible">
+
+    <com.applause.android.ui.MontserratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_login_error_box_title"
+        android:textAllCaps="true"
+        android:textColor="@color/applause_error_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/applause_login_error_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/applause_error_text"
+        android:textSize="14sp"
+        android:padding="4dp"
+        tools:text="Here comes the error code With very very very long text." />
+
+    <com.applause.android.ui.AwesomeFontTextView
+        android:id="@+id/applause_login_error_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/applause_close_icon"
+        android:textColor="@color/applause_error_text"
+        android:textSize="14sp" />
+
+</com.applause.android.dialog.LoginErrorBox><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_login_error_box.xml -->

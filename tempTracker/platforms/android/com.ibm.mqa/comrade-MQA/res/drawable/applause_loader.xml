@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="1080">
+
+    <shape
+        android:innerRadius="12dp"
+        android:thickness="5dp"
+        android:shape="ring"
+
+
+        android:useLevel="false">
+        <solid android:color="#fff" />
+        <gradient
+
+            android:centerY="0.50"
+            android:endColor="@color/applause_steel"
+            android:startColor="@color/applause_transparent"
+            android:type="sweep"
+            android:useLevel="false" />
+    </shape>
+
+</rotate><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/drawable/applause_loader.xml -->

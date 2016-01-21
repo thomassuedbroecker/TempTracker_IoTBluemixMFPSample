@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/applause_dialog_header_background"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <com.applause.android.ui.MontserratTextView
+            android:id="@+id/applause_production_feedback_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/applause_production_feedback_dialog_title"
+            android:textColor="@color/applause_header_text"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/applause_subheader_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical|left"
+            android:text="@string/applause_production_feedback_dialog_subtitle"
+            android:textColor="@color/applause_subheader_text"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/applause_production_feedback_dialog_hint"
+            style="@style/applause_input"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:hint="@string/applause_production_feedback_dialog_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/applause_subheader_bg"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/applause_production_feedback_dialog_negative_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/applause_button_dark"
+                android:textColor="@color/applause_white"
+                android:text="@string/applause_production_feedback_dialog_negative_button" />
+
+
+            <Button
+                android:id="@+id/applause_production_feedback_dialog_positive_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/applause_button"
+                android:textColor="@color/applause_white"
+                android:text="@string/applause_production_feedback_dialog_positive_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout/applause_production_feedback.xml -->

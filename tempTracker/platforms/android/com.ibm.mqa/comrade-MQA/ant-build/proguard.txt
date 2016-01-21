@@ -1,0 +1,107 @@
+# view AndroidManifest.xml #generated:27
+-keep class com.apphance.android.ui.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class com.apphance.android.ui.ProblemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.apphance.android.ui.ScreenshotEditorActivity { <init>(...); }
+
+# view land/res/layout-land/applause_login_normal.xml #generated:2
+# view res/layout/applause_beta_login_page.xml #generated:2
+# view res/layout/applause_login_normal.xml #generated:2
+-keep class com.applause.android.dialog.LoginDialogPasswordAuthView { <init>(...); }
+
+# view res/layout/applause_login_error_box.xml #generated:2
+-keep class com.applause.android.dialog.LoginErrorBox { <init>(...); }
+
+# view land/res/layout-land/applause_tutorial_step_3.xml #generated:26
+# view land/res/layout-land/applause_tutorial_step_4.xml #generated:27
+# view land/res/layout-land/applause_tutorial_step_5.xml #generated:26
+-keep class com.applause.android.dialog.tutorial.LandscapeTutorialLayout { <init>(...); }
+
+# view res/layout/applause_tutorial_step_3.xml #generated:6
+# view res/layout/applause_tutorial_step_4.xml #generated:6
+# view res/layout/applause_tutorial_step_5.xml #generated:7
+-keep class com.applause.android.dialog.tutorial.PortraitTutorialLayout { <init>(...); }
+
+# view res/layout/applause_tutorial.xml #generated:8
+-keep class com.applause.android.dialog.tutorial.TutorialViewPager { <init>(...); }
+
+# view land/res/layout-land/applause_feedback.xml #generated:90
+# view res/layout/applause_feedback.xml #generated:54
+# view res/layout/applause_feedback_copy.xml #generated:25
+-keep class com.applause.android.ui.ApplauseRatingBar { <init>(...); }
+
+# view res/layout/applause_editor.xml #generated:44
+# view res/layout/applause_editor.xml #generated:64
+# view res/layout/applause_editor.xml #generated:72
+# view res/layout/applause_editor.xml #generated:80
+# view res/layout/applause_feedback_header.xml #generated:21
+# view res/layout/applause_report.xml #generated:11
+-keep class com.applause.android.ui.AwesomeFontButton { <init>(...); }
+
+# view res/layout/applause_login_error_box.xml #generated:31
+# view res/layout/applause_problem.xml #generated:101
+# view res/layout/applause_report.xml #generated:38
+# view res/layout/applause_report.xml #generated:67
+# view res/layout/applause_screenshot_element.xml #generated:47
+-keep class com.applause.android.ui.AwesomeFontTextView { <init>(...); }
+
+# view res/layout/applause_problem.xml #generated:57
+# view res/layout/applause_problem_new.xml #generated:183
+-keep class com.applause.android.ui.HorizontalList { <init>(...); }
+
+# view res/layout/applause_login_page_credentials.xml #generated:40
+# view res/layout/applause_login_page_credentials.xml #generated:85
+# view res/layout/applause_testcycles_input.xml #generated:44
+# view res/layout/applause_welcome_screen.xml #generated:61
+-keep class com.applause.android.ui.MontserratButton { <init>(...); }
+
+# view land/res/layout-land/applause_login_normal.xml #generated:92
+# view res/layout/applause_feedback_copy.xml #generated:83
+# view res/layout/applause_feedback_title.xml #generated:12
+# view res/layout/applause_header_beta.xml #generated:9
+# view res/layout/applause_login_error_box.xml #generated:13
+# view res/layout/applause_login_page_credentials.xml #generated:68
+# view res/layout/applause_production_feedback.xml #generated:15
+# view res/layout/applause_report.xml #generated:49
+# view res/layout/applause_report.xml #generated:79
+# view res/layout/applause_testcycles_header.xml #generated:11
+# view res/layout/applause_welcome_screen.xml #generated:17
+-keep class com.applause.android.ui.MontserratTextView { <init>(...); }
+
+# view res/layout/applause_screenshot_element.xml #generated:2
+-keep class com.applause.android.ui.ScreenshotElementView { <init>(...); }
+
+# view res/layout/applause_severity_widget.xml #generated:2
+-keep class com.applause.android.ui.SeveritySliderView { <init>(...); }
+
+# view res/layout/applause_testcycle.xml #generated:2
+-keep class com.applause.android.ui.TestCycleAdapterRow { <init>(...); }
+
+# view res/layout/applause_user.xml #generated:2
+-keep class com.applause.android.ui.UserListAdapterRow { <init>(...); }
+
+# view res/layout/applause_welcome_screen.xml #generated:3
+-keep class com.applause.android.ui.WelcomeScreenView { <init>(...); }
+
+# view res/layout/applause_editor.xml #generated:8
+-keep class com.applause.android.ui.overlay.OverlayView { <init>(...); }
+
+# view res/layout/applause_screenshot_element.xml #generated:15
+# view res/layout/applause_screenshot_element.xml #generated:21
+-keep class com.applause.android.ui.util.ScreenshotImageView { <init>(...); }
+
+# view AndroidManifest.xml #generated:31
+-keep class com.ibm.mqa.ui.FeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.ibm.mqa.ui.ProblemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.ibm.mqa.ui.ScreenshotEditorActivity { <init>(...); }
+
+# view res/layout/applause_tutorial.xml #generated:26
+-keep class ext.com.viewpagerindicator.CirclePageIndicator { <init>(...); }
+

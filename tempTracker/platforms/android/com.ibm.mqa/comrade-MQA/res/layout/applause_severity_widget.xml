@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.applause.android.ui.SeveritySliderView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/applause_severity_slider"
+    android:layout_margin="10dp"
+    android:background="@color/applause_transparent"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="@dimen/applause_severity_slider_height">
+
+    <TextView
+        android:paddingTop="@dimen/applause_severity_label_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_severity_level_low"
+        style="@style/applause_severity_slider_label" />
+
+    <TextView
+        android:paddingTop="@dimen/applause_severity_label_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_severity_level_medium"
+        style="@style/applause_severity_slider_label" />
+
+    <TextView
+        android:paddingTop="@dimen/applause_severity_label_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_severity_level_high"
+        style="@style/applause_severity_slider_label" />
+
+    <TextView
+        android:paddingTop="@dimen/applause_severity_label_top_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applause_severity_level_critical"
+        style="@style/applause_severity_slider_label" />
+
+</com.applause.android.ui.SeveritySliderView><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_severity_widget.xml -->

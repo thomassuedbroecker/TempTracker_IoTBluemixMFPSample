@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:baselineAligned="false"
+    android:paddingBottom="@dimen/applause_tutorial_bottom_bar_height">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/applause_tutorial_step2_label1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/applause_tutorial_step2_label1"
+            android:textColor="@color/applause_tutorial_step2_main_font_color"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/applause_tutorial_step2_label2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/applause_tutorial_step2_label2_margin_top"
+            android:text="@string/applause_tutorial_step2_label2"
+            android:textColor="@color/applause_tutorial_step2_secondary_font_color"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <ImageView
+            android:id="@+id/applause_tutorial_step2_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/applause_tutorial_step_2" />
+
+    </FrameLayout>
+
+</LinearLayout>
+<!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout-land/applause_tutorial_step_2.xml -->

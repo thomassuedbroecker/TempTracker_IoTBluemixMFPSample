@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/applause_beta_dialog_header_background"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.applause.android.ui.MontserratTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="@string/applause_login_beta_title"
+        android:textColor="@color/applause_beta_title"
+        android:textSize="20sp" />
+
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_header_beta.xml -->

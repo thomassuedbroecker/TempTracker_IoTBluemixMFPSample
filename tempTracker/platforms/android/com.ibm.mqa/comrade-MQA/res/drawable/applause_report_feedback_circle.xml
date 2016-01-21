@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/applause_feedback_dialog_bug_circle_color" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/applause_feedback_dialog_bug_circle_color_pressed" />
+        </shape>
+    </item>
+</selector><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/drawable/applause_report_feedback_circle.xml -->

@@ -1,0 +1,11 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'android-library'
+
+configurations.compile.dependencies.clear()
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}

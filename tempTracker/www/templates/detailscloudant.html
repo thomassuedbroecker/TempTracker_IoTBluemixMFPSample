@@ -1,0 +1,46 @@
+<!-- *************************************************-->
+<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<!-- *************************************************-->
+<!--                     DETAILS Cloudant             -->
+<!--      <img ng-src='img/thumbnail.png'>            -->
+<!-- *************************************************-->
+<ion-view title="Temperature detail">
+    <ion-content padding="true" class="has-header">
+        <div style="height: 40px;" class="spacer"></div>
+        <ion-list>
+            <ion-item class="item-thumbnail-left">
+                <img ng-src='{{currentCloudant.doc.sensordatavalue.deviceImageURI}}'>
+                <h2>DeviceId: {{currentCloudant.doc.sensordatavalue.deviceId}}</h2>
+                <p>DeviceType: {{currentCloudant.doc.sensordatavalue.deviceType}}</p>
+                <p> State: {{currentCloudant.doc.sensordatavalue.status}}</p>
+            </ion-item>
+            <ion-item>Celsius - Temperature
+               <p>{{currentCloudant.doc.sensordatavalue.temp}}</p>
+            </ion-item>
+            <ion-item>Celsius - IR Temperature
+               <p>{{currentCloudant.doc.sensordatavalue.irtemp}}</p>
+            </ion-item>
+            <ion-item>Optical
+               <p>{{currentCloudant.doc.sensordatavalue.optical}}</p>
+            </ion-item>
+            <ion-item class="item-thumbnail-left">
+                <img ng-src='{{currentCloudant.doc.sensordatavalue.sensorImage}}'>
+                <h2>Sensor and Device: {{currentCloudant.doc.sensordatavalue.deviceType}}</h2>
+                <p> TI Sensor (IoT made easy) </p>
+            </ion-item>
+            <ion-item>
+               <button ng-click="gotoLocation(currentCloudant)" class="button button-block button-primary">Show Location in Map</button>
+            </ion-item>
+            <ion-item>
+              <button ng-click="gotoNewLocation(currentCloudant)" class="button button-block button-primary"><p style="color:red;"><b>Update with Device Location</b></p></button>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-click="gotoPhoto(currentCloudant)">
+                <img ng-src='{{currentCloudant.doc.sensordatavalue.image}}'>
+                <h2>Report a Problem</h2>
+                <p>{{currentCloudant.doc.sensordatavalue.comment}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

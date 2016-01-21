@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.applause.android.dialog.tutorial.PortraitTutorialLayout
+        android:id="@+id/applause_tutorial_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/applause_darkGrey">
+
+        <include
+            layout="@layout/applause_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.applause.android.dialog.tutorial.PortraitTutorialLayout>
+
+    <TextView
+        style="@style/applause_tutorial_label"
+        android:text="@string/applause_tutorial_step5_label" />
+
+</FrameLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_tutorial_step_5.xml -->

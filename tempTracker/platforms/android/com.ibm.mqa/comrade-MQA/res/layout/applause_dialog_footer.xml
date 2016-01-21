@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/applause_dialog_footer_background"
+    android:gravity="center_horizontal|center_vertical"
+    android:textColor="@color/applause_footer_text"
+    android:textSize="13sp"
+    android:text="@string/applause_copyright"
+    tools:showIn="@layout/applause_login" /><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout/applause_dialog_footer.xml -->

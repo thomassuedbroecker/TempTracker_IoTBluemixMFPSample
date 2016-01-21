@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/applause_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/applause_header_quick"/>
+
+    <ListView
+
+        android:id="@+id/applause_login_users_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/applause_dialog_bg"
+        android:cacheColorHint="@color/applause_transparent"
+        android:divider="@color/applause_dialog_divider"
+        android:dividerHeight="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        tools:listitem="@layout/applause_user" />
+
+    <LinearLayout
+        android:id="@+id/applause_login_progress_container"
+        android:background="@color/applause_dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/applause_user"
+            android:id="@+id/applause_login_progress_user" />
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/applause_dialog_footer" />
+</LinearLayout>
+
+        <!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_login_quick.xml -->

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/applause_dialog_header_background"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/applause_subheader_bg"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/applause_company_logo" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="@string/applause_login_title"
+            android:textColor="@color/applause_header_2_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/applause_login_app_version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:textColor="@color/applause_header_2_text"
+            android:textSize="15sp"
+            tools:text="App Version" />
+    </LinearLayout>
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout/applause_header_normal.xml -->

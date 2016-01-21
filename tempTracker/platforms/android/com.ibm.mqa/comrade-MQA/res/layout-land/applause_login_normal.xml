@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.applause.android.dialog.LoginDialogPasswordAuthView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/applause_login_dialog_password_auth_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:background="@color/applause_dialog_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <include layout="@layout/applause_header_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/applause_login_email_edit"
+                                style="@style/applause_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:hint="@string/applause_login_username_hint"
+                                android:inputType="text|textEmailAddress"
+                                android:textColorHint="@color/applause_input_hint"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/applause_login_password_edit"
+                                style="@style/applause_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:hint="@string/applause_login_password_hint"
+                                android:inputType="text|textAutoComplete|textNoSuggestions|textPassword"
+                                android:textColorHint="@color/applause_input_hint"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+
+                            <Button
+                                android:id="@+id/applause_login_btn_login"
+                                style="@style/applause_button"
+                                android:layout_width="match_parent"
+                                android:background="@drawable/applause_button"
+                                android:text="@string/applause_login_login_button"
+
+                                android:textColor="@color/applause_button_text" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/applause_dialog_divider" />
+
+                            <com.applause.android.ui.MontserratTextView
+                                style="@style/applause_or_text_divider"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="24dp"
+                                android:paddingRight="24dp"
+                                android:paddingTop="7dp" />
+
+                            <FrameLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/applause_dialog_divider" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/applause_login_error_box" />
+
+                            <Button
+                                android:id="@+id/applause_login_btn_anon_login"
+                                style="@style/applause_button"
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/applause_button"
+                                android:text="@string/applause_login_anon_login_button"
+
+                                android:textColor="@color/applause_button_text" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/applause_dialog_footer" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/applause_login_loading_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/applause_transparent_darkGrey"
+                android:visibility="gone">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLargeInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</com.applause.android.dialog.LoginDialogPasswordAuthView><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout-land/applause_login_normal.xml -->

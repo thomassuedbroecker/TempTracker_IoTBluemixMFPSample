@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@color/applause_dialog_shadow" />
+            <corners android:radius="2dp"></corners>
+        </shape>
+    </item>
+    <item android:right="1dp" android:left="1dp" android:bottom="2dp">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@color/applause_dialog_bg"/>
+            <corners android:radius="2dp"></corners>
+        </shape>
+    </item>
+</layer-list><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/drawable/applause_dialog_background.xml -->

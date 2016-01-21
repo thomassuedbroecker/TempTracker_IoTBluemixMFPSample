@@ -1,0 +1,26 @@
+<!-- *************************************************-->
+<!--                     All Drivers              -->
+<!--      <img ng-src='img/thumbnail.png'>            -->
+<!-- *************************************************-->
+<ion-nav-bar>
+</ion-nav-bar>
+<ion-view style="" title="All Drivers">
+    <ion-content class="has-header" padding="true">
+    <a style="" class="button button-positive button-block " href="#/maincloudant">Get Sensor Data</a>
+        <ion-list style="">
+            <label style="" class="item item-input">
+               <i class="icon ion-search placeholder-icon"></i>
+               <input placeholder="" type="search" ng-model="searchText">
+            </label>
+            <ion-item style="" class="item-thumbnail-left" ng-repeat="comrade in comrades| filter:searchText" ng-click="goto(comrade)">
+                <img ng-src="{{comrade.user.picture.thumbnail}}">
+                <h2>{{comrade.user.name.first}} {{comrade.user.name.last}}</h2>
+                <p>Department in {{comrade.user.location.city}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="title"></div>
+        <button class="button button-clear button-positive" ng-click="gotoLogout()">Logout</button>
+    </div>
+</ion-view>

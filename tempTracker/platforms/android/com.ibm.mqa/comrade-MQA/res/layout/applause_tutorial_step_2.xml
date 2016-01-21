@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_marginTop="@dimen/applause_tutorial_label_padding"
+        android:id="@+id/applause_tutorial_step2_image"
+        android:layout_width="@dimen/applause_tutorial_step2_image_width"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/applause_tutorial_step_2" />
+
+    <LinearLayout
+        android:padding="@dimen/applause_tutorial_step2_labels_padding"
+        android:layout_marginBottom="@dimen/applause_tutorial_bottom_bar_height"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/applause_tutorial_step2_label1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/applause_tutorial_step2_label1"
+            android:textColor="@color/applause_tutorial_step2_main_font_color"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/applause_tutorial_step2_label2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/applause_tutorial_step2_label2_margin_top"
+            android:text="@string/applause_tutorial_step2_label2"
+            android:textColor="@color/applause_tutorial_step2_secondary_font_color"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_tutorial_step_2.xml -->

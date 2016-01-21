@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<View xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/applause_problem_horizontal_list_tooltip_hook"
+    android:layout_width="5dp"
+    android:layout_height="5dp"
+    android:layout_marginLeft="100dp"
+    android:layout_marginTop="14dp"
+    android:visibility="invisible"
+    tools:background="@android:color/black"
+    tools:visibility="visible"
+    tools:showIn="@layout/applause_problem" /><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_problem_horizontal_list_tooltip.xml -->

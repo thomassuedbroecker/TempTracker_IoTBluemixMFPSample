@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/applause_subheader_bg"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/applause_company_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:text="@string/applause_login_title"
+            android:textColor="@color/applause_header_2_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/applause_login_app_version"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:textColor="@color/applause_header_2_text"
+            android:textSize="15sp"
+            tools:text="App Version" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingBottom="15dp"
+            android:id="@+id/applause_header_quick_subheader"
+            android:text="@string/applause_login_choose_from_list"
+            android:textColor="@color/applause_subheader_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
+
+<!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout-land/applause_header_quick.xml -->

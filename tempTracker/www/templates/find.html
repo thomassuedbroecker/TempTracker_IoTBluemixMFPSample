@@ -1,0 +1,44 @@
+<!-- *************************************************-->
+<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<ion-view style="" title="Seach for Sensor Data">
+    <ion-content class="has-header" padding="true">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Select Search Filter Options
+          </div>
+          <select ng-model="optionValueSelected" ng-change="selectUpdated(optionValueSelected, searchValue)">
+            <option value="Status" selected >Status</option>
+            <option value="DeviceID" >Device ID</option>
+            <option value="Temp" >Temp</option>
+            <option value="Date" >Date</option>
+          </select>
+        </label>
+        <label style="" class="item item-input">
+           <i class="icon ion-search placeholder-icon"></i>
+           <input placeholder="" type="search" ng-model="searchValue" ng-change="searchUpdated(optionValueSelected, searchValue)">
+        </label>
+        <label style="" class="item item-input">
+           <i class="icon ion-search placeholder-icon"></i>
+           <input placeholder="" type="search" ng-model="searchText">
+        </label>
+        <form style="background-color: black">
+            <a style="" ng-click="gotoChart()" class="button button-positive button-block ">Chart</a>
+        </form>
+        <ion-list>
+         <ion-item style="" class="item-thumbnail-left" ng-repeat="cloudant in cloudants | filter:searchText" ng-click="gotoDetail(cloudant)">
+           <img ng-src='{{cloudant.fields.theDeviceImageURI}}'>
+           <h2>{{cloudant.fields.theMessage}}</h2>
+           <p>Status: {{cloudant.fields.theStatus}}</p>
+           <p>DeviceId: {{cloudant.fields.theDeviceId}}</p>
+           <p>DeviceType: {{cloudant.fields.theDeviceType}}</p>
+           <p>Time: {{cloudant.fields.theDate}}</p>
+          </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="title" ng-show="showRowCount">{{rowCountFooter}}</div>
+        <button class="button button-clear button-positive" ng-click="gotoLogout()">Logout</button>
+    </div>
+</ion-view>

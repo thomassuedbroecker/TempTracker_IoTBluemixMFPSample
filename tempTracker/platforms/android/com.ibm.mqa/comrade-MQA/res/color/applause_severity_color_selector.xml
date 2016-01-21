@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/applause_severity_selected_color" android:state_pressed="true"  />
+    <item android:color="@color/applause_severity_selected_color" android:state_selected="true"  />
+    <item android:color="@color/applause_severity_normal_color" />
+</selector><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/color/applause_severity_color_selector.xml -->

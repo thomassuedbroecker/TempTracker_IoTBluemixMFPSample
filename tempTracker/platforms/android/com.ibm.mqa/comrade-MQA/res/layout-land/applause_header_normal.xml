@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/applause_dialog_header_background"
+        android:gravity="center_vertical|left"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/applause_subheader_bg"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/applause_company_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+
+            android:layout_marginRight="20dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingTop="0dp"
+                android:text="@string/applause_login_title"
+                android:textColor="@color/applause_header_2_text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/applause_login_app_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="0dp"
+                android:textColor="@color/applause_header_2_text"
+                android:textSize="15sp"
+                tools:text="App Version" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/layout-land/applause_header_normal.xml -->

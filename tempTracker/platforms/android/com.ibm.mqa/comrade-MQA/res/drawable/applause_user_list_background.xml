@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:drawable="@color/applause_user_list_bg_pressed" android:state_pressed="true"/>
+    <item android:drawable="@color/applause_user_list_bg"/>
+
+</selector><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/drawable/applause_user_list_background.xml -->

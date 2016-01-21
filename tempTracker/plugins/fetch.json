@@ -1,0 +1,133 @@
+{
+    "cordova-plugin-mfp": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-mfp"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-device"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-dialogs"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.geolocation": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-geolocation"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.globalization": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-globalization"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-inappbrowser"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.network-information": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-network-information"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-camera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-camera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.media": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-media"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.file-transfer": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-file-transfer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file-opener2": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pwlin/cordova-plugin-file-opener2.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.ibm.mqa": {
+        "source": {
+            "type": "local",
+            "path": "/Users/tsuedbroecker/Downloads/CordovaPlugin-3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-spinner-dialog": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Paldom/SpinnerDialog.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

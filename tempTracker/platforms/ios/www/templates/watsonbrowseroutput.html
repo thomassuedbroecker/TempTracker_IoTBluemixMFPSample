@@ -1,0 +1,30 @@
+<!--
+https://blog.nraboy.com/2014/07/launch-external-urls-ionicframework/
+Code	Description
+window.open(‘http://example.com’, ‘_system’);	Loads in the system browser
+window.open(‘http://example.com’, ‘_blank’);	Loads in the InAppBrowser
+window.open(‘http://example.com’, ‘_blank’, ‘location=no’);	Loads in the InAppBrowser with no location bar
+window.open(‘http://example.com’, ‘_self’);	Loads in the Cordova web view
+-->
+
+<ion-view title="Live Messages Sensorinformation">
+    <ion-content>
+        <div class="list">
+            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/audio', '_system', 'location=no'); return false;">
+                Get Live Messages
+            </a>
+            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/cloudant', '_system', 'location=no'); return false;">
+                Get Sensor Data Server Page
+            </a>
+            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/map', '_system', 'location=no'); return false;">
+                Get Sensor Geo Data Server Page
+            </a>
+            <a class="item" href="#" onclick="window.open('http://134.168.14.179:9080', '_system', 'location=no'); return false;">
+                Get to IBM MobileFirstServer
+            </a>
+            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/red', '_system', 'location=no'); return false;">
+                Get to IBM Bluemix Node-Red
+            </a>
+        </div>
+   </ion-content>
+</ion-view>

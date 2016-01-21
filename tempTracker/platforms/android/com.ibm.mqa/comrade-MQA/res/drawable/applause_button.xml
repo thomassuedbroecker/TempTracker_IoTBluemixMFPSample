@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <gradient android:angle="-90" android:startColor="@color/applause_ibm_blue"
+                android:endColor="@color/applause_ibm_blue_dark" />
+
+        </shape>
+    </item>
+
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/applause_ibm_blue_dark"/>
+
+        </shape>
+    </item>
+    <item
+        android:state_enabled="false"
+        android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/applause_button_bg_disabled"/>
+
+        </shape>
+    </item>
+
+    <item
+        android:state_enabled="false"
+        android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/applause_button_bg_disabled"/>
+
+        </shape>
+    </item>
+
+</selector><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/ibm/res/drawable/applause_button.xml -->

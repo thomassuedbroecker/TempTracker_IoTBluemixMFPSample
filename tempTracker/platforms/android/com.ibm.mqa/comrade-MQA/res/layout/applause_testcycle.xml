@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.applause.android.ui.TestCycleAdapterRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/applause_user_list_background"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp">
+    <TextView
+        android:id="@+id/applause_test_cycle_name"
+        android:layout_width="wrap_content"
+        android:duplicateParentState="true"
+        android:focusable="false"
+        android:layout_height="48dp"
+        android:paddingLeft="16dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@drawable/applause_user_list_textcolor"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        tools:text="Test Cycle text"  />
+</com.applause.android.ui.TestCycleAdapterRow><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_testcycle.xml -->

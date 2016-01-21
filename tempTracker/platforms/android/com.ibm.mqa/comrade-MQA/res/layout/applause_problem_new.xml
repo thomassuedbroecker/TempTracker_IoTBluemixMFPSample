@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/applause_report_bg_bottom"
+    android:orientation="vertical">
+
+    <include layout="@layout/applause_problem_header" />
+
+    <ScrollView
+        android:id="@+id/applause_problem_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/applause_problem_bottom_shadow" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/applause_report_bg_top"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        style="@style/applause_report_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-6dp"
+                        android:text="@string/applause_problem_bug_title_label" />
+
+                    <EditText
+                        android:id="@+id/applause_report_message_edit"
+                        style="@style/applause_report_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applause_problem_bug_title_hint"
+                        android:textSize="24sp" />
+
+                    <View
+                        android:id="@+id/applause_report_message_edit_bar"
+                        style="@style/applause_report_inputs_bar" />
+
+                    <TextView
+                        style="@style/applause_report_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/applause_problem_actual_result_label" />
+
+                    <EditText
+                        android:id="@+id/applause_report_message_actual_result"
+                        style="@style/applause_report_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applause_problem_actual_result_hint" />
+
+                    <View
+                        android:id="@+id/applause_report_message_actual_result_bar"
+                        style="@style/applause_report_inputs_bar" />
+
+                    <TextView
+                        style="@style/applause_report_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/applause_problem_action_performed_label" />
+
+                    <EditText
+                        android:id="@+id/applause_report_message_action_performed"
+                        style="@style/applause_report_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applause_problem_action_performed_hint" />
+
+                    <View
+                        android:id="@+id/applause_report_message_action_performed_bar"
+                        style="@style/applause_report_inputs_bar" />
+
+                    <TextView
+                        style="@style/applause_report_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/applause_problem_severity_label" />
+
+                    <include
+                        layout="@layout/applause_severity_widget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="22sp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/applause_report_bug_edit_tooltip_hook"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="140dp"
+                    android:visibility="invisible"
+                    tools:background="@android:color/black"
+                    tools:visibility="visible" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/applause_problem_top_shadow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp">
+
+                    <View
+                        style="@style/applause_report_attachments_bar"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:paddingTop="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/applause_problem_attachments_label"
+                        android:textColor="@color/applause_report_attachment"
+                        style="@style/applause_report_label" />
+
+                    <View
+                        style="@style/applause_report_attachments_bar"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/applause_report_add_screenshot"
+                    android:layout_width="match_parent"
+                    style="@style/applause_button"
+                    android:background="@drawable/applause_button"
+                    android:text="@string/applause_problem_add_screenshot"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/applause_report_add_from_gallery"
+                    android:layout_width="match_parent"
+                    style="@style/applause_button"
+                    android:background="@drawable/applause_button"
+                    android:text="@string/applause_problem_add_from_gallery"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/applause_report_add_from_camera"
+                    android:layout_width="match_parent"
+                    style="@style/applause_button"
+                    android:background="@drawable/applause_button"
+                    android:text="@string/applause_problem_add_from_camera"
+                    android:layout_marginBottom="12dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                    <com.applause.android.ui.HorizontalList
+                        android:id="@+id/applause_problem_horizontal_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/applause_screenshot_height" />
+
+                    <ImageView
+                        android:id="@+id/applause_problem_horizontal_list_sample"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/applause_screenshot_height"
+                        android:src="@drawable/applause_tutorial_screenshot_small"
+                        android:scaleType="fitStart"
+                        android:visibility="invisible"
+                        tools:visibility="visible" />
+
+                    <include layout="@layout/applause_problem_horizontal_list_tooltip" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/applause_problem_sub_header" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_problem_new.xml -->

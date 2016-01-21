@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/applause_dialog_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/applause_feedback_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/applause_dialog_panel_bg"
+            android:orientation="vertical">
+
+            <include layout="@layout/applause_feedback_title" />
+
+            <com.applause.android.ui.ApplauseRatingBar
+                android:id="@+id/applause_feedback_rating_bar"
+                style="@style/applause_blue_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:max="5"
+                android:numStars="5"
+                android:rating="2"
+                android:stepSize="1" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/applause_feedback_rating_bar_tooltip_hook"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="130dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            tools:background="@android:color/black" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/applause_dialog_divider" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/applause_dialog_panel_bg"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
+
+        <include
+            layout="@layout/applause_screenshot_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <com.applause.android.ui.MontserratTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:text="@string/applause_include_screenshot"
+                android:textAllCaps="true"
+                android:textColor="@color/applause_dialog_panel_header"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:paddingTop="2dp"
+                android:text="@string/applause_send_screenshot_desc"
+                android:textColor="@color/applause_dialog_panel_text"
+                android:textSize="12sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/applause_feedback_include_screenshot_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|top"
+            android:layout_weight="0"
+            android:button="@drawable/applause_checkbox"
+            android:checked="true"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/applause_dialog_divider" />
+
+    <include layout="@layout/applause_problem_description" />
+
+</LinearLayout><!-- From: file:/Users/alek/Workspace/Applause/Mobile-SDK-Android/applause-lib/src/main/res/layout/applause_feedback_copy.xml -->
