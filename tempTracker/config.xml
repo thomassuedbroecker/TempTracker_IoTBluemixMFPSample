@@ -1,5 +1,5 @@
 <!-- *************************************************-->
-<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- Created or modified by Thomas Südbröcker         -->
 <!-- All usage is on your own risk no guarantee       -->
 <!-- *************************************************-->
 <?xml version='1.0' encoding='utf-8'?>
@@ -68,8 +68,8 @@
         <preference name="loginDisplay" value="embedded" />
         <preference name="wlNativeVersion" value="1493550001" />
     </platform>
-    <preference name="mfpServerUrl" value="http://134.168.14.179:9080" />
-    <preference name="mfpServerRuntime" value="MobileFirstStarter" />
+    <preference name="mfpServerUrl" value="ACTUAL_IP:ACTUAL_PORT" />
+    <preference name="mfpServerRuntime" value="ACTUAL_SERVER" />
     <preference name="displayName" value="temptracker" />
     <preference name="mfpManualInit" value="false" />
 </widget>

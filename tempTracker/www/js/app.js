@@ -1,7 +1,7 @@
-// *************************************************-->
-// Created or modivied by Thomas Südbröcker         -->
-// All usage is on your own risk no guarantee       -->
-// *************************************************-->
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
 // *************************************************-->
 // Objective: App combines all needed controllers of the app   -->
 //            and provides the states of the app.              -->

@@ -1,7 +1,7 @@
 // *************************************************-->
-// Created or modivied by Thomas Südbröcker         -->
+// Created or modified by Thomas Südbröcker         -->
 // All usage is on your own risk no guarantee       -->
-// *************************************************-->#
+// *************************************************-->
 // *************************************************-->
 // Objective: Get Data from Cloudant in Bluemix                   -->
 //            and show actual loction in Map using MFP adapter   -->
