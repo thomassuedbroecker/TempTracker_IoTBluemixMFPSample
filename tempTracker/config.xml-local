@@ -1,5 +1,5 @@
 <!-- *************************************************-->
-<!-- Created or modivied by Thomas Südbröcker         -->
+<!-- Created or modified by Thomas Südbröcker         -->
 <!-- All usage is on your own risk no guarantee       -->
 <!-- *************************************************-->
     <preference name="mfpServerUrl" value="YOUR_LOCAL_IP:10080" />
