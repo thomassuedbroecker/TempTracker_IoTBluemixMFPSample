@@ -1,7 +1,3 @@
-<!-- *************************************************-->
-<!-- Created or modivied by Thomas Südbröcker         -->
-<!-- All usage is on your own risk no guarantee       -->
-<!-- *************************************************-->
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:loginConfiguration xmlns:tns="http://www.worklight.com/auth/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
