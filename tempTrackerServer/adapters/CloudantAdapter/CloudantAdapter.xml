@@ -10,6 +10,10 @@
     IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
 
 -->
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
 <wl:adapter name="CloudantAdapter"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:wl="http://www.ibm.com/mfp/integration"

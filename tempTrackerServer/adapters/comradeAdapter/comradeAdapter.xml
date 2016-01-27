@@ -5,6 +5,10 @@
     US Government Users Restricted Rights - Use, duplication or
     disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
 <wl:adapter name="comradeAdapter"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:wl="http://www.ibm.com/mfp/integration"

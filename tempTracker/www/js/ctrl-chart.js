@@ -28,12 +28,14 @@ angular.module('app.ctrl-chart', ['chart.js'])
   var i =0;
   var j =1;
 
+  // Check list to display in the chart
   for (i=0;i<ExchangeData.cloudants.length;i++) {
     label = "" + j + "";
     j++;
     labelList.push(label);
   }
 
+  // Set Chart.js Variables
   $scope.showChartDetail = false;
   console.log('Label List to Display : ', labelList);
   console.log('Label List to Display : ', labelList.toString());
@@ -47,6 +49,7 @@ angular.module('app.ctrl-chart', ['chart.js'])
   //  [28, 48, 40, 19, 86, 27, 90]
   //];
 
+  // Extract the data for the chart
   for (i=0;i<ExchangeData.cloudants.length;i++) {
     dataList.push(parseFloat(ExchangeData.cloudants[i].fields.theTemp));
     //dataList.push(parseInt(ExchangeData.cloudants[i].fields.theTemp));
@@ -59,8 +62,11 @@ angular.module('app.ctrl-chart', ['chart.js'])
   arrayList.push(dataList);
   console.log('Array List to Display : ', arrayList.toString());
 
+  // Set Chart.js Variables
   $scope.data = arrayList;
   //$scope.data = [[20,25]];
+  
+  // Set App Variables
   $scope.chartHeadline = "Chart for " + ExchangeData.cloudants.chartHeadline;
   $scope.cloudants = ExchangeData.cloudants;
 

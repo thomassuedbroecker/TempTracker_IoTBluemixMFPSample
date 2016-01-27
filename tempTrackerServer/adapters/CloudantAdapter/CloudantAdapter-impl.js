@@ -10,6 +10,10 @@
     IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
 
  */
+/* *************************************************-->
+ <!-- Created or modified by Thomas Südbröcker         -->
+ <!-- All usage is on your own risk no guarantee       -->
+ <!-- ************************************************* */
 
 //Database Methods
 

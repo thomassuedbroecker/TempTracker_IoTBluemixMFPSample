@@ -1,3 +1,8 @@
+/* *************************************************-->
+ <!-- Created or modified by Thomas Südbröcker         -->
+ <!-- All usage is on your own risk no guarantee       -->
+ <!-- ************************************************* */
+ 
 function onAuthRequired(headers, errorMessage){
 	errorMessage = errorMessage ? errorMessage : null;
 
