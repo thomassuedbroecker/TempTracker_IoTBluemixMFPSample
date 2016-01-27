@@ -27,14 +27,48 @@ data.image  = "undefined";
 data.imageLocalURI = "undefined";
 
 // *****************
-// Concrete Senor data
-data.temp     = msg.payload.d.AmbTemp;
-data.irtemp   = msg.payload.d.IRTemp;
-data.optical  = msg.payload.d.optical;
-data.deviceId = msg.deviceId;
+// Get the concrete Sensor data
+// the input can be different based on your device/app type:
+// "Apple, Android, Simulator do have different datastructure in the payload"
+
+if (msg.payload.d.AmbTemp !== undefined) {
+    data.temp     = msg.payload.d.AmbTemp;      // Typical Apple datastructure
+}
+
+if (msg.payload.d.ambient_temp !== undefined) {
+    data.temp     = msg.payload.d.ambient_temp;  // Typical Android datastructure
+}
+
+if (msg.payload.d.temp !== undefined) {
+    data.temp     = msg.payload.d.temp;          // Typical Simulator datastructure
+}
+
+if (msg.payload.d.IRTemp !== undefined) {
+    data.irtemp   = msg.payload.d.IRTemp;        // Typical Apple datastructure
+}
+
+if (msg.payload.d.object_temp !== undefined) {
+    data.irtemp   = msg.payload.d.object_temp;   // Typical Android datastructure
+}
+
+if (msg.payload.d.objectTemp !== undefined) {
+    data.irtemp   = msg.payload.d.objectTemp;    // Typical Simulator datastructure
+}
+
+data.optical = 0; // default if not defined by others
+
+if (msg.payload.d.optical !== undefined) {
+    data.optical  = msg.payload.d.optical;      // Typical Apple datastructure
+}
+
+if (msg.payload.d.light !== undefined) {
+    data.optical  = msg.payload.d.light;      // Typical Android datastructure
+}
+
+data.deviceId = msg.deviceId; // Typical datastructure for all
 
 // *****************
-// Addtional Senor data
+// Add your additional sensor data
 data.sensorImage = "img/sensor-detail.png";
 data.comment = "Currently on comment";
 data.sensorType = "Simplelink SensorTag - TI.com";
@@ -43,7 +77,10 @@ data.image    = "undefined";
 data.imageLocalURI = "undefined";
 
 // *****************
-// Define Device Type
+// Define your Device Type which ICON should be dispayed
+// ======================================================
+// You can get the Device ID from your TI App on your mobile device.
+//
 // (iPad:94128ececff1) (iPhone:08b5cbcfa326) (Samsung:c4be84722b07)
 // http://www.w3schools.com/jsref/jsref_localecompare.asp
 var ipad = "94128ececff1";
@@ -78,19 +115,21 @@ data.gtfs_longitude = "8.940540000000055";
 if ( data.temp < 25 )
 {
    data.message= data.date + "/" + data.time + " (" + data.temp + ") within safe limits";
-   data.status ="SAVE";
+   data.status ="SAFE";
 } else {
    data.message= data.date + "/" + data.time + " (" + data.temp + ") is in critial limits";
    data.status ="CRITICAL";
 }
 
 // *****************
-// Create root object
+// Build data your own datastructure
+// -> create json root object
 sensorroot = new Object();
 sensorroot.sensordatavalue = data;
 
 // *****************
-// Set payload
+// Set your data as the payload,
+// which will be used in the next node as input.
 msg.payload = sensorroot;
 } else {
     msg.payload = "No IoT Data Input";
