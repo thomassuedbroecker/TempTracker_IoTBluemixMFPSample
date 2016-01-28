@@ -1,8 +1,0 @@
-<!-- *************************************************-->
-<!-- Created or modified by Thomas Südbröcker         -->
-<!-- All usage is on your own risk no guarantee       -->
-<!-- *************************************************-->
-    <preference name="mfpServerUrl" value="192.168.179.40:10080" />
-    <preference name="mfpServerRuntime" value="tempTrackerServer" />
-    <preference name="displayName" value="temptracker" />
-    <preference name="mfpManualInit" value="false" />

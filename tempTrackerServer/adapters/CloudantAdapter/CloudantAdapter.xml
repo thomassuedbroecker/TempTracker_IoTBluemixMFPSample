@@ -29,7 +29,7 @@
 			<!-- ******************* -->
       <!-- Connect to cloudant -->
       <!-- ******************* -->
-      <domain>0bd8cf5f-6d55-4807-b577-15a944eedd20-bluemix.cloudant.com</domain>
+      <domain>YOUR_BLUEMIX_CLOUDANT_DOMAIN-bluemix.cloudant.com</domain>
 			<port>443</port>
 			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
 			<socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
@@ -37,8 +37,8 @@
 			<authentication>
 					<basic/>
 					<serverIdentity>
-						<username>0bd8cf5f-6d55-4807-b577-15a944eedd20-bluemix</username>
-						<password>c81367ca38fb4da218cfb12b0abf16abc144ecb019beb3825d32cb713a5f7f0a</password>
+						<username>YOUR_USERNAME-bluemix</username>
+						<password>YOUR_PASSWORD</password>
 					</serverIdentity>
 			</authentication>
 
