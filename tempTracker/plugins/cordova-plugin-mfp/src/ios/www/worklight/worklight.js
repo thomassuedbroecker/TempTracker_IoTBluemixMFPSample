@@ -1748,12 +1748,35 @@ var __WLUtils = function() {
     elm.style.whiteSpace = whiteSpace;
   }
 
+    function findCordovaPath() {
+        var path = null;
+        var scripts = document.getElementsByTagName('script');
+        var term = '/cordova.js';
+        for (var n = scripts.length-1; n>-1; n--) {
+            var src = scripts[n].src.replace(/\?.*$/, ''); // Strip any query param (CB-6007).
+            if (src.indexOf(term) === (src.length - term.length)) {
+                path = src.substring(0, src.length - term.length) + '/';
+                break;
+            }
+        }
+        return path;
+    }
+                          
   function loadWLClientMessages(lang) {
-
-    var url = 'worklight/messages/' + lang + '/messages.json';
-    if (lang === null || typeof lang === 'undefined' || lang.indexOf('en') === 0) {
-      // why indexOf? check 41118
-      url = 'worklight/messages/messages.json';
+    var cordovajspath = findCordovaPath() + 'cordova.js';
+    var url;
+    if (cordovajspath.indexOf('www/cordova.js') > -1) {
+        //in a pure cordova project
+        url = findCordovaPath() + 'worklight/messages/' + lang + '/messages.json';
+        if (lang === null || typeof lang === 'undefined' || lang.indexOf('en') === 0) {
+            url = findCordovaPath() + 'worklight/messages/messages.json';
+        }
+    } else {
+        url = 'worklight/messages/' + lang + '/messages.json';
+        if (lang === null || typeof lang === 'undefined' || lang.indexOf('en') === 0) {
+            // why indexOf? check 41118
+            url = 'worklight/messages/messages.json';
+        }
     }
 
     //Windows 8 does not allow ajax calls to local json files. For Windows 8 environment set isLocal option in the ajax call to false.
@@ -5700,7 +5723,7 @@ WL.Logger = (function (jQuery) {
       if(typeof errorObj !== 'undefined'){
         stackMetaData = { $stacktrace: errorObj.stack };
       }
-
+      WL.Analytics._logCrashEvent();
       WL.Logger.metadata(stackMetaData).fatal(errorMessage);
 
       if (typeof __onerrorOriginal === 'function') {
@@ -6181,6 +6204,8 @@ WL.Analytics = (function (jQuery, global) {
 
 	//Dependencies
 	$ = jQuery,
+	
+	foregroundTimestamp = null,
 
 	//Constants
 	_PKG_NAME = 'wl.analytics',
@@ -6304,6 +6329,39 @@ WL.Analytics = (function (jQuery, global) {
     pendingTrackingIDs[id] = 1;
   },
 	
+  __logForegroundEvent = function(){
+		if(__checkNativeEnvironment() && foregroundTimestamp === null){
+			foregroundTimestamp = new Date().getTime();
+		}
+	},
+	
+	__logBackgroundEvent = function(){
+		__logSessionEvent(false);
+	},
+	
+	__logCrashEvent = function(){
+		__logSessionEvent(true);
+	},
+	
+	__logSessionEvent = function(isCrash){
+		if(__checkNativeEnvironment() && foregroundTimestamp === null){
+			var sessionType = isCrash ? true : false;
+			WL.Logger.error('Tried to record an ' + sessionType + ' without a starting timestamp');
+			return;
+		}
+		
+		var closedBy = isCrash ? 'CRASH' : 'USER';
+		var timestamp = new Date().getTime();
+		var meta = {
+				'$category': 'appSession',
+				'timestamp': foregroundTimestamp,
+				'$duration': timestamp - foregroundTimestamp,
+				'$closedBy': closedBy
+		};
+		
+		WL.Logger.metadata(meta).analytics('appSession');
+	},
+
   /**
 		Log outbound network request
 	*/
@@ -6422,6 +6480,9 @@ WL.Analytics = (function (jQuery, global) {
 		
 		_logOutboundRequest: __logOutboundRequest,
 		_logInboundResponse: __logInboundResponse,
+		_logBackgroundEvent : __logBackgroundEvent,
+		_logForegroundEvent : __logForegroundEvent,
+		_logCrashEvent : __logCrashEvent,
 		_getTrackingId: __getTrackingId,
 
     // for unit test only:
@@ -7357,6 +7418,10 @@ __WLClient = function() {
 					heartBeatPeriodicalExecuter.stop();
 				}
 			}, false);
+			
+			document.addEventListener("deviceready", WL.Analytics._logForegroundEvent, false);
+			document.addEventListener("pause", WL.Analytics._logBackgroundEvent, false);
+			document.addEventListener("resume", WL.Analytics._logForegroundEvent, false);
 
 			// continue heart beat on resume
 			document.addEventListener("resume", function() {
@@ -9642,6 +9707,23 @@ this.pinTrustedCertificatePublicKey = function(certificateFilename){
 		}
 		return false;
 	};
+	
+	/**
+	 * @ignore
+	 * Go over all non MFP challenge handlers and call it's isCustomResponse function.
+	 * Return true if ChallengeHander was called
+	 */
+	this.isCustomResponse = function(response){
+				
+		for (var processorRealm in WL.Client.__chMap) {
+			if (Object.prototype.hasOwnProperty.call(WL.Client.__chMap, processorRealm)) {
+				var handler = WL.Client.__chMap[processorRealm];
+				if (!handler.isWLHandler && handler.isCustomResponse(response)) {
+					return true;
+				}
+			}
+		}
+	};
 
 	/*
 	 * When a message arrives from a postAnswerRequert ("authenticate") and it is a 401,403, we need to remove it from the waitinglist so there wont be any resend on it,
@@ -11382,578 +11464,584 @@ WL.FIPSHttp = (function (_) {
  * US Government Users Restricted Rights - Use, duplication or
  * disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
  */
-
 /*globals WL, WL_, WLJQ, WLAuthorizationManager*/
-
 function WLResourceRequest(_url, _method, _timeout) {
-  /*jshint strict:false*/
+    /*jshint strict:false*/
 
-  function logAndThrowError(msg, callerName) {
-    if (WL.Logger) {
-      if (callerName) {
-        msg = 'Invalid invocation of method ' + callerName + '; ' + msg;
-      }
-      WL.Logger.error(msg);
+    function logAndThrowError(msg, callerName) {
+        if (WL.Logger) {
+            if (callerName) {
+                msg = 'Invalid invocation of method ' + callerName + '; ' + msg;
+            }
+            WL.Logger.error(msg);
+        }
+
+        throw new Error(msg);
     }
 
-    throw new Error(msg);
-  }
-
-  function isValidRequestMethod(method) {
-    return (method === WLResourceRequest.GET || method === WLResourceRequest.POST || method === WLResourceRequest.PUT ||
-      method === WLResourceRequest.DELETE || method === WLResourceRequest.HEAD || method === WLResourceRequest.OPTIONS ||
-      method === WLResourceRequest.TRACE);
-  }
-  
-  var url = (_url === null || typeof(_url) === 'undefined') ? logAndThrowError('Request URL must be specified.', 'WLResourceRequest') : _url.trim();
-  var method = (typeof(_method) === 'undefined' || !isValidRequestMethod(_method)) ? logAndThrowError('Request method is invalid or not specified.', 'WLResourceRequest') : _method;
-  var timeout = _timeout;
-  var queryParameters = {};
-  var headers = {};
-
-  /**
-   * Returns request URL. The URL must have been passed to constructor.
-   */
-  this.getUrl = function() {
-    return url;
-  };
-
-  /**
-   * Returns current request method. A valid request method must have been passed to constructor.
-   */
-  this.getMethod = function() {
-    return method;
-  };
-
-  /**
-   * Returns query parameters as a JSON object with key-value pairs.
-   */
-  this.getQueryParameters = function() {
-    return queryParameters;
-  };
-
-  /**
-   * Sets query parameters.
-   * @param {parameters} A JSON object with key-value pairs.
-   */
-  this.setQueryParameters = function(parameters) {
-    if (typeof(parameters) === 'undefined' || parameters === null) {
-      queryParameters = {};
-    } else {
-      queryParameters = parameters;
-    }
-  };
-
-  /**
-   * Sets a new query parameter. If a parameter with the same name already exists, it will be replaced.
-   * @param {name} Parameter name
-   * @param {value} Parameter value. Should be string, number or boolean.
-   */
-  this.setQueryParameter = function(name, value) {
-    if (typeof(name) !== 'undefined' && name !== null && typeof(value) !== 'undefined' && value !== null) {
-      queryParameters[name] = value;
-    }
-  };
-
-  // receives string, returns array of header values (even if only 1). if name==undefined returns all headers
-  /**
-   * Returns array of header values.
-   * @param {name} Header name. If header name is specified, this function returns an array of header values
-   * stored with this header, or undefined, if specified header name is not found. If <i>name</i> is null, or undefined,
-   * this function returns all headers.
-   */
-  this.getHeaders = function(name) {
-    if (name === null || typeof(name) === 'undefined') {
-      return headers;
+    function isValidRequestMethod(method) {
+        return (method === WLResourceRequest.GET || method === WLResourceRequest.POST || method === WLResourceRequest.PUT ||
+            method === WLResourceRequest.DELETE || method === WLResourceRequest.HEAD || method === WLResourceRequest.OPTIONS ||
+            method === WLResourceRequest.TRACE);
     }
 
-    var headerValue = headers[name];
+    var url = (_url === null || typeof(_url) === 'undefined') ? logAndThrowError('Request URL must be specified.', 'WLResourceRequest') : _url.trim();
+    var method = (typeof(_method) === 'undefined' || !isValidRequestMethod(_method)) ? logAndThrowError('Request method is invalid or not specified.', 'WLResourceRequest') : _method;
+    var timeout = _timeout;
+    var queryParameters = {};
+    var headers = {};
 
-    if (typeof(headerValue) === 'undefined') {
-      // try case insensitive search
-      headerValue = __getFirstHeaderByNameNoCase(name).value;
-    }
+    /**
+     * Returns request URL. The URL must have been passed to constructor.
+     */
+    this.getUrl = function() {
+        return url;
+    };
 
-    if (headerValue !== null) {
-      if (WL_.isArray(headerValue)) {
-        return headerValue;
-      } else {
-        return [headerValue];
-      }
-    }
+    /**
+     * Returns current request method. A valid request method must have been passed to constructor.
+     */
+    this.getMethod = function() {
+        return method;
+    };
 
-  };
+    /**
+     * Returns query parameters as a JSON object with key-value pairs.
+     */
+    this.getQueryParameters = function() {
+        return queryParameters;
+    };
 
-  /**
-   * Returns array of header names. It can be empty if no headers has been added.
-   */
-  this.getHeaderNames = function() {
-    var headerNames = [];
-    for (var headerName in headers) {
-      if (true) {  // thanks jshint
-        headerNames.push(headerName);
-      }
-    }
-    return headerNames;
-  };
+    /**
+     * Sets query parameters.
+     * @param {parameters} A JSON object with key-value pairs.
+     */
+    this.setQueryParameters = function(parameters) {
+        if (typeof(parameters) === 'undefined' || parameters === null) {
+            queryParameters = {};
+        } else {
+            queryParameters = parameters;
+        }
+    };
 
-  // receives string, returns string. if multiple headers with same name - return first one
-  /**
-   * Returns a first header value stored with the specified header name. The value is returned as a string.
-   * Can be undefined if a header with specified name does not exist.
-   * @param {name} Header name.
-   */
-  this.getHeader = function(name) {
-    if (name === null || typeof(name) === 'undefined') {
-      logAndThrowError('Header name should be defined.', 'WLResourceRequest.getHeader');
-    }
+    /**
+     * Sets a new query parameter. If a parameter with the same name already exists, it will be replaced.
+     * @param {name} Parameter name
+     * @param {value} Parameter value. Should be string, number or boolean.
+     */
+    this.setQueryParameter = function(name, value) {
+        if (typeof(name) !== 'undefined' && name !== null && typeof(value) !== 'undefined' && value !== null) {
+            queryParameters[name] = value;
+        }
+    };
 
-    var headerValue = headers[name];
-    if (typeof(headerValue) === 'undefined') {
-      // try case insensitive search
-      headerValue = __getFirstHeaderByNameNoCase(name).value;
-    }
+    // receives string, returns array of header values (even if only 1). if name==undefined returns all headers
+    /**
+     * Returns array of header values.
+     * @param {name} Header name. If header name is specified, this function returns an array of header values
+     * stored with this header, or undefined, if specified header name is not found. If <i>name</i> is null, or undefined,
+     * this function returns all headers.
+     */
+    this.getHeaders = function(name) {
+        if (name === null || typeof(name) === 'undefined') {
+            return headers;
+        }
 
-    if (WL_.isArray(headerValue)) {
-      return headerValue[0];
-    }
-    return headerValue;
-  };
+        var headerValue = headers[name];
 
-  //receives JSON object similar to what getHeaders returns
-  /**
-   * Sets request headers. The existing headers are replaced.
-   * @param {requestHeaders} JSON object with request headers. Each header value should be either string, or array of strings. This function will
-   * throw error if one of specified header values is not valid.
-   */
-  this.setHeaders = function(requestHeaders) {
-    if (requestHeaders === null || typeof(requestHeaders) === 'undefined') {
-      headers = {};
-      return;
-    }
+        if (typeof(headerValue) === 'undefined') {
+            // try case insensitive search
+            headerValue = __getFirstHeaderByNameNoCase(name).value;
+        }
 
-    // verify that each key contains array of values or simple object
-    for (var headerName in requestHeaders) {
-      if (true) {  // thanks jshint
-        var headerValue = requestHeaders[headerName];
+        if (headerValue !== null) {
+            if (WL_.isArray(headerValue)) {
+                return headerValue;
+            } else {
+                return [headerValue];
+            }
+        }
+
+    };
+
+    /**
+     * Returns array of header names. It can be empty if no headers has been added.
+     */
+    this.getHeaderNames = function() {
+        var headerNames = [];
+        for (var headerName in headers) {
+            if (true) { // thanks jshint
+                headerNames.push(headerName);
+            }
+        }
+        return headerNames;
+    };
+
+    // receives string, returns string. if multiple headers with same name - return first one
+    /**
+     * Returns a first header value stored with the specified header name. The value is returned as a string.
+     * Can be undefined if a header with specified name does not exist.
+     * @param {name} Header name.
+     */
+    this.getHeader = function(name) {
+        if (name === null || typeof(name) === 'undefined') {
+            logAndThrowError('Header name should be defined.', 'WLResourceRequest.getHeader');
+        }
+
+        var headerValue = headers[name];
+        if (typeof(headerValue) === 'undefined') {
+            // try case insensitive search
+            headerValue = __getFirstHeaderByNameNoCase(name).value;
+        }
 
         if (WL_.isArray(headerValue)) {
-          /*jshint maxdepth:4*/
-          if (headerValue.length > 0 && !isArrayOfSimpleTypes(headerValue)) {
-            // complex type detected within array of values - throw error
-            logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeaders');
-          }
-        } else if (!isSimpleType(headerValue)) {
-          logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeaders');
+            return headerValue[0];
         }
-      }
-    }
+        return headerValue;
+    };
 
-    headers = {};
-    for (var key in requestHeaders) {
-      if (true) {  // thanks jshint
-        var headerValueTemp = requestHeaders[key];
-        if (WL_.isArray(headerValueTemp)) {
-          for (var item in headerValueTemp) {
-            /*jshint maxdepth:5*/
-            if (true) {  // thanks jshint
-              this.addHeader(key, headerValueTemp[item]);
-            }
-          }
-        } else {
-          this.addHeader(key, headerValueTemp);
-        }
-      }
-    }
-  };
-
-  /**
-   * Sets a new header or replaces an existing header with the same name.
-   * @param {name} Header name
-   * @param value Header value. The value must be of simple type (string, boolean or value).
-   */
-  this.setHeader = function(name, value) {
-    if (!isSimpleType(value)) {
-      // complex type detected instead of string - throw error
-      logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeader');
-    }
-
-    for (var headerName in headers) {
-      if (headerName.toLowerCase() === name.toLowerCase()) {
-        delete headers[headerName];
-      }
-    }
-
-    headers[name] = value;
-  };
-
-  /**
-   * Adds a new header. If a header with the same name already exists, the header value will be added to the existing header. The name is
-   * case insensitive.
-   * @param {name} Header name
-   * @param {value} Header value. The value must be of simple type (string, number or boolean).
-   */
-  this.addHeader = function(name, value) {
-    if (typeof(value) === 'undefined' || value === null) {
-      logAndThrowError('Header value should not be null or undefined.', 'WLResourceRequest.addHeader');
-    }
-    if (!isSimpleType(value)) {
-      // complex type detected instead of string - throw error 
-      logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.addHeader');
-    }
-
-    var header = __getFirstHeaderByNameNoCase(name);
-    var existingHeaderName = header.name;
-    var existingHeaderValue = header.value;
-    if (existingHeaderValue === null) {
-      headers[name] = value;
-    } else {
-      if (WL_.isArray(existingHeaderValue)) {
-        for (var idx in existingHeaderValue) {
-          /*jshint maxdepth:4*/
-          if (existingHeaderValue[idx].toString() === value.toString()) {
+    //receives JSON object similar to what getHeaders returns
+    /**
+     * Sets request headers. The existing headers are replaced.
+     * @param {requestHeaders} JSON object with request headers. Each header value should be either string, or array of strings. This function will
+     * throw error if one of specified header values is not valid.
+     */
+    this.setHeaders = function(requestHeaders) {
+        if (requestHeaders === null || typeof(requestHeaders) === 'undefined') {
+            headers = {};
             return;
-          }
-        }
-        existingHeaderValue.push(value);
-      } else {
-        var array = [];
-        array.push(existingHeaderValue);
-        array.push(value);
-        headers[existingHeaderName] = array;
-      }
-    }
-  };
-
-  function __getFirstHeaderByNameNoCase(name) {
-    for (var headerName in headers) {
-      if (headerName.toLowerCase() === name.toLowerCase()) {
-        return {
-          name: headerName,
-          value: headers[headerName]
-        };
-      }
-    }
-
-    return {
-      name: null,
-      value: null
-    };
-  }
-
-  /**
-   * Returns request time out in milliseconds.
-   */
-  this.getTimeout = function() {
-    return timeout;
-  };
-
-  /**
-   * Sets request timeout. If timeout is not specified, then a default timeout will be used.
-   * @param {requestTimeout} Request timeout in milliseconds.
-   */
-  this.setTimeout = function(requestTimeout) {
-    timeout = requestTimeout;
-  };
-
-  /**
-   * Sends the request to a server.
-   * @param {content} Body content. It can be of simple type (like string), or object.
-   * @returns Returns promise. Sample usage: <br>
-   * var request = WLResourceRequest(url, method, timeout);<br>
-   * request.send(content).then(<br>
-   *  function(response) {// success flow}, <br>
-   *  function(error) {// fail flow} <br>
-   * );
-   */
-  this.send = function(content) {
-    var contentString = '';
-    if (typeof(content) !== 'undefined' && content !== null) {
-      contentString = isSimpleType(content) ? content.toString() : JSON.stringify(content);
-    }
-    return sendRequestAsync(contentString, 0);
-  };
-
-  /**
-   * Sends the request to a server.
-   * @param {json} Body content as JSON object or string as a form data. If content type is not set by 'Content-Type' header, it will be set to 'application/x-www-form-urlencoded'.
-   * @returns Returns promise. Sample usage: <br>
-   * var request = WLResourceRequest(url, method, timeout);<br>
-   * request.send(json).then(<br>
-   *  function(response) {// success flow}, <br>
-   *  function(error) {// fail flow} <br>
-   * );
-   */
-  this.sendFormParameters = function(json) {
-    var contentString = encodeFormParameters(json);
-    if (this.getHeader('Content-Type') === null) {
-      this.addHeader('Content-Type', 'application/x-www-form-urlencoded');
-    }
-
-    return sendRequestAsync(contentString, 0);
-  };
-  
-  function encodeFormParameters(json) {
-    if (json === null || typeof(json) === 'undefined') {
-      return '';
-    }
-
-    var result = '';
-
-    if (isSimpleType(json)) {
-      var params = json.split('&');
-      for (var i = 0; i < params.length; i++) {
-        var kv = params[i].split('=');
-        if (kv.length === 0) {
-          continue;
         }
 
-        if (kv.length === 1) {
-          result += encodeURIComponent(kv[0]);
-        } else {
-          result += encodeURIComponent(kv[0]) + '=' + encodeURIComponent(kv[1]);
-        }
+        // verify that each key contains array of values or simple object
+        for (var headerName in requestHeaders) {
+            if (true) { // thanks jshint
+                var headerValue = requestHeaders[headerName];
 
-        if (i < params.length - 1) {
-          result += '&';
-        }
-      }
-      return result;
-    } else {
-      for (var key in json) {
-        if (true) {  // thanks jshint
-          var value = json[key];
-          /*jshint maxdepth:4*/
-          if (!isSimpleType(value)) {
-            logAndThrowError('Form value must be a simple type.', 'WLResourceRequest.sendFormParameters');
-          }
-
-          result += encodeURIComponent(key) + '=' + encodeURIComponent(value);
-          result += '&';
-        }
-      }
-
-      if (result.length > 0 && result[result.length - 1] === '&') {
-        result = result.substring(0, result.length - 1);
-      }
-
-      return result;
-    }
-  }
-
-  function sendRequestAsync(contentString, authCounter) {
-    var dfd = WLJQ.Deferred();
-
-    buildRequestUrl()
-      .then(
-        function(serverUrl) {
-          __send(serverUrl, contentString, authCounter).then(
-            function(response) {
-              dfd.resolve(response);
-            },
-            function(error) {
-              dfd.reject(error);
-            }
-          );
-        },
-        function(error) {
-          dfd.reject(error);
-        }
-      );
-
-    return dfd.promise();
-  }
-
-  var maxRequestAttempts = 4;
-
-  function __send(serverUrl, contentString, authCounter) {
-    var dfd = WLJQ.Deferred();
-
-    if (!WL.EnvProfile.isEnabled(WL.EPField.SUPPORT_OAUTH)) {
-      var transport = {
-        status: 0,
-        responseJSON: {
-          errorCode: WL.ErrorCode.API_INVOCATION_FAILURE,
-          errorMsg: WL.ClientMessages.unsupportedEnvironment
-        }
-      };
-      var failResponse = new WL.Response(transport, null);
-      dfd.reject(failResponse);
-      return dfd;
-    }
-
-    // create WLNativeXHR or XMLHttpRequest
-    var xhr = window.WLJSX.Ajax.getTransport();
-
-    var queryString = buildQueryString();
-    var finalUrl = queryString === null ? serverUrl : serverUrl + '?' + queryString;
-
-    xhr.open(method, finalUrl, true);
-
-    if (typeof(timeout) !== 'undefined') {
-      xhr.timeout = timeout;
-    }
-
-    addRequestHeaders(xhr);
-
-    xhr.onreadystatechange = function() {
-      if (this.readyState === 4) {
-// any status in the 2xx range is considered a success
-        if (this.status >= 200 && this.status <= 299) {
-          dfd.resolve(new WL.Response(this, null));
-        } else {
-          var transport = this;
-          if (this.status === 0) {
-            var errorCode = this.wlFailureStatus !== 'undefined' ? this.wlFailureStatus : WL.ErrorCode.UNEXPECTED_ERROR;
-            // handle errors - timeout, unresponsive host and unexpected error
-            transport.status = 0;
-            transport.responseJSON = {
-              errorCode: errorCode,
-              errorMsg: this.statusText //WL.Utils.formatString(WL.ClientMessages.handleTimeOut, finalUrl)
-            };
-          }
-
-          var failResponse = new WL.Response(transport, null);
-
-          // WL.Response sets status to 200 if transport.status is 0 - set it back to 0.
-          if (this.status === 0) {
-            failResponse.status = 0;
-          }
-
-          if (typeof(WLAuthorizationManager) !== 'undefined' && WLAuthorizationManager.__isOAuthError(transport) && authCounter < maxRequestAttempts) {
-            var scope = WLAuthorizationManager.__getScopeFromResponse(transport);
-            // if we got here, the cached auth header was missing or was not good;
-            // obtain the header again and retry the request
-            WLAuthorizationManager.obtainAuthorizationHeader(scope).then(
-              function() {
-                // The auth header was received successfully, increment number of attempts and continue
-                // The request should be constructed again, therefore this call is recursive
-                sendRequestAsync(contentString, ++authCounter)
-                  .then(
-                    function(response) {
-                      dfd.resolve(response);
-                    },
-                    function(error) {
-                      dfd.reject(error);
+                if (WL_.isArray(headerValue)) {
+                    /*jshint maxdepth:4*/
+                    if (headerValue.length > 0 && !isArrayOfSimpleTypes(headerValue)) {
+                        // complex type detected within array of values - throw error
+                        logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeaders');
                     }
-                  );
-              },
-              function(error) {
-                // unable to retrieve the authorization header, fail the request; the failure will be propagated up the chain
-                dfd.reject(error);
-              }
-            );
-          } else {
-            // it's not OAuth error or number of attempts is exceeded; fail the request with last error, which will be propagated up 
-            dfd.reject(failResponse);
-          }
+                } else if (!isSimpleType(headerValue)) {
+                    logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeaders');
+                }
+            }
         }
-      }
+
+        headers = {};
+        for (var key in requestHeaders) {
+            if (true) { // thanks jshint
+                var headerValueTemp = requestHeaders[key];
+                if (WL_.isArray(headerValueTemp)) {
+                    for (var item in headerValueTemp) {
+                        /*jshint maxdepth:5*/
+                        if (true) { // thanks jshint
+                            this.addHeader(key, headerValueTemp[item]);
+                        }
+                    }
+                } else {
+                    this.addHeader(key, headerValueTemp);
+                }
+            }
+        }
     };
 
-    // this is the first try  with cached authorization header, which may be null
-    if (typeof(WLAuthorizationManager) !== 'undefined') {
-      WLAuthorizationManager.__addHeadersToResourceRequest(xhr)
-        .always(
-          // send the request disregard the ability to obtain the client id and auth header
-          sendRequest
-        );
-    } else {
-      sendRequest();
-    }
+    /**
+     * Sets a new header or replaces an existing header with the same name.
+     * @param {name} Header name
+     * @param value Header value. The value must be of simple type (string, boolean or value).
+     */
+    this.setHeader = function(name, value) {
+        if (!isSimpleType(value)) {
+            // complex type detected instead of string - throw error
+            logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.setHeader');
+        }
 
-    /*jshint latedef:false*/
-    function sendRequest() {
-      xhr.send(method === 'GET' ? null : contentString, true);
-    }
-
-    return dfd.promise();
-  }
-
-  function buildRequestUrl() {
-    var dfd = WLJQ.Deferred();
-    if (url.indexOf('http:') >= 0 || url.indexOf('https:') >= 0) {
-      dfd.resolve(url);
-    } else {
-      WL.App.getServerUrl(
-        function(serverUrl) {
-          if (WL.Client.getEnvironment() === WL.Environment.WINDOWS8 || WL.Client.getEnvironment() === WL.Environment.WINDOWSPHONEUNIVERSAL  ) {
-            var index = serverUrl.indexOf('/apps/services');
-            if (index > -1) {
-              serverUrl = serverUrl.substr(0, index);
+        for (var headerName in headers) {
+            if (headerName.toLowerCase() === name.toLowerCase()) {
+                delete headers[headerName];
             }
-          }
-          dfd.resolve(__buildUrl(serverUrl));
-        },
-        function(error) {
-          dfd.reject(error);
         }
-      );
-    }
 
-    function __buildUrl(serverUrl) {
-      if (serverUrl[serverUrl.length - 1] !== '/' && url[0] !== '/') {
-        serverUrl += '/';
-      } else if (serverUrl[serverUrl.length - 1] === '/' && url[0] === '/') {
-        serverUrl = serverUrl.substring(0, serverUrl.length - 1);
-      }
+        headers[name] = value;
+    };
 
-      return serverUrl + url;
-    }
+    /**
+     * Adds a new header. If a header with the same name already exists, the header value will be added to the existing header. The name is
+     * case insensitive.
+     * @param {name} Header name
+     * @param {value} Header value. The value must be of simple type (string, number or boolean).
+     */
+    this.addHeader = function(name, value) {
+        if (typeof(value) === 'undefined' || value === null) {
+            logAndThrowError('Header value should not be null or undefined.', 'WLResourceRequest.addHeader');
+        }
+        if (!isSimpleType(value)) {
+            // complex type detected instead of string - throw error 
+            logAndThrowError('Header value should be a simple type.', 'WLResourceRequest.addHeader');
+        }
 
-    return dfd.promise();
-  }
-
-  function addRequestHeaders(xhr) {
-    for (var headerName in headers) {
-      if (true) {  // thanks jshint
-        var headerValue = headers[headerName];
-        if (isSimpleType(headerValue)) {
-          xhr.setRequestHeader(headerName, headerValue.toString());
+        var header = __getFirstHeaderByNameNoCase(name);
+        var existingHeaderName = header.name;
+        var existingHeaderValue = header.value;
+        if (existingHeaderValue === null) {
+            headers[name] = value;
         } else {
-          var commaSeparatedHeader = headerValue[0];
-          /*jshint maxdepth:4*/
-          for (var i = 1; i < headerValue.length; i++) {
-            commaSeparatedHeader += ', ' + headerValue[i];
-          }
-          xhr.setRequestHeader(headerName, commaSeparatedHeader);
+            if (WL_.isArray(existingHeaderValue)) {
+                for (var idx in existingHeaderValue) {
+                    /*jshint maxdepth:4*/
+                    if (existingHeaderValue[idx].toString() === value.toString()) {
+                        return;
+                    }
+                }
+                existingHeaderValue.push(value);
+            } else {
+                var array = [];
+                array.push(existingHeaderValue);
+                array.push(value);
+                headers[existingHeaderName] = array;
+            }
         }
-      }
-    }
-  }
+    };
 
-  function buildQueryString() {
-    if (queryParameters === null || typeof(queryParameters) === 'undefined' || WLJQ.isEmptyObject(queryParameters)) {
-      return null;
-    }
-
-    var queryString = '';
-    for (var paramKey in queryParameters) {
-      if (true) {  // thanks jshint
-        if (queryString.length > 0) {
-          queryString += '&';
+    function __getFirstHeaderByNameNoCase(name) {
+        for (var headerName in headers) {
+            if (headerName.toLowerCase() === name.toLowerCase()) {
+                return {
+                    name: headerName,
+                    value: headers[headerName]
+                };
+            }
         }
-        var value = queryParameters[paramKey];
-        var paramValue = isSimpleType(value) ? value : JSON.stringify(value);
-        queryString += paramKey + '=' + encodeURIComponent(paramValue);
-      }
+
+        return {
+            name: null,
+            value: null
+        };
     }
 
-    return queryString;
-  }
+    /**
+     * Returns request time out in milliseconds.
+     */
+    this.getTimeout = function() {
+        return timeout;
+    };
 
-  function isSimpleType(value) {
-    return (WL_.isString(value) || WL_.isNumber(value) || WL_.isBoolean(value));
-  }
+    /**
+     * Sets request timeout. If timeout is not specified, then a default timeout will be used.
+     * @param {requestTimeout} Request timeout in milliseconds.
+     */
+    this.setTimeout = function(requestTimeout) {
+        timeout = requestTimeout;
+    };
 
-  function isArrayOfSimpleTypes(object) {
-    for (var i = 0; i < object.length; i++) {
-      if (!isSimpleType(object[i])) {
-        return false;
-      }
+    /**
+     * Sends the request to a server.
+     * @param {content} Body content. It can be of simple type (like string), or object.
+     * @returns Returns promise. Sample usage: <br>
+     * var request = WLResourceRequest(url, method, timeout);<br>
+     * request.send(content).then(<br>
+     *  function(response) {// success flow}, <br>
+     *  function(error) {// fail flow} <br>
+     * );
+     */
+    this.send = function(content) {
+        var contentString = '';
+        if (typeof(content) !== 'undefined' && content !== null) {
+            contentString = isSimpleType(content) ? content.toString() : JSON.stringify(content);
+        }
+        return sendRequestAsync(contentString, 0);
+    };
+
+    /**
+     * Sends the request to a server.
+     * @param {json} Body content as JSON object or string as a form data. If content type is not set by 'Content-Type' header, it will be set to 'application/x-www-form-urlencoded'.
+     * @returns Returns promise. Sample usage: <br>
+     * var request = WLResourceRequest(url, method, timeout);<br>
+     * request.send(json).then(<br>
+     *  function(response) {// success flow}, <br>
+     *  function(error) {// fail flow} <br>
+     * );
+     */
+    this.sendFormParameters = function(json) {
+        var contentString = encodeFormParameters(json);
+        if (this.getHeader('Content-Type') === null) {
+            this.addHeader('Content-Type', 'application/x-www-form-urlencoded');
+        }
+
+        return sendRequestAsync(contentString, 0);
+    };
+
+    function encodeFormParameters(json) {
+        if (json === null || typeof(json) === 'undefined') {
+            return '';
+        }
+
+        var result = '';
+
+        if (isSimpleType(json)) {
+            var params = json.split('&');
+            for (var i = 0; i < params.length; i++) {
+                var kv = params[i].split('=');
+                if (kv.length === 0) {
+                    continue;
+                }
+
+                if (kv.length === 1) {
+                    result += encodeURIComponent(kv[0]);
+                } else {
+                    result += encodeURIComponent(kv[0]) + '=' + encodeURIComponent(kv[1]);
+                }
+
+                if (i < params.length - 1) {
+                    result += '&';
+                }
+            }
+            return result;
+        } else {
+            for (var key in json) {
+                if (true) { // thanks jshint
+                    var value = json[key];
+                    /*jshint maxdepth:4*/
+                    if (!isSimpleType(value)) {
+                        logAndThrowError('Form value must be a simple type.', 'WLResourceRequest.sendFormParameters');
+                    }
+
+                    result += encodeURIComponent(key) + '=' + encodeURIComponent(value);
+                    result += '&';
+                }
+            }
+
+            if (result.length > 0 && result[result.length - 1] === '&') {
+                result = result.substring(0, result.length - 1);
+            }
+
+            return result;
+        }
     }
-    return true;
-  }
+
+    function sendRequestAsync(contentString, authCounter) {
+        var dfd = WLJQ.Deferred();
+
+        buildRequestUrl()
+            .then(
+                function(serverUrl) {
+                    __send(serverUrl, contentString, authCounter).then(
+                        function(response) {
+                            dfd.resolve(response);
+                        },
+                        function(error) {
+                            dfd.reject(error);
+                        }
+                    );
+                },
+                function(error) {
+                    dfd.reject(error);
+                }
+            );
+
+        return dfd.promise();
+    }
+
+    var maxRequestAttempts = 4;
+
+    function __send(serverUrl, contentString, authCounter) {
+        var dfd = WLJQ.Deferred();
+
+        if (!WL.EnvProfile.isEnabled(WL.EPField.SUPPORT_OAUTH)) {
+            var transport = {
+                status: 0,
+                responseJSON: {
+                    errorCode: WL.ErrorCode.API_INVOCATION_FAILURE,
+                    errorMsg: WL.ClientMessages.unsupportedEnvironment
+                }
+            };
+            var failResponse = new WL.Response(transport, null);
+            dfd.reject(failResponse);
+            return dfd;
+        }
+
+        // create WLNativeXHR or XMLHttpRequest
+        var xhr = window.WLJSX.Ajax.getTransport();
+
+        var queryString = buildQueryString();
+        var finalUrl = queryString === null ? serverUrl : serverUrl + '?' + queryString;
+
+        xhr.open(method, finalUrl, true);
+
+        if (typeof(timeout) !== 'undefined') {
+            xhr.timeout = timeout;
+        }
+
+        addRequestHeaders(xhr);
+
+        xhr.onreadystatechange = function() {
+            if (this.readyState === 4) {
+                var transport = this;
+                if (this.status === 0) {
+                    var errorCode = this.wlFailureStatus !== 'undefined' ? this.wlFailureStatus : WL.ErrorCode.UNEXPECTED_ERROR;
+                    // handle errors - timeout, unresponsive host and unexpected error
+                    transport.status = 0;
+                    transport.responseJSON = {
+                        errorCode: errorCode,
+                        errorMsg: this.statusText //WL.Utils.formatString(WL.ClientMessages.handleTimeOut, finalUrl)
+                    };
+                }
+
+                var wlResponse = new WL.Response(transport, null);
+
+                // WL.Response sets status to 200 if transport.status is 0 - set it back to 0.
+                if (this.status === 0) {
+                    wlResponse.status = 0;
+                }
+
+                var isNotMaxRequestAttempts = authCounter < maxRequestAttempts;
+
+                // if isOAuthError is true , the cached auth header was missing or was not good
+                var isOAuthError = typeof(WLAuthorizationManager) !== 'undefined' && WLAuthorizationManager.__isOAuthError(transport);
+
+                // For WL response. Check if the response is OAuth error 
+                // For non WL response, If its not an OAuth error, go over all customeChallengeHandler and check if this response includes handle challenge for one of them.
+                // If true obtain token.				
+                if ((isOAuthError || WL.Client.isCustomResponse(wlResponse)) && isNotMaxRequestAttempts) {
+                    var scope = WLAuthorizationManager.__getScopeFromResponse(transport);
+                    // if we got here, the cached auth header was missing or was not good;
+                    // obtain the header again and retry the request
+                    WLAuthorizationManager.obtainAuthorizationHeader(scope).then(
+                        function() {
+                            // The auth header was received successfully, increment number of attempts and continue
+                            // The request should be constructed again, therefore this call is recursive
+                            sendRequestAsync(contentString, ++authCounter)
+                                .then(
+                                    function(response) {
+                                        dfd.resolve(response);
+                                    },
+                                    function(error) {
+                                        dfd.reject(error);
+                                    }
+                                );
+                        },
+                        function(error) {
+                            // unable to retrieve the authorization header, fail the request; the failure will be propagated up the chain
+                            dfd.reject(error);
+                        }
+                    );
+                }
+
+                // If the response is not for any CustomChallenge, check for status 200
+                else if (this.status === 200) {
+                    dfd.resolve(new WL.Response(this, null));
+                } else {
+                    // it's not OAuth error or number of attempts is exceeded; fail the request with last error, which will be propagated up 
+                    dfd.reject(wlResponse);
+                }
+            }
+        };
+
+        // this is the first try  with cached authorization header, which may be null
+        if (typeof(WLAuthorizationManager) !== 'undefined') {
+            WLAuthorizationManager.__addHeadersToResourceRequest(xhr)
+                .always(
+                    // send the request disregard the ability to obtain the client id and auth header
+                    sendRequest
+                );
+        } else {
+            sendRequest();
+        }
+
+        /*jshint latedef:false*/
+        function sendRequest() {
+            xhr.send(method === 'GET' ? null : contentString, true);
+        }
+
+        return dfd.promise();
+    }
+
+    function buildRequestUrl() {
+        var dfd = WLJQ.Deferred();
+        if (url.indexOf('http:') >= 0 || url.indexOf('https:') >= 0) {
+            dfd.resolve(url);
+        } else {
+            WL.App.getServerUrl(
+                function(serverUrl) {
+                    if (WL.Client.getEnvironment() === WL.Environment.WINDOWS8 || WL.Client.getEnvironment() === WL.Environment.WINDOWSPHONEUNIVERSAL) {
+                        var index = serverUrl.indexOf('/apps/services');
+                        if (index > -1) {
+                            serverUrl = serverUrl.substr(0, index);
+                        }
+                    }
+                    dfd.resolve(__buildUrl(serverUrl));
+                },
+                function(error) {
+                    dfd.reject(error);
+                }
+            );
+        }
+
+        function __buildUrl(serverUrl) {
+            if (serverUrl[serverUrl.length - 1] !== '/' && url[0] !== '/') {
+                serverUrl += '/';
+            } else if (serverUrl[serverUrl.length - 1] === '/' && url[0] === '/') {
+                serverUrl = serverUrl.substring(0, serverUrl.length - 1);
+            }
+
+            return serverUrl + url;
+        }
+
+        return dfd.promise();
+    }
+
+    function addRequestHeaders(xhr) {
+        for (var headerName in headers) {
+            if (true) { // thanks jshint
+                var headerValue = headers[headerName];
+                if (isSimpleType(headerValue)) {
+                    xhr.setRequestHeader(headerName, headerValue.toString());
+                } else {
+                    var commaSeparatedHeader = headerValue[0];
+                    /*jshint maxdepth:4*/
+                    for (var i = 1; i < headerValue.length; i++) {
+                        commaSeparatedHeader += ', ' + headerValue[i];
+                    }
+                    xhr.setRequestHeader(headerName, commaSeparatedHeader);
+                }
+            }
+        }
+    }
+
+    function buildQueryString() {
+        if (queryParameters === null || typeof(queryParameters) === 'undefined' || WLJQ.isEmptyObject(queryParameters)) {
+            return null;
+        }
+
+        var queryString = '';
+        for (var paramKey in queryParameters) {
+            if (true) { // thanks jshint
+                if (queryString.length > 0) {
+                    queryString += '&';
+                }
+                var value = queryParameters[paramKey];
+                var paramValue = isSimpleType(value) ? value : JSON.stringify(value);
+                queryString += paramKey + '=' + encodeURIComponent(paramValue);
+            }
+        }
+
+        return queryString;
+    }
+
+    function isSimpleType(value) {
+        return (WL_.isString(value) || WL_.isNumber(value) || WL_.isBoolean(value));
+    }
+
+    function isArrayOfSimpleTypes(object) {
+        for (var i = 0; i < object.length; i++) {
+            if (!isSimpleType(object[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 WLResourceRequest.GET = 'GET';

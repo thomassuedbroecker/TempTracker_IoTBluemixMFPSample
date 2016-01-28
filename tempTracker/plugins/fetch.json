@@ -1,12 +1,4 @@
 {
-    "cordova-plugin-mfp": {
-        "source": {
-            "type": "local",
-            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-mfp"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "org.apache.cordova.device": {
         "source": {
             "type": "local",
@@ -55,6 +47,14 @@
         "is_top_level": false,
         "variables": {}
     },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "local",
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-camera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-camera": {
         "source": {
             "type": "registry",
@@ -63,10 +63,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "org.apache.cordova.camera": {
+    "cordova-plugin-mfp": {
         "source": {
             "type": "local",
-            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-camera"
+            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-mfp"
         },
         "is_top_level": true,
         "variables": {}
@@ -87,45 +87,18 @@
         "is_top_level": false,
         "variables": {}
     },
-    "org.apache.cordova.file-transfer": {
-        "source": {
-            "type": "local",
-            "path": "/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/cordovacmd/cordova/plugins/cordova-plugin-file-transfer"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-inappbrowser": {
-        "source": {
-            "type": "git",
-            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-file-opener2": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/pwlin/cordova-plugin-file-opener2.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "com.ibm.mqa": {
-        "source": {
-            "type": "local",
-            "path": "/Users/tsuedbroecker/Downloads/CordovaPlugin-3"
+            "type": "registry",
+            "id": "cordova-plugin-file-opener2"
         },
         "is_top_level": true,
         "variables": {}
     },
     "cordova-plugin-spinner-dialog": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/Paldom/SpinnerDialog.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova-plugin-spinner-dialog"
         },
         "is_top_level": true,
         "variables": {}

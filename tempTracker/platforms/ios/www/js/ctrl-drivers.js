@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Get date from an external datasource using -->
+//            MFP Adapter                                -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-drivers', ['ngCordova'])
 
 .controller('DriversCtrl',function($scope, $state, $cordovaSpinnerDialog, ExchangeData){

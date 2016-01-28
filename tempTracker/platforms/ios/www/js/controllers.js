@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Provide the detailed information of a selcted data  -->
+//            Get data from cloudant -->
+// Comments:  'DetailsCtrl','CloudantCtrl'                                      -->
+// *************************************************-->
 angular.module('app.controllers', ['uiGmapgoogle-maps','ngCordova'])
 
 // Exchange Data Factory

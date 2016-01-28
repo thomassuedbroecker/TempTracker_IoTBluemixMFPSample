@@ -29,39 +29,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-mfp/bootstrap.js",
-        "id": "cordova-plugin-mfp.mfp",
-        "runs": true
-    },
-    {
-        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
-        "id": "org.apache.cordova.media.MediaError",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.media/www/Media.js",
-        "id": "org.apache.cordova.media.Media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransferError.js",
-        "id": "org.apache.cordova.file-transfer.FileTransferError",
-        "clobbers": [
-            "window.FileTransferError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.file-transfer/www/FileTransfer.js",
-        "id": "org.apache.cordova.file-transfer.FileTransfer",
-        "clobbers": [
-            "window.FileTransfer"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
         "id": "cordova-plugin-file-opener2.FileOpener2",
         "clobbers": [
@@ -69,81 +36,15 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.ibm.mqa/js/tracekit.js",
-        "id": "com.ibm.mqa.TraceKit",
-        "clobbers": [
-            "MQATrace"
-        ]
-    },
-    {
-        "file": "plugins/com.ibm.mqa/js/MQA.js",
-        "id": "com.ibm.mqa.MQA",
-        "clobbers": [
-            "MQA"
-        ]
+        "file": "plugins/cordova-plugin-mfp/bootstrap.js",
+        "id": "cordova-plugin-mfp.mfp",
+        "runs": true
     },
     {
         "file": "plugins/cordova-plugin-spinner-dialog/www/spinner.js",
         "id": "cordova-plugin-spinner-dialog.SpinnerDialog",
         "merges": [
             "window.plugins.spinnerDialog"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.device/www/device.js",
-        "id": "org.apache.cordova.device.device",
-        "clobbers": [
-            "device"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
-        "id": "org.apache.cordova.dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.dialogs/www/android/notification.js",
-        "id": "org.apache.cordova.dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
-        "id": "org.apache.cordova.globalization.GlobalizationError",
-        "clobbers": [
-            "window.GlobalizationError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
-        "id": "org.apache.cordova.globalization.globalization",
-        "clobbers": [
-            "navigator.globalization"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-        "id": "org.apache.cordova.inappbrowser.inappbrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.network-information/www/network.js",
-        "id": "org.apache.cordova.network-information.network",
-        "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
-        "id": "org.apache.cordova.network-information.Connection",
-        "clobbers": [
-            "Connection"
         ]
     },
     {
@@ -291,25 +192,94 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
+        "id": "org.apache.cordova.media.MediaError",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/Media.js",
+        "id": "org.apache.cordova.media.Media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.dialogs/www/android/notification.js",
+        "id": "org.apache.cordova.dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
+        "id": "org.apache.cordova.globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
+        "id": "org.apache.cordova.globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/network.js",
+        "id": "org.apache.cordova.network-information.network",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.network-information/www/Connection.js",
+        "id": "org.apache.cordova.network-information.Connection",
+        "clobbers": [
+            "Connection"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-camera": "1.2.0",
-    "cordova-plugin-mfp": "7.1.0",
-    "org.apache.cordova.media": "0.2.15",
-    "org.apache.cordova.file-transfer": "0.4.8",
+    "cordova-plugin-camera": "2.1.0",
     "cordova-plugin-file-opener2": "2.0.2",
-    "com.ibm.mqa": "3.0.14",
+    "cordova-plugin-mfp": "7.1.0",
     "cordova-plugin-spinner-dialog": "1.3.1",
+    "org.apache.cordova.file": "1.3.2",
+    "org.apache.cordova.media": "0.2.15",
     "org.apache.cordova.device": "0.2.13",
     "org.apache.cordova.dialogs": "0.2.11",
     "org.apache.cordova.geolocation": "0.3.11",
     "org.apache.cordova.globalization": "0.3.3",
     "org.apache.cordova.inappbrowser": "0.5.4",
-    "org.apache.cordova.network-information": "0.2.14",
-    "org.apache.cordova.file": "1.3.2"
+    "org.apache.cordova.network-information": "0.2.14"
 }
 // BOTTOM OF METADATA
 });

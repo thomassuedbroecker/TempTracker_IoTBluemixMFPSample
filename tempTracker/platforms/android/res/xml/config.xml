@@ -4,6 +4,9 @@
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
+    <feature name="FileOpener2">
+        <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2" />
+    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -19,21 +22,15 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
+    <feature name="SpinnerDialog">
+        <param name="android-package" value="hu.dpal.phonegap.plugins.SpinnerDialog" />
+    </feature>
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
     <feature name="Media">
         <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-    </feature>
-    <feature name="FileTransfer">
-        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
-    </feature>
-    <feature name="MQAPlugin">
-        <param name="android-package" value="com.ibm.mqa.MQAPlugin" />
-    </feature>
-    <feature name="SpinnerDialog">
-        <param name="android-package" value="hu.dpal.phonegap.plugins.SpinnerDialog" />
     </feature>
     <feature name="WLInitializationPlugin">
         <param name="android-package" value="com.worklight.androidgap.plugin.WLInitializationPlugin" />
@@ -128,7 +125,7 @@
     <update src="res/screen/android/splash-xhdpi.9.png" target="res/drawable-xhdpi/splash.9.png" />
     <update src="res/screen/android/splash-xxhdpi.9.png" target="res/drawable-xxhdpi/splash.9.png" />
     <preference name="loginDisplay" value="embedded" />
-    <preference name="wlNativeVersion" value="2734314068" />
+    <preference name="wlNativeVersion" value="2789997007" />
     <name>TempTracker</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -138,7 +135,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="mfpServerUrl" value="http://134.168.14.179:9080" />
+    <preference name="mfpServerUrl" value="http://134.168.4.50:9080" />
     <preference name="mfpServerRuntime" value="MobileFirstStarter" />
     <preference name="displayName" value="temptracker" />
     <preference name="mfpManualInit" value="false" />

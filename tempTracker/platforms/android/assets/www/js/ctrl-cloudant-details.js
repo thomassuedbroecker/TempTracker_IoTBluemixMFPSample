@@ -1,3 +1,11 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective:  Provide the AppNavigation inside the given details -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-cloudant-details', [])
 
 // Exchange Data Factory

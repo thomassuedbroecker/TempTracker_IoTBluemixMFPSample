@@ -1,7 +1,3 @@
-<!-- *************************************************-->
-<!-- Created or modified by Thomas Südbröcker         -->
-<!-- All usage is on your own risk no guarantee       -->
-<!-- *************************************************-->
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ibm.temptracker" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TempTracker</name>
@@ -36,7 +32,7 @@
         <update src="res/screen/android/splash-xhdpi.9.png" target="res/drawable-xhdpi/splash.9.png" />
         <update src="res/screen/android/splash-xxhdpi.9.png" target="res/drawable-xxhdpi/splash.9.png" />
         <preference name="loginDisplay" value="embedded" />
-        <preference name="wlNativeVersion" value="2734314068" />
+        <preference name="wlNativeVersion" value="2789997007" />
     </platform>
     <platform name="ios">
         <icon height="57" src="res/icon/ios/icon.png" width="57" />
@@ -66,10 +62,10 @@
         <splash height="2208" src="res/screen/ios/Default-736h~iphone.png" width="1242" />
         <splash height="1242" src="res/screen/ios/Default-736h-Landscape~iphone.png" width="2208" />
         <preference name="loginDisplay" value="embedded" />
-        <preference name="wlNativeVersion" value="1493550001" />
+        <preference name="wlNativeVersion" value="2929140589" />
     </platform>
-    <preference name="mfpServerUrl" value="ACTUAL_IP:ACTUAL_PORT" />
-    <preference name="mfpServerRuntime" value="ACTUAL_SERVER" />
+    <preference name="mfpServerUrl" value="http://134.168.4.50:9080" />
+    <preference name="mfpServerRuntime" value="MobileFirstStarter" />
     <preference name="displayName" value="temptracker" />
     <preference name="mfpManualInit" value="false" />
 </widget>

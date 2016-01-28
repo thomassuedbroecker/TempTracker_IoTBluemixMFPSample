@@ -70,5 +70,35 @@
  */
 - (NSDictionary*) generateNetworkResponseMetadataWithResponseData:(NSData*)data andTrackingId:(NSString*)trackingId;
 
+/**
+ This method begins recording application foreground and background events
+ @since IBM MobileFirst Platform v7.1.0
+ */
+- (void)startRecordingApplicationLifecycleEvents;
+
+/**
+ This method stops recording application foreground and background events
+ @since IBM MobileFirst Platform v7.1.0
+ */
+- (void)stopRecordingApplicationLifecycleEvents;
+
+/**
+ This method logs an analytic event for when the application enters the foreground
+ @since IBM MobileFirst Platform v7.1.0
+ */
+- (void)logAppForeground;
+
+/**
+ This method logs an analytic event for when the application enters the background
+ @since IBM MobileFirst Platform v7.1.0
+ */
+- (void)logAppBackground;
+
+/**
+ This method logs an analytic event for when the application enters the background due to a crash
+ @since IBM MobileFirst Platform v7.1.0
+ */
+- (void)logAppCrash;
+
 
 @end

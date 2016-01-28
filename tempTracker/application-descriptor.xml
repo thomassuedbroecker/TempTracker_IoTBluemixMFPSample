@@ -18,7 +18,7 @@
     <userIdentityRealms />
     <licenseAppType>APPLICATION</licenseAppType>
     <targetCategory>UNDEFINED</targetCategory>
-    <android version="1.0.9">
+    <android version="1.1.1">
         <worklightSettings include="false" />
         <security>
             <encryptWebResources enabled="false" />
@@ -26,7 +26,7 @@
             <publicSigningKey />
         </security>
     </android>
-    <iphone bundleId="com.ibm.temptracker" version="1.0.9">
+    <iphone bundleId="com.ibm.temptracker" version="1.1.1">
         <worklightSettings include="false" />
         <security>
             <encryptWebResources enabled="false" />

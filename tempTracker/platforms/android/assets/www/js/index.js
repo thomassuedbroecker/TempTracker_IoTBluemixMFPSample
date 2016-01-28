@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective:  MobileFirstServer Connection Init     -->
+//                                                  -->
+// Comments:                                        -->
+// *************************************************-->
 var Messages = {
     // Add here your messages for the default language.
     // Generate a similar file with a language suffix containing the translated messages.

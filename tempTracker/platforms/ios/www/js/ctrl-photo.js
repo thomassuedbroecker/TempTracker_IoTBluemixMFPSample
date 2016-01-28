@@ -1,3 +1,11 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// Objective: Create a Photo and store it in Bluemix-->
+//            Cloudant Database using MFP adapter   -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-photo', ['ngCordova'])
 
 // ***********************************************
@@ -31,7 +39,7 @@ angular.module('app.ctrl-photo', ['ngCordova'])
     if(currentCloudant!=undefined)
     {
         ExchangeData.cloudant = currentCloudant;
-    }  
+    }
     var data = ExchangeData.cloudant;
     var sensordata = new Object();
     doc.sensordatavalue = sensordata;

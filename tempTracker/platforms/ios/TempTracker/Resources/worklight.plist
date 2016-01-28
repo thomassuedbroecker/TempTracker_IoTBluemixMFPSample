@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>protocol</key>
-    <string>http</string>
-    <key>host</key>
-    <string>134.168.14.179</string>
-    <key>port</key>
-    <string>9080</string>
-    <key>wlServerContext</key>
-    <string>/MobileFirstStarter/</string>
-    <key>application id</key>
-    <string>com_ibm_temptracker</string>
-    <key>application version</key>
-    <string>1.0.9</string>
-    <key>environment</key>
-    <string>iphone</string>
-    <key>wlUid</key>
-    <string>xr5qApGzAX9BzqzGPxazjg==</string>
-    <key>platformVersion</key>
-    <string>7.1.0.0</string>
-    <key>buildtime</key>
-    <string>1453294274992</string>
-    <key>testWebResourcesChecksum</key>
-    <string>false</string>
-    <key>ignoredFileExtensions</key>
-    <string>png, jpg, jpeg, gif, mp4, mp3</string>
-    <key>wlMainFile</key>
-    <string>index.html</string>
-    <key>wlAppFamily</key>
-    <string></string>
-    <key>wlShareCookies</key>
-    <string></string>
-    <key>wlShareUserCert</key>
-    <string>false</string>
-    <key>wlSecureDirectUpdatePublicKey</key>
-    <string></string>
-  </dict>
+<dict>
+	<key>protocol</key>
+	<string>http</string>
+	<key>host</key>
+	<string>134.168.4.50</string>
+	<key>port</key>
+	<string>9080</string>
+	<key>wlServerContext</key>
+	<string>/MobileFirstStarter/</string>
+	<key>application id</key>
+	<string>com_ibm_temptracker</string>
+	<key>application version</key>
+	<string>1.1.1</string>
+	<key>environment</key>
+	<string>iphone</string>
+	<key>wlUid</key>
+	<string>Y2QxndKs/eNyOUBz5gQn8Q==</string>
+	<key>platformVersion</key>
+	<string>7.1.0.0</string>
+	<key>buildtime</key>
+	<string>1453976109501</string>
+	<key>testWebResourcesChecksum</key>
+	<string>false</string>
+	<key>ignoredFileExtensions</key>
+	<string>png, jpg, jpeg, gif, mp4, mp3</string>
+	<key>wlMainFile</key>
+	<string>index.html</string>
+	<key>wlAppFamily</key>
+	<string></string>
+	<key>wlShareCookies</key>
+	<string></string>
+	<key>wlShareUserCert</key>
+	<string>false</string>
+	<key>wlSecureDirectUpdatePublicKey</key>
+	<string></string>
+</dict>
 </plist>

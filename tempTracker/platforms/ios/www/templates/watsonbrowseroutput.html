@@ -1,3 +1,7 @@
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
 <!--
 https://blog.nraboy.com/2014/07/launch-external-urls-ionicframework/
 Code	Description
@@ -7,22 +11,25 @@ window.open(‘http://example.com’, ‘_blank’, ‘location=no’);	Loads in
 window.open(‘http://example.com’, ‘_self’);	Loads in the Cordova web view
 -->
 
+<!--
+ Please change to YOUR_BLUEMIXURL
+-->
 <ion-view title="Live Messages Sensorinformation">
     <ion-content>
         <div class="list">
-            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/audio', '_system', 'location=no'); return false;">
+            <a class="item" href="#" onclick="window.open('http://YOUR_BLUEMIXURL/audio', '_system', 'location=no'); return false;">
                 Get Live Messages
             </a>
-            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/cloudant', '_system', 'location=no'); return false;">
+            <a class="item" href="#" onclick="window.open('http://YOUR_BLUEMIXURL/cloudant', '_system', 'location=no'); return false;">
                 Get Sensor Data Server Page
             </a>
-            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/map', '_system', 'location=no'); return false;">
+            <a class="item" href="#" onclick="window.open('http://YOUR_BLUEMIXURL/map', '_system', 'location=no'); return false;">
                 Get Sensor Geo Data Server Page
             </a>
-            <a class="item" href="#" onclick="window.open('http://134.168.14.179:9080', '_system', 'location=no'); return false;">
+            <a class="item" href="#" onclick="window.open('http://YOUR_MOBILE_FIRST_STARTER_URL:YOUR_MOBILE_FIRST_STARTER_PORT', '_system', 'location=no'); return false;">
                 Get to IBM MobileFirstServer
             </a>
-            <a class="item" href="#" onclick="window.open('http://mytempiotdemo01.mybluemix.net/red', '_system', 'location=no'); return false;">
+            <a class="item" href="#" onclick="window.open('http://YOUR_BLUEMIXURL.mybluemix.net/red', '_system', 'location=no'); return false;">
                 Get to IBM Bluemix Node-Red
             </a>
         </div>

@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Using cloudant searchIndex to search  -->
+//            Item and use Options to Search        -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-find', ['ngCordova'])
 
 // ***********************************************
@@ -5,6 +14,7 @@ angular.module('app.ctrl-find', ['ngCordova'])
 //                =============
 // 1) Get Data from cloudants using searchIndex
 // 2) Able go to Details
+// 3) React on change of options or search input
 // ***********************************************
 .controller('FindCtrl',function($scope, $state, $cordovaSpinnerDialog, ExchangeData){
   $scope.cloudants = [];

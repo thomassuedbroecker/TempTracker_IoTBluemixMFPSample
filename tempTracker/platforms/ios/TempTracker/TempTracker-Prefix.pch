@@ -17,7 +17,7 @@
  under the License.
  */
 //
-// Prefix header for all source files of the 'comrade' target in the 'comrade' project
+// Prefix header for all source files of the 'TempTracker' target in the 'TempTracker' project
 //
 
 #ifdef __OBJC__

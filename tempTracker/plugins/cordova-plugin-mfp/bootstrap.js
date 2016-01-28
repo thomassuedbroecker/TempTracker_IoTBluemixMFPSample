@@ -19,22 +19,22 @@ function loadMFP(){
 
 	function loadStaticAppProps(){
 		//console.log("worklight/static_app_props.js");
-		injectScript("worklight/static_app_props.js",loadJQ,bootError);
+		injectScript(findCordovaPath() + "worklight/static_app_props.js",loadJQ,bootError);
 	}
 	
 	function loadJQ(){
 		//console.log("injecting script wljq.js");
-		injectScript("worklight/wljq.js",loadWorklight,bootError);
+		injectScript(findCordovaPath() + "worklight/wljq.js",loadWorklight,bootError);
 	}
 	
     function loadWorklight(){
 		//console.log("injecting script worklight.js");
-		injectScript("worklight/worklight.js",loadChecksum,bootError);
+		injectScript(findCordovaPath() + "worklight/worklight.js",loadChecksum,bootError);
 	}
 	
 	function loadChecksum (){
 		//console.log("injecting script checksum.js");
-		injectScript("worklight/checksum.js",mfpready,bootError);
+		injectScript(findCordovaPath() + "worklight/checksum.js",mfpready,bootError);
 	}
 	
 	function mfpready (){
@@ -109,3 +109,18 @@ setTimeout(function mfpTimeOut(){
 	 loadMFP();
  }
 },6000);
+
+
+function findCordovaPath() {
+    var path = null;
+    var scripts = document.getElementsByTagName('script');
+    var term = '/cordova.js';
+    for (var n = scripts.length-1; n>-1; n--) {
+        var src = scripts[n].src.replace(/\?.*$/, ''); // Strip any query param (CB-6007).
+        if (src.indexOf(term) === (src.length - term.length)) {
+            path = src.substring(0, src.length - term.length) + '/';
+            break;
+        }
+    }
+    return path;
+}

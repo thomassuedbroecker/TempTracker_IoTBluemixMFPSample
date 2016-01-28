@@ -1,3 +1,11 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Handle the Auth with MFP MFP adapter Auth -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-login', ['ngCordova'])
 
 .controller('LoginCtrl',function($scope, $state, ExchangeData){

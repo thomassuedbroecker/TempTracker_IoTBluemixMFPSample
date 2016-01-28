@@ -1,3 +1,16 @@
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+// *************************************************-->
+// Objective: App combines all needed controllers of the app   -->
+//            and provides the states of the app.              -->
+//            This is the overall naviation inside the app.    -->
+//            Calling the right module (business logic) and the right ->>
+//            presentation (template) based on the state -->
+// Comments:                                        -->
+// *************************************************-->
+
 angular.module('app', ['ionic',
                        'ngCordova',
                        'uiGmapgoogle-maps',

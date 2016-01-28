@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Provide the main Navigation           -->
+// Comments:                                        -->
+// *************************************************-->
+
 angular.module('app.ctrl-intro', ['ngCordova'])
 
 .controller('IntroCtrl',function($scope, $state, ExchangeData){

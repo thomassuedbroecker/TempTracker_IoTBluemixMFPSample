@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective: Get Data from Cloudant in Bluemix                   -->
+//            and show actual loction in Map using MFP adapter   -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-map', ['uiGmapgoogle-maps','ngCordova'])
 // ***********************************************
 //                Location sample
@@ -15,7 +24,7 @@ angular.module('app.ctrl-map', ['uiGmapgoogle-maps','ngCordova'])
    // Make data available
    var data = ExchangeData.cloudant;
    $scope.cloundant = ExchangeData.cloudant;
-   
+
    console.log('MapCtrl Controller Data: ', data);
    // LOADING CURRENT LOCATION
      // DEFINE OWN LOCATION and Information

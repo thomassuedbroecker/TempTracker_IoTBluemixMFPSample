@@ -65,7 +65,3 @@ or ```<gap:plugin name="hu.dpal.phonegap.plugins.spinnerdialog" source="plugins.
     window.plugins.spinnerDialog.hide();
     
 Note: on Android platform, multiple show calls builds up a stack (LIFO) which means hide will dismiss the last spinner added with show call.
-
-## License
-
-MIT License

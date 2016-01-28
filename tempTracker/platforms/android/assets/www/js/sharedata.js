@@ -1,3 +1,13 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective:  Provide a Data Exchange and Reuse for -->
+//            all Modules                           -->
+// Comments:                                        -->
+// *************************************************-->
+
 angular.module('app.factories', [])
 // Exchange Data between Modules
 // Usage in Controller:

@@ -1,3 +1,12 @@
+// *************************************************-->
+// Created or modified by Thomas Südbröcker         -->
+// All usage is on your own risk no guarantee       -->
+// *************************************************-->
+// *************************************************-->
+// Objective:  Create a socket connection to Bluemix-->
+//            Using Text2Speech                     -->
+// Comments:                                        -->
+// *************************************************-->
 angular.module('app.ctrl-store-device-location', ['uiGmapgoogle-maps','ngCordova'])
 
 // ***********************************************

@@ -8,17 +8,16 @@
 /img/container.png
 /img/icon-1.png
 /img/iotlogo80x80.png
+/img/iotlogo80x800.png
 /img/ipad.png
 /img/iphone.png
 /img/live.news.png
 /img/samsung.png
 /img/sensor-detail.png
-/img/sensor-sample-overview.png
 /img/successWithIBM.jpg
 /img/temptracker.png
 /img/thumbnail.png
 /index.html
-/js/MQA.js
 /js/app.js
 /js/controllers.js
 /js/ctrl-chart.js
@@ -34,7 +33,6 @@
 /js/ctrl-watson-output.js
 /js/index.js
 /js/sharedata.js
-/js/tracekit.js
 /lib/bower_components/Chart.js/.bower.json
 /lib/bower_components/Chart.js/.travis.yml
 /lib/bower_components/Chart.js/CONTRIBUTING.md
@@ -244,8 +242,6 @@
 /lib/ionic/scss/ionicons/_ionicons-variables.scss
 /lib/ionic/scss/ionicons/ionicons.scss
 /lib/ionic/version.json
-/plugins/com.ibm.mqa/js/MQA.js
-/plugins/com.ibm.mqa/js/tracekit.js
 /plugins/cordova-plugin-camera/www/Camera.js
 /plugins/cordova-plugin-camera/www/CameraConstants.js
 /plugins/cordova-plugin-camera/www/CameraPopoverHandle.js
@@ -256,8 +252,6 @@
 /plugins/org.apache.cordova.device/www/device.js
 /plugins/org.apache.cordova.dialogs/www/android/notification.js
 /plugins/org.apache.cordova.dialogs/www/notification.js
-/plugins/org.apache.cordova.file-transfer/www/FileTransfer.js
-/plugins/org.apache.cordova.file-transfer/www/FileTransferError.js
 /plugins/org.apache.cordova.file/www/DirectoryEntry.js
 /plugins/org.apache.cordova.file/www/DirectoryReader.js
 /plugins/org.apache.cordova.file/www/Entry.js
@@ -291,6 +285,7 @@
 /templates/chart.html
 /templates/detailscloudant.html
 /templates/find.html
+/templates/index.html
 /templates/intro.html
 /templates/login.html
 /templates/logout.html
