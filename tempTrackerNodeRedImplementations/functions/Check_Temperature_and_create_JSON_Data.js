@@ -30,7 +30,8 @@ if ( msg !== null)
   // Get the concrete Sensor data
   // the input can be different based on your device/app type:
   // "Apple, Android, Simulator do have different datastructure in the payload"
-
+    //-----------------------------------------------------------------------
+    data.temp = "20.0000"; // default
     if (msg.payload.d.AmbTemp !== undefined) {
         data.temp     = msg.payload.d.AmbTemp;      // Typical Apple datastructure
     }
@@ -42,7 +43,8 @@ if ( msg !== null)
     if (msg.payload.d.temp !== undefined) {
         data.temp     = msg.payload.d.temp;          // Typical Simulator datastructure
     }
-
+    //--------------------------------------------------------------------------
+    data.iptemp = "20.0000"; //default
     if (msg.payload.d.IRTemp !== undefined) {
         data.irtemp   = msg.payload.d.IRTemp;        // Typical Apple datastructure
     }
@@ -54,7 +56,7 @@ if ( msg !== null)
     if (msg.payload.d.objectTemp !== undefined) {
         data.irtemp   = msg.payload.d.objectTemp;    // Typical Simulator datastructure
     }
-
+    //--------------------------------------------------------------------------
     data.optical = 0; // default if not defined by others
 
     if (msg.payload.d.optical !== undefined) {
@@ -64,7 +66,7 @@ if ( msg !== null)
     if (msg.payload.d.light !== undefined) {
         data.optical  = msg.payload.d.light;      // Typical Android datastructure
     }
-
+    //--------------------------------------------------------------------------
     data.deviceId = msg.deviceId; // Typical datastructure for all
 
   // *****************
