@@ -64,8 +64,8 @@
         <preference name="loginDisplay" value="embedded" />
         <preference name="wlNativeVersion" value="2929140589" />
     </platform>
-    <preference name="mfpServerUrl" value="http://134.168.4.50:9080" />
-    <preference name="mfpServerRuntime" value="MobileFirstStarter" />
+    <preference name="mfpServerUrl" value="http://192.168.179.40:10080" />
+    <preference name="mfpServerRuntime" value="tempTrackerServer" />
     <preference name="displayName" value="temptracker" />
     <preference name="mfpManualInit" value="false" />
 </widget>
