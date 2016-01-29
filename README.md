@@ -33,6 +33,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    1. Get the TI Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/ )
    2. Get a Bluemix Account (https://console.ng.bluemix.net)
    3. Instantiate IoT Foundation Starter + add Text2Speech service (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
+   (https://console.ng.bluemix.net/catalog/services/speech-to-text/)
    4. Instantiate "ibm-mobilefirst-starter Container – Small 1 GB" (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
    5. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
 )
