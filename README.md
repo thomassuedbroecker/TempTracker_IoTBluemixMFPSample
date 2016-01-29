@@ -1,6 +1,6 @@
-# TempTracker a IoT Bluemix and MFP Sample
+# "TempTracker" a IoT Bluemix and MFP Sample
 
-For more details please visit WIKI:
+For more details please visit WIKIs:
 
 * [Basic Documentation](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Basic-Documentation-TempTracker--Sample)
 
@@ -9,7 +9,7 @@ For more details please visit WIKI:
 * [Code to be changed in the sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
 ***
-## 1. The Objective of the TempTracker sample
+## 1. The objective of the "TempTracker" sample
 
 The objective is to help to understand how the integration technical works between:
 
@@ -21,7 +21,7 @@ The objective is to help to understand how the integration technical works betwe
   6. MobileFirst
 
 ***
-## 2. TempTracker Sample on YouTube
+## 2. The "TempTracker" Sample on YouTube
 
 On YouTube: IoT Cloud, Bluemix and MobileFirst ... trying to understand
 https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
