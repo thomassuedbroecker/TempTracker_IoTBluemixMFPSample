@@ -34,9 +34,10 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    2. Get a Bluemix Account (https://console.ng.bluemix.net)
    3. Instantiate IoT Foundation Starter + add Text2Speech service (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
    (https://console.ng.bluemix.net/catalog/services/speech-to-text/)
-   4. Instantiate "ibm-mobilefirst-starter Container – Small 1 GB" (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
-   5. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
+   4. Get a Google Maps JavaScript API Key (https://www.google.com/work/mapsearth/)
+   5. Instantiate "ibm-mobilefirst-starter Container – Small 1 GB" (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
+   6. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
 )
-   6. Install Android SDK(http://developer.android.com/sdk/installing/index.html)
-   7. Install a Editor or IDE on your machine (https://atom.io)
-   8. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
+   7. Install Android SDK(http://developer.android.com/sdk/installing/index.html)
+   8. Install a Editor or IDE on your machine (https://atom.io)
+   9. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
