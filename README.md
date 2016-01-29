@@ -26,7 +26,7 @@ The objective is to help to understand how the integration technical works betwe
 On YouTube: IoT Cloud, Bluemix and MobileFirst ... trying to understand
 https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
 
-## 3. Environment Prerequisites run use the full TempTracker sample
+## 3. Environment Prerequisites to use the full TempTracker sample
 
 Here are the prerequisites you need to setup the environment, to run the full "TempTracker" sample.
 
