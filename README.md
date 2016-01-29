@@ -1,4 +1,4 @@
-# "TempTracker" a IoT Bluemix and MFP Sample
+# "TempTracker" a IoT Bluemix and MobileFristPlatform sample
 
 For more details please visit WIKIs:
 
@@ -18,10 +18,10 @@ The objective is to help to understand how the integration technical works betwe
   3. Bluemix
   4. Bluemix Services
   5. Bluemix Container
-  6. MobileFirst
+  6. MobileFirstPlatform
 
 ***
-## 2. The "TempTracker" Sample on YouTube
+## 2. The "TempTracker" sample on YouTube
 
 On YouTube: IoT Cloud, Bluemix and MobileFirst ... trying to understand
 https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
