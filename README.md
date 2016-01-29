@@ -37,7 +37,5 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    5. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
 )
    6. Install Android SDK(http://developer.android.com/sdk/installing/index.html)
-   7. Install a Editor (https://atom.io)
-
-
-Install an IDE locally – for example Android Studio 1.4 or Atom
+   7. Install a Editor or IDE on your machine (https://atom.io)
+   8. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
