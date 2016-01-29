@@ -44,6 +44,11 @@ angular.module('app.ctrl-drivers', ['ngCordova'])
   function getComradesFailure (result){
      console.log('Failure getting a comrades list', result);
      $cordovaSpinnerDialog.hide();
+     WL.SimpleDialog.show(
+        "Failure in getting the Driver Data", result,
+        [{text: "OK, thanks", handler: function() {WL.Logger.debug(result); }
+        }]
+     );
   }
 
   $scope.goto = function(comrade) {
