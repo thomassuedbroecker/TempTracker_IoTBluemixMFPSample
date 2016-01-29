@@ -1,4 +1,4 @@
-# "TempTracker" a IoT Bluemix and MobileFristPlatform sample
+# "TempTracker" a IoT Bluemix and MobileFirstPlatform sample
 
 For more details please visit WIKIs:
 
