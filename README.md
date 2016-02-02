@@ -53,7 +53,7 @@ The setup is divided in **two main steps**:
 
    2. Setting up the **Mobile application based on MobileFirst in Chapter 4.2**. This part is important to have a Mobile application and to use the given data from the sensor on a mobile device, report a problem, take picture ....
 
-Note: Just take a look the sample UseCases defined in **Chapter 0.**
+Note: Just take a look at the sample UseCases defined in **Chapter 0.**
 Feel free to use the parts separately.
 
 ***
