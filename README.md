@@ -9,6 +9,26 @@ For more details please visit WIKIs:
 * [Code to be changed in the sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
 ***
+## 0. Introduction to the Topic
+
+Monitor sensible ware (goods, food, electronics, etc. ) temperature – ware which is stored in special containers that have sensors for location and temperature control.
+
+* **Questions:**
+- Is the Temperature in critical condition?
+- How can I notify the closest service operator or the driver in case of emergency?
+
+* **Objective:**
+Monitor the state of the container and notify on emergency
+Report a problem if needed with Picture / Comment
+Get a list of currently available drivers to check the situation
+
+* **Solution:**
+The temperature sensors can be connected and managed over the Bluemix IoT cloud service
+monitored over a mobile application having the backend running on Bluemix.
+The mobile application allows feedback (comments and picture)
+Notifications can be sent via SMS, Twitter, email, voice, etc.
+
+***
 ## 1. The objective of the "TempTracker" sample
 
 The objective is to help to understand how the integration technical works between:
