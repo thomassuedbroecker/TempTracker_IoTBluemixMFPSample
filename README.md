@@ -136,14 +136,14 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
    2. Install an IDE locally – for example Android Studio 1.4 or Atom
    3. Make sure you have Java JDK, Ant and Android SDK installed
    4. On a Windows System set environment variables: JAVA_HOME
-   5. Set ANDROID_HOME to the installation directory of the Android sdk
-   6. Set Path : add ANDROID_HOME/platform-tools and ANDROID_HOME/tools to your path
-   7. Set ANT_HOME to the installation directory of your ant
+   5. Set **ANDROID_HOME** to the installation directory of the Android sdk
+   6. Set Path : add **ANDROID_HOME/platform-tools** and **ANDROID_HOME/tools** to your path
+   7. Set **ANT_HOME** to the installation directory of your ant
 
 ***
 #### 4.2.2 Configuration for Front End – MobileFirst locally
 
-  1. Create a new workspace folder for mobilefirst
+  1. If you want, you can create a new workspace folder for your MobileFirst projects
   2. Clone the git repository into a local folder, by entering the following commandline: **git clone https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git**
   3. Note: you can also download the sources as zip from here:
   (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
@@ -151,7 +151,7 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ***
 #### 4.2.3 Start the MobileFirst server locally
 
-  1. Open a command line window in the tempTrackerServer folder and run mfp start command
+  1. Open a command line window in the tempTrackerServer folder and run *mfp start* command
   2. In a Browser, check if the server is running: url: localhost:10080/worklightconsole
   User/password: admin/admin
 
@@ -159,7 +159,7 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ####  4.2.4 Use an editor to add your credentials
 
   1. In Atom (or another editor) import the projects
-  2. Navigate to tempTrackerServer/adapters/ and open CloudantAdapter.xml
+  2. Navigate to ./tempTrackerServer/adapters/ and open **CloudantAdapter.xml**
   3. Enter your Cloudant credentials in the marked lines (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   4. Save your changes
 
@@ -174,35 +174,35 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 
   1. In Bluemix go to your MFP Container
   2. Open MobileFirstConsole to Manage the MobileFirstServer (http://YOUR_CONTAINER_IP:9080/)
-  3. Click open console on the webpage
-  4. Click "Add Adapters and Applications" in the left upper corner in the console
-  5. Add the adapters from folder ../tempTrackerServer/bin  - filename.adapter
+  3. Click **Open Console** under the Manage on the webpage
+  4. Click *Add new Applications or Adapters* in the left upper corner in the console
+  5. Add and upload the adapters from folder ../tempTrackerServer/bin  - filename.adapter
 
 ***
 ####  4.2.7  Make the MobileFirst Server from Bluemix known locally
 
-  1. Using command line, cd to tempTracker directory
+  1. Using command line, cd to ../tempTracker directory
   2. enter: **mfp server add**
-  3. Enter a name: BluemixServer
+  3. Enter a name: **BluemixServer**
   4. Enter the url of your server (the ip address of the Docker container in Bluemix)
   5. Enter the login and password
   6. You will have to register first and choose a password
   7. Save the password Y
-  8. Context root: worklightadmin
+  8. Context root: **worklightadmin**
 
 ***
 ####  4.2.8  Change the client code in the TempTracker MobileApp
 
   1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
-  2. In .. config.xml – change the ip to match your mfp docker
+  2. In .. **config.xml** – change the ip to match your mfp docker
   3. In … **www/template/watsonbrowseroutput.xml** – change the url and ip
-  4. In … index.html - change the google api key // you will need to generate a google browser key
+  4. In … **index.html** - change the google api key // you will need to generate a google browser key
   5. Save your changes
 
 ***
 ####  4.2.9  Push the MobileFirst client to the MobileFirst Server on Bluemix
 
-  1. Open a command line window and cd to the /tempTracker folder (after changes)
+  1. Open a command line window and cd to the ../tempTracker folder (after changes)
   2. enter: **mfp push BluemixServer**
   3. This will push the changes to the MobileFirst Server in the container on Bluemix
 
@@ -211,4 +211,4 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   1. In the Android sdk installation directory  / start “ADV manager.exe” over command line
   2. Create new Android Virtual Device
   3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
-  4. Run as preview in the "Chrome Browser" using the commandline in the ./tempTracker directory: **mfp cordova preview**
+  4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
