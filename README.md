@@ -68,6 +68,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ***
 ### 3.2 Mobile App related
+
    1. Get a Google Maps JavaScript API Key (https://www.google.com/work/mapsearth/)
    2. Instantiate "ibm-mobilefirst-starter Container – Small 1 GB" (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
    3. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
