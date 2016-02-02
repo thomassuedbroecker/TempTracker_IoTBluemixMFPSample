@@ -143,20 +143,34 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ***
 ####  4.2.7  Make the MobileFirst Server from Bluemix known locally
 
-1. Using command line, cd to tempTracker directory
-2. enter: mfp server add
-3. Enter a name: BluemixServer
-4. Enter the url of your server (the ip address of the Docker container in Bluemix)
-5. The login and password
-6. You will have to register first and choose a password
-7. Save the password Y
-8. Context root: worklightadmin
+  1. Using command line, cd to tempTracker directory
+  2. enter: mfp server add
+  3. Enter a name: BluemixServer
+  4. Enter the url of your server (the ip address of the Docker container in Bluemix)
+  5. The login and password
+  6. You will have to register first and choose a password
+  7. Save the password Y
+  8. Context root: worklightadmin
 
 ***
 ####  4.2.8  Change the client code in tempTracker
 
-1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
-2. In .. config.xml – change the ip to match your mfp docker
-3. In … www/template/watsonbrowseroutput.xml – change the url and ip
-4. In… index.html - change the google api key // you will need to generate a google browser key
-5. Save your changes
+  1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+  2. In .. config.xml – change the ip to match your mfp docker
+  3. In … www/template/watsonbrowseroutput.xml – change the url and ip
+  4. In … index.html - change the google api key // you will need to generate a google browser key
+  5. Save your changes
+
+***
+####  4.2.9  Push the MobileFirst client to the MobileFirst Server on Bluemix
+
+  1. Open a command line window and cd to the /tempTracker folder (after changes)
+  2. enter: mfp push BluemixServer
+  3. This will push the changes to the MobileFirst Server in the container on Bluemix
+
+***
+####  4.2.10  Run the App on the emulator or your MobileFirst preview
+  1. In the Android sdk installation directory  / start “ADV manager.exe” over command line
+  2. Create new Android Virtual Device
+  3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
+  4. Run as preview in the "Chrome Browser" using the commandline in the ./tempTracker directory: mfp cordova preview
