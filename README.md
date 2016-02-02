@@ -180,7 +180,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   8. Context root: worklightadmin
 
 ***
-####  4.2.8  Change the client code in tempTracker
+####  4.2.8  Change the client code in the TempTracker MobileApp
 
   1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   2. In .. config.xml – change the ip to match your mfp docker
