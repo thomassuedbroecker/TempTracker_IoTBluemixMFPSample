@@ -9,7 +9,7 @@ For more details please visit WIKIs:
 ***
 **Table of content of the readme.md**
 
-  0. [Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#0-introduction-for-possible-usecase-the-topics-for-the-integrated-usage-of-iot-bluemix-and-mobile)
+  0. [Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#0-introduction-for-possible-usecases-of-the-topics-for-an-integrated-usage-of-iot-bluemix-and-mobile)
   1. [The objective of the "TempTracker" sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#1-the-objective-of-the-temptracker-sample)
   2. [The "TempTracker" sample on YouTube](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#2-the-temptracker-sample-on-youtube)
   3. [Environment Prerequisites to use the full TempTracker sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#3-environment-prerequisites-to-use-the-full-temptracker-sample)
