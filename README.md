@@ -57,45 +57,43 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ***
 #### 4.1.1 Create the Bluemix application
 
-    1. Get yourself a Bluemix Account – register at bluemix.net
-    2. Instantiate IoT Foundation Starter ([https://www.ng.bluemix.net/docs/starters/IoT/iot500.html](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html))
-    3. Give it a name <<your app name>>
-    4. After your application is running – click ADD A SERVICE OR API
-    5. Select Text to Speech from the Catalog
-    6. Search for entering “Text to “ in the Search field and click the icon
-    7. Create your Text To Speech service instance
-    8. Click CREATE
-    9. Restage the application
-    10. Instantiate ibm-mobilefirst-starter Container (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
+  1. Get yourself a Bluemix Account – register at bluemix.net
+  2. Instantiate IoT Foundation Starter (https://www.ng.bluemix.net/docs/starters/IoT/iot500.html)
+  3. Give it a name <<your app name>>
+  4. After your application is running – click ADD A SERVICE OR API
+  5. Select Text to Speech from the Catalog
+  6. Search for entering “Text to “ in the Search field and click the icon
+  7. Create your Text To Speech service instance
+  8. Click CREATE
+  9. Restage the application
+  10. Instantiate ibm-mobilefirst-starter Container (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
 
 ***
 #### 4.1.2 Node-RED Configuration
 
-    1. On Bluemix, go to your application and click on the url to open your Node-RED
-    2. Delete the content of the default created sheet by selecting all and DEL
-    3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard
-    Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/1QC39ld)
-    4. Import from Clipboard
-    5. Make changes in yours in the lines marked with CHANGE as comment in code
-    6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
-    7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
-    (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+  1. On Bluemix, go to your application and click on the url to open your Node-RED
+  2. Delete the content of the default created sheet by selecting all and DEL
+  3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/1QC39ld)
+  4. Import from Clipboard
+  5. Make changes in yours in the lines marked with CHANGE as comment in code
+  6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+  7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
 ***
 #### 4.1.3 CloudantDB setup
 
-    1. In your Bluemix Appliction, click the Cloudant service from your application
-    2. Open the dashboard of your Cloudant service by clicking LAUNCH
-    3. Click Create Database
-    4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
-    5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
+  1. In your Bluemix Appliction, click the Cloudant service from your application
+  2. Open the dashboard of your Cloudant service by clicking LAUNCH
+  3. Click Create Database
+  4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
+  5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
 
 ***
 #### 4.1.4 Connect the sensor and check the data with your Bluemix application
 
-    1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
-    2. Configure the IoT-Node in Node-RED using the given DeviceID
-    3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
+  1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
+  2. Configure the IoT-Node in Node-RED using the given DeviceID
+  3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
 
 ***
 ### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
