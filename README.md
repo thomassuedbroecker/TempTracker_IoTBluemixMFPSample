@@ -50,9 +50,13 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
 ## 4. Concrete Steps to Setup TempTracker
+
+***
 ### 4.1 Concrete Steps to Setup TempTracker – (all Bluemix tasks)
+
 ***
 #### 4.1.1 Create the Bluemix application
+
     1. Get yourself a Bluemix Account – register at bluemix.net
     2. Instantiate IoT Foundation Starter (https://www.ng.bluemix.net/docs/starters/IoT/iot500.html)
     3. Give it a name <<your app name>>
@@ -66,6 +70,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ***
 #### 4.1.2 Node-RED Configuration
+
     1. On Bluemix, go to your application and click on the url to open your Node-RED
     2. Delete the content of the default created sheet by selecting all and DEL
     3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard
@@ -75,6 +80,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
     7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
     (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+
 ***
 #### 4.1.3 CloudantDB setup
 
