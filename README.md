@@ -77,7 +77,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
 ***
-## 4. Concrete Steps to Setup the TempTracker Sample
+## 4. Concrete Steps to Setup the full TempTracker Sample
 
 ***
 ### 4.1 Concrete Steps to Setup TempTracker – (all Bluemix tasks)
