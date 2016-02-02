@@ -58,7 +58,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 #### 4.1.1 Create the Bluemix application
 
     1. Get yourself a Bluemix Account – register at bluemix.net
-    2. Instantiate IoT Foundation Starter (https://www.ng.bluemix.net/docs/starters/IoT/iot500.html)
+    2. Instantiate IoT Foundation Starter ([https://www.ng.bluemix.net/docs/starters/IoT/iot500.html](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html))
     3. Give it a name <<your app name>>
     4. After your application is running – click ADD A SERVICE OR API
     5. Select Text to Speech from the Catalog
