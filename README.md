@@ -89,3 +89,65 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     1. Get the Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
     2. Configure the IoT-Node in Node-RED using the given DeviceID
     3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
+
+***
+### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
+
+***
+#### 4.2.1 Development Environment – MobileFirst locally
+   1. Locally install MobileFirst CLI installer  –if you have troubles running the installation directly, here a command line example: install_windows.exe LAX_VM "C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.exe“
+   2. Install an IDE locally – for example Android Studio 1.4 or Atom
+   3. Make sure you have Java JDK, Ant and Android SDK installed
+   4. On a Windows System set environment variables: JAVA_HOME
+   5. Set ANDROID_HOME to the installation directory of the Android sdk
+   6. Set Path : add ANDROID_HOME/platform-tools and ANDROID_HOME/tools to your path
+   7. Set ANT_HOME to the installation directory of your ant
+
+***
+#### 4.2.2 Configuration for Front End – MobileFirst locally
+
+  1. Create a new workspace folder for mobilefirst
+  2. Clone the git repository into a local folder: git clone https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git
+  Note: you can also download the sources as zip from here:
+  (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
+
+***
+#### 4.2.3 Start the MobileFirst server locally
+
+  1. Open a command line window in the tempTrackerServer folder and run mfp start command
+  2. In a Browser, check if the server is running: url: localhost:10080/worklightconsole
+  User/password: admin/admin
+
+***
+####  4.2.4 Use an editor to add your credentials
+
+  1. In Atom (or another editor) import the projects
+  2. Navigate to tempTrackerServer/adapters/ and open CloudantAdapter.xml
+  3. Enter your Cloudant credentials in the marked lines (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+  4. Save your changes
+
+***
+####  4.2.5  Redeploy the adapters on the local MobileFirst server
+  1. Open command line to the ./tempTrackerServer folder
+  2. enter: mfp push local
+
+***
+####  4.2.6  Add the adapters to the MobileFirst Server on the Bluemix container
+
+  1. In Bluemix go to your MFP Container
+  2. Open MobileFirstConsole to Manage the MobileFirstServer (http://YOUR_CONTAINER_IP:9080/)
+  3. Click open console on the webpage
+  4. Click "Add Adapters and Applications" in the left upper corner in the console
+  5. Add the adapters from folder ../tempTrackerServer/bin  - filename.adapter
+
+***
+####  4.2.6  Make the MobileFirst Server from Bluemix known locally
+
+1. Using command line, cd to tempTracker directory
+2. enter: mfp server add
+3. Enter a name: BluemixServer
+4. Enter the url of your server (the ip address of the Docker container in Bluemix)
+5. The login and password
+6. You will have to register first and choose a password
+7. Save the password Y
+8. Context root: worklightadmin
