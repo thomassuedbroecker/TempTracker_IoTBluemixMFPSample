@@ -69,6 +69,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    5. Install a Editor or IDE on your machine (https://atom.io)
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
+***
 ## 4. Concrete Steps to Setup TempTracker
 
 ***
