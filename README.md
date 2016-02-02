@@ -63,12 +63,13 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     8. Click CREATE
     9. Restage the application
     10. Instantiate ibm-mobilefirst-starter Container (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
+
 ***
 #### 4.1.2 Node-RED Configuration
     1. On Bluemix, go to your application and click on the url to open your Node-RED
     2. Delete the content of the default created sheet by selecting all and DEL
     3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard
-    Either you have it cloned with git or you can get it from git.hub here: http://bit.ly/1QC39ld
+    Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/1QC39ld)
     4. Import from Clipboard
     5. Make changes in yours in the lines marked with CHANGE as comment in code
     6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
@@ -86,7 +87,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ***
 #### 4.1.4 Connect the sensor and check the data with your Bluemix application
 
-    1. Get the Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
+    1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
     2. Configure the IoT-Node in Node-RED using the given DeviceID
     3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
 
@@ -95,6 +96,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ***
 #### 4.2.1 Development Environment – MobileFirst locally
+
    1. Locally install MobileFirst CLI installer  –if you have troubles running the installation directly, here a command line example: install_windows.exe LAX_VM "C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.exe“
    2. Install an IDE locally – for example Android Studio 1.4 or Atom
    3. Make sure you have Java JDK, Ant and Android SDK installed
@@ -107,7 +109,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 #### 4.2.2 Configuration for Front End – MobileFirst locally
 
   1. Create a new workspace folder for mobilefirst
-  2. Clone the git repository into a local folder: git clone https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git
+  2. Clone the git repository into a local folder: git clone (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git)
   Note: you can also download the sources as zip from here:
   (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
 
@@ -128,6 +130,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ***
 ####  4.2.5  Redeploy the adapters on the local MobileFirst server
+
   1. Open command line to the ./tempTrackerServer folder
   2. enter: mfp push local
 
