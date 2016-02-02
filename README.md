@@ -49,9 +49,10 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    5. Install a Editor or IDE on your machine (https://atom.io)
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
-## 4. Concrete Steps to Setup TempTracker – (all Bluemix tasks)
+## 4. Concrete Steps to Setup TempTracker
+### 4.1 Concrete Steps to Setup TempTracker – (all Bluemix tasks)
 ***
-### 4.1 Create the Bluemix application
+#### 4.1.1 Create the Bluemix application
     1. Get yourself a Bluemix Account – register at bluemix.net
     2. Instantiate IoT Foundation Starter (https://www.ng.bluemix.net/docs/starters/IoT/iot500.html)
     3. Give it a name <<your app name>>
@@ -61,10 +62,9 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     7. Create your Text To Speech service instance
     8. Click CREATE
     9. Restage the application
-    10. Instantiate ibm-mobilefirst-starter Container
-(https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
+    10. Instantiate ibm-mobilefirst-starter Container (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
 ***
-### 4.2 Node-RED Configuration
+#### 4.1.2 Node-RED Configuration
     1. On Bluemix, go to your application and click on the url to open your Node-RED
     2. Delete the content of the default created sheet by selecting all and DEL
     3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard
@@ -75,7 +75,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
     (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 ***
-### 4.3 CloudantDB setup
+#### 4.1.3 CloudantDB setup
 
     1. In your Bluemix Appliction, click the Cloudant service from your application
     2. Open the dashboard of your Cloudant service by clicking LAUNCH
@@ -84,7 +84,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
 
 ***
-### 4.4 Connect the sensor and check the data with your Bluemix application
+#### 4.1.4 Connect the sensor and check the data with your Bluemix application
 
     1. Get the Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
     2. Configure the IoT-Node in Node-RED using the given DeviceID
