@@ -109,7 +109,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
 
 ***
-#### 4.1.4 Connect the sensor and check the data with your Bluemix application
+#### 4.1.4 Connect the sensor to the IoT Cloud and check the data with your Bluemix application
 
   1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
   2. Configure the IoT-Node in Node-RED using the given DeviceID
@@ -156,7 +156,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ####  4.2.5  Redeploy the adapters on the local MobileFirst server
 
   1. Open command line to the ./tempTrackerServer folder
-  2. enter: mfp push local
+  2. enter: **mfp push local**
 
 ***
 ####  4.2.6  Add the adapters to the MobileFirst Server on the Bluemix container
@@ -171,7 +171,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ####  4.2.7  Make the MobileFirst Server from Bluemix known locally
 
   1. Using command line, cd to tempTracker directory
-  2. enter: mfp server add
+  2. enter: **mfp server add**
   3. Enter a name: BluemixServer
   4. Enter the url of your server (the ip address of the Docker container in Bluemix)
   5. Enter the login and password
@@ -184,7 +184,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
   1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   2. In .. config.xml – change the ip to match your mfp docker
-  3. In … www/template/watsonbrowseroutput.xml – change the url and ip
+  3. In … **www/template/watsonbrowseroutput.xml** – change the url and ip
   4. In … index.html - change the google api key // you will need to generate a google browser key
   5. Save your changes
 
@@ -192,7 +192,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ####  4.2.9  Push the MobileFirst client to the MobileFirst Server on Bluemix
 
   1. Open a command line window and cd to the /tempTracker folder (after changes)
-  2. enter: mfp push BluemixServer
+  2. enter: **mfp push BluemixServer**
   3. This will push the changes to the MobileFirst Server in the container on Bluemix
 
 ***
@@ -200,4 +200,4 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   1. In the Android sdk installation directory  / start “ADV manager.exe” over command line
   2. Create new Android Virtual Device
   3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
-  4. Run as preview in the "Chrome Browser" using the commandline in the ./tempTracker directory: mfp cordova preview
+  4. Run as preview in the "Chrome Browser" using the commandline in the ./tempTracker directory: **mfp cordova preview**
