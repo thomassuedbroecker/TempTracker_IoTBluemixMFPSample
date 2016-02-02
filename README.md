@@ -127,6 +127,8 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ***
 ### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
 
+More details about the used Frameworks? Take a look [here](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Basic-Documentation-TempTracker--Sample#6-frameworks-and-tool-versions-used-for-the-mobile-application)
+
 ***
 #### 4.2.1 Development Environment – MobileFirst locally
 
