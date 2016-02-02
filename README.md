@@ -16,7 +16,7 @@ For more details please visit WIKIs:
   4. [Concrete Steps to Setup the full TempTracker Sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#4-concrete-steps-to-setup-the-full-temptracker-sample)
 
 ***
-## 0. Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile
+## 0. Introduction for possible UseCases of the topics for an integrated usage of IoT, Bluemix and Mobile
 
 Monitor sensible ware (goods, food, electronics, etc. ) temperature – ware which is stored in special containers that have sensors for location and temperature control.
 
