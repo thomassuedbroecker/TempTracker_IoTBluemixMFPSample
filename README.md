@@ -1,4 +1,4 @@
-# "TempTracker" a IoT Bluemix and MobileFirstPlatform sample
+# "TempTracker" a IoT Cloud, Bluemix and MobileFirstPlatform sample
 
 For more details you can visit these TempTracker WIKI Sites:
 * [Basic Documentation](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Basic-Documentation-TempTracker--Sample)
