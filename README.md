@@ -57,11 +57,11 @@ https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
 
 Here are the prerequisites you need to setup the environment, to run the full "TempTracker" sample.
 
-The setup is divided in two main steps:
+The setup is divided in **two main steps**:
 
- 1. Setting up the Bluemix application **Chapter 4.1**. The Bluemix application is the important to get and store the sensor data inside the cloudant database and to integrate the services.
+ 1. Setting up the **Bluemix application in Chapter 4.1**. The Bluemix application is the important to get and store the sensor data inside the cloudant database and to integrate the services.
 
- 2. Setting up the Mobile application based on MobileFirst **Chapter 4.2**. This part is important to have a Mobile application and to use the given data on a mobile device. 
+ 2. Setting up the **Mobile application based on MobileFirst in Chapter 4.2**. This part is important to have a Mobile application and to use the given data from the sensor on a mobile device, report a problem, take picture .... 
 
 Note: Just take a look the sample UseCases defined in **Chapter 0.**
 Feel free to you the parts separately.
