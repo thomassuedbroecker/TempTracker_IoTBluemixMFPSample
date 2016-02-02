@@ -14,8 +14,8 @@ For more details please visit WIKIs:
 Monitor sensible ware (goods, food, electronics, etc. ) temperature – ware which is stored in special containers that have sensors for location and temperature control.
 
 * **Questions:**
-- Is the Temperature in critical condition?
-- How can I notify the closest service operator or the driver in case of emergency?
+  - Is the Temperature in critical condition?
+  - How can I notify the closest service operator or the driver in case of emergency?
 
 * **Objective:**
 Monitor the state of the container and notify on emergency
