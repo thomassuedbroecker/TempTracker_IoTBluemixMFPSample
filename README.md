@@ -147,7 +147,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   2. enter: mfp server add
   3. Enter a name: BluemixServer
   4. Enter the url of your server (the ip address of the Docker container in Bluemix)
-  5. The login and password
+  5. Enter the login and password
   6. You will have to register first and choose a password
   7. Save the password Y
   8. Context root: worklightadmin
