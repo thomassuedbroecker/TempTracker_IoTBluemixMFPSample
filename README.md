@@ -1,12 +1,18 @@
 # "TempTracker" a IoT Bluemix and MobileFirstPlatform sample
 
 For more details please visit WIKIs:
-
 * [Basic Documentation](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Basic-Documentation-TempTracker--Sample)
-
 * [Source folder content description](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Source-Folder-content-description)
-
 * [Code to be changed in the sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+* [Setup steps for the full TempTracker Sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Setup-steps-for-the-full-TempTracker-Sample)
+
+***
+**Table of content**
+0. Introduction to the Topic
+1. The objective of the "TempTracker" sample
+2. The "TempTracker" sample on YouTube
+3. Environment Prerequisites to use the full TempTracker sample
+4. Concrete Steps to Setup TempTracker Sample
 
 ***
 ## 0. Introduction to the Topic
@@ -70,7 +76,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
 ***
-## 4. Concrete Steps to Setup TempTracker
+## 4. Concrete Steps to Setup TempTracker Sample
 
 ***
 ### 4.1 Concrete Steps to Setup TempTracker – (all Bluemix tasks)
