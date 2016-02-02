@@ -32,7 +32,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ***
 
-# Bluemix App related
+### 3.1 Bluemix App related
 
    1. Get the TI Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/ )
    2. Get a Bluemix Account (https://console.ng.bluemix.net)
@@ -40,7 +40,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    (https://console.ng.bluemix.net/catalog/services/speech-to-text/)
 
 ***
-# Mobile App related
+### 3.2 Mobile App related
    1. Get a Google Maps JavaScript API Key (https://www.google.com/work/mapsearth/)
    2. Instantiate "ibm-mobilefirst-starter Container – Small 1 GB" (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
    3. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
@@ -51,7 +51,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 
 ## 4. Concrete Steps to Setup TempTracker – (all Bluemix tasks)
 ***
-### a) Create the app
+### 4.1 Create the Bluemix application
     1. Get yourself a Bluemix Account – register at bluemix.net
     2. Instantiate IoT Foundation Starter (https://www.ng.bluemix.net/docs/starters/IoT/iot500.html)
     3. Give it a name <<your app name>>
@@ -64,7 +64,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     10. Instantiate ibm-mobilefirst-starter Container
 (https://www.ng.bluemix.net/docs/images/mobilefirst/index.html)
 ***
-### b) Node-RED Configuration
+### 4.2 Node-RED Configuration
     1. On Bluemix, go to your application and click on the url to open your Node-RED
     2. Delete the content of the default created sheet by selecting all and DEL
     3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard
@@ -75,7 +75,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address
     (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 ***
-### c) CloudantDB setup
+### 4.3 CloudantDB setup
 
     1. In your Bluemix Appliction, click the Cloudant service from your application
     2. Open the dashboard of your Cloudant service by clicking LAUNCH
@@ -84,7 +84,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
     5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
 
 ***
-### d) Connect the sensor and check the data with your Bluemix application
+### 4.4 Connect the sensor and check the data with your Bluemix application
 
     1. Get the Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
     2. Configure the IoT-Node in Node-RED using the given DeviceID
