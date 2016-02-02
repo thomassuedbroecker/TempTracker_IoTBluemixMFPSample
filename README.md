@@ -9,11 +9,11 @@ For more details please visit WIKIs:
 ***
 **Table of content**
 
-  0. Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile
-  1. The objective of the "TempTracker" sample
-  2. The "TempTracker" sample on YouTube
-  3. Environment Prerequisites to use the full TempTracker sample
-  4. Concrete Steps to Setup TempTracker Sample
+  0. [Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#0-introduction-for-possible-usecase-the-topics-for-the-integrated-usage-of-iot-bluemix-and-mobile)
+  1. [The objective of the "TempTracker" sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#1-the-objective-of-the-temptracker-sample)
+  2. [The "TempTracker" sample on YouTube](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#2-the-temptracker-sample-on-youtube)
+  3. [Environment Prerequisites to use the full TempTracker sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#3-environment-prerequisites-to-use-the-full-temptracker-sample)
+  4. [Concrete Steps to Setup the TempTracker Sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#4-concrete-steps-to-setup-the-full-temptracker-sample)
 
 ***
 ## 0. Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile
@@ -77,7 +77,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
 ***
-## 4. Concrete Steps to Setup TempTracker Sample
+## 4. Concrete Steps to Setup the TempTracker Sample
 
 ***
 ### 4.1 Concrete Steps to Setup TempTracker – (all Bluemix tasks)
