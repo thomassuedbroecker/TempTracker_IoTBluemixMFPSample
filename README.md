@@ -8,14 +8,15 @@ For more details please visit WIKIs:
 
 ***
 **Table of content**
-0. Introduction to the Topic
-1. The objective of the "TempTracker" sample
-2. The "TempTracker" sample on YouTube
-3. Environment Prerequisites to use the full TempTracker sample
-4. Concrete Steps to Setup TempTracker Sample
+
+  0. Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile
+  1. The objective of the "TempTracker" sample
+  2. The "TempTracker" sample on YouTube
+  3. Environment Prerequisites to use the full TempTracker sample
+  4. Concrete Steps to Setup TempTracker Sample
 
 ***
-## 0. Introduction to the Topic
+## 0. Introduction for possible UseCase the Topics for the integrated usage of IoT, Bluemix and Mobile
 
 Monitor sensible ware (goods, food, electronics, etc. ) temperature – ware which is stored in special containers that have sensors for location and temperature control.
 
