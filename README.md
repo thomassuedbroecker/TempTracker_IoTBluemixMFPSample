@@ -141,7 +141,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   5. Add the adapters from folder ../tempTrackerServer/bin  - filename.adapter
 
 ***
-####  4.2.6  Make the MobileFirst Server from Bluemix known locally
+####  4.2.7  Make the MobileFirst Server from Bluemix known locally
 
 1. Using command line, cd to tempTracker directory
 2. enter: mfp server add
@@ -151,3 +151,12 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 6. You will have to register first and choose a password
 7. Save the password Y
 8. Context root: worklightadmin
+
+***
+####  4.2.8  Change the client code in tempTracker
+
+1. Note: follow the instructions in code to be changed: (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
+2. In .. config.xml – change the ip to match your mfp docker
+3. In … www/template/watsonbrowseroutput.xml – change the url and ip
+4. In… index.html - change the google api key // you will need to generate a google browser key
+5. Save your changes
