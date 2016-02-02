@@ -62,8 +62,9 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 ### 3.1 Bluemix App related
 
    1. Get the TI Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/ )
-   2. Get a Bluemix Account (https://console.ng.bluemix.net)
-   3. Instantiate IoT Foundation Starter + add Text2Speech service (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
+   2. In case you don't have a real Sensor you can use alternative : https://quickstart.internetofthings.ibmcloud.com/iotsensor/ in the upper left corner is the DeviceID you later must use inside Node-RED for the IoT-Node.
+   3. Get a Bluemix Account (https://console.ng.bluemix.net)
+   4. Instantiate IoT Foundation Starter + add Text2Speech service (https://console.ng.bluemix.net/catalog/starters/internet-of-things-foundation-starter/)
    (https://console.ng.bluemix.net/catalog/services/speech-to-text/)
 
 ***
@@ -121,6 +122,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 #### 4.1.4 Connect the sensor to the IoT Cloud and check the data with your Bluemix application
 
   1. Get the Sensor and connect to IoT Cloud (https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/)
+  2. In case you don't have a real Sensor you can use alternative : https://quickstart.internetofthings.ibmcloud.com/iotsensor/ in the upper left corner is the DeviceID you later must use inside Node-RED for the IoT-Node.
   2. Configure the IoT-Node in Node-RED using the given DeviceID
   3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
 
