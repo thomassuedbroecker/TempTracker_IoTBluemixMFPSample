@@ -133,8 +133,8 @@ Here are the prerequisites you need to setup the environment, to run the full "T
 #### 4.2.2 Configuration for Front End – MobileFirst locally
 
   1. Create a new workspace folder for mobilefirst
-  2. Clone the git repository into a local folder: git clone (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git)
-  Note: you can also download the sources as zip from here:
+  2. Clone the git repository into a local folder, by entering the following commandline: **git clone https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample.git**
+  3. Note: you can also download the sources as zip from here:
   (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample)
 
 ***
