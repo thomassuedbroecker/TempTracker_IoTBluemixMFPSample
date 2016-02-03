@@ -1,5 +1,4 @@
 # "TempTracker" a IoT Cloud, Bluemix and MobileFirstPlatform sample
-
 For more details you can visit these TempTracker "GitHub WIKI Sites":
 
 * [Basic Documentation](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Basic-Documentation-TempTracker--Sample)
@@ -15,6 +14,9 @@ For more details you can visit these TempTracker "GitHub WIKI Sites":
   2. [The "TempTracker" sample on YouTube](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#2-the-temptracker-sample-on-youtube)
   3. [Environment Prerequisites to use the full TempTracker sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#3-environment-prerequisites-to-use-the-full-temptracker-sample)
   4. [Concrete Steps to Setup the full TempTracker Sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#4-concrete-steps-to-setup-the-full-temptracker-sample)
+***
+
+A alternative Introduction can be found here: [A IoT Cloud, Bluemix and MobileFirst Sample – What makes you happy?](https://mfp.help/2016/02/03/iot/)
 
 ***
 ## 0. Introduction for possible UseCases of the topics for an integrated usage of IoT, Bluemix and Mobile
