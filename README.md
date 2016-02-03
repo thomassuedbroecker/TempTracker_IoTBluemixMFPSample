@@ -127,7 +127,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   2. Open the dashboard of your Cloudant service by clicking LAUNCH
   3. Click Create Database
   4. Create a new database named “my_demo_iot_db” This will simplify your usage of the provided code
-  5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv)
+  5. Create new Search Index  - use the documentation in ..\TempTracker_IoTBluemixMFPSample-master\tempTrackCloudantConfiguration or (http://bit.ly/1TnfJFv) to do that
 
 ***
 #### 4.1.4 Connect the sensor to the IoT Cloud and check the data with your Bluemix application
