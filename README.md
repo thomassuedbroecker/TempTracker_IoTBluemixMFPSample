@@ -115,6 +115,8 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   3. Copy the ClipboardNodeRed-containsAllNodes.txt content into the Clipboard Either you have it cloned with git or you can get it from git.hub here:(http://bit.ly/1QC39ld)
   4. Import from Clipboard
   5. Make changes in yours in the lines marked with CHANGE as comment in code
+  Please use the WIKI link for the detailed instructions: under Node-RED
+  (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
