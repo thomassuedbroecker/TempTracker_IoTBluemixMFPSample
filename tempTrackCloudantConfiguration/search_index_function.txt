@@ -7,10 +7,16 @@ For understanding background take a look here:
 https://developer.ibm.com/answers/questions/208950/node-red-cloudant-search-index-configuration-retur.html#answer-248075
 
 a) Names:
-=======
+=========
 
-DesignDocumentName: _d_search
-IndexName:          _inx_all
+1. Launch your cloudant database
+2. Select you **my_demo_iot_db** database
+3. Press the **+** Button behind _All Design Doc_
+4. Select _Add SearchIndex_
+
+Name inside the new DesignDocument:
+   DesignDocumentName: _d_search
+   IndexName:          _inx_all
 
 b) searchIndexFunction Implementation:
 ==================================
