@@ -65,12 +65,12 @@ Feel free to use the parts separately.
 On YouTube: IoT Cloud, Bluemix and MobileFirst ... trying to understand
 https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
 
+***
 ## 3. Environment Prerequisites to use the full TempTracker sample
 
 Here are the prerequisites you need to setup the environment, to run the full "TempTracker" sample.
 
 ***
-
 ### 3.1 Bluemix App related
 
    1. Get the TI Sensor and connect to IoT Cloud ( https://developer.ibm.com/recipes/tutorials/connect-a-cc2650-sensortag-to-the-iot-foundations-quickstart/ )
