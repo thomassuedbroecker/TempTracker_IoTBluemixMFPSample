@@ -151,7 +151,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    * **.. /audio**
 
       ![Template Audio Page](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/template-audio-data.jpg)
-      
+
 ***
 ### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
 
@@ -240,3 +240,17 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   2. Create new Android Virtual Device
   3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
+
+  Sample usage:
+
+  * update geo data
+
+  ![Mobile Update Geo Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-update-geo-data.jpg)
+
+  * search data
+
+  ![Mobile Update Geo Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-search-data.jpg)
+
+  * get live data
+
+  ![Mobile Get Live Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-getlive-data.jpg)
