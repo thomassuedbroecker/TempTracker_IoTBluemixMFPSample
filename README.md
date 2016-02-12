@@ -151,6 +151,7 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    * **.. /audio**
 
       ![Template Audio Page](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/template-audio-data.jpg)
+      
 ***
 ### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
 
