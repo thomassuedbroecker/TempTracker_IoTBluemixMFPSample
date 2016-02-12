@@ -140,6 +140,17 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   2. Configure the IoT-Node in Node-RED using the given DeviceID
   3. Check the display of the sensor data on http://YOUR_BLUEMIX_APP_URL/map and in CloudantDB
 
+  * **.. /cloudant**
+
+    ![Template All Data Page](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/template-all-data.jpg)
+
+  * **.. /map**
+
+    ![Template GeoLocation Page](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/template-map-data.jpg)
+
+   * **.. /audio**
+
+      ![Template Audio Page](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/template-audio-data.jpg)
 ***
 ### 4.2 Concrete Steps to Setup TempTracker – (all MobileFirst tasks)
 
