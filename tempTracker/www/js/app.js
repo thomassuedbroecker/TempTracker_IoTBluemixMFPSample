@@ -27,7 +27,8 @@ angular.module('app', ['ionic',
                        'app.ctrl-map',
                        'app.ctrl-photo',
                        'app.ctrl-store-device-location',
-                       'app.ctrl-watson-output'])
+                       'app.ctrl-watson-output',
+                       'app.ctrl-reatime-output'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   console.log("Config Started successfully");
@@ -142,6 +143,16 @@ angular.module('app', ['ionic',
     .state('watsonBrowserOutput', {
       url: '/watsonBrowserOutput',
       templateUrl: 'templates/watsonbrowseroutput.html'
+    })
+
+    // **********************************
+    //       CONNECT TO SOCKET
+    // **********************************
+    .state('realtime', {
+      url: '/realtime',
+      cache: false,
+      controller: 'RealtimeOutputCtrl',
+      templateUrl: 'templates/detailsrealtimecloudant.html'
     })
     ;
 

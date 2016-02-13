@@ -1,0 +1,34 @@
+<!-- *************************************************-->
+<!-- Created or modified by Thomas Südbröcker         -->
+<!-- All usage is on your own risk no guarantee       -->
+<!-- *************************************************-->
+<!-- *************************************************-->
+<!--           Temperature Realtime detail            -->
+<!--      <img ng-src='img/thumbnail.png'>            -->
+<!-- *************************************************-->
+<ion-view title="Temperature Realtime detail">
+    <ion-content padding="true" class="has-header">
+        <div style="height: 40px;" class="spacer"></div>
+        <ion-list>
+            <ion-item>
+                <p>Connection Status: {{connectionStatus}}</p>
+                <p>Current Message Counct: {{messageCount}}</p>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" ng-show="connected">
+                <img ng-src='{{currentCloudant.sensordatavalue.deviceImageURI}}'>
+                <h2>DeviceId: {{currentCloudant.sensordatavalue.deviceId}}</h2>
+                <p> DeviceType: {{currentCloudant.sensordatavalue.deviceType}}</p>
+                <p> State: {{currentCloudant.sensordatavalue.status}}</p>
+            </ion-item>
+            <ion-item ng-show="connected">Celsius - Temperature
+               <p ng-show="connected">{{currentCloudant.sensordatavalue.temp}}</p>
+            </ion-item>
+            <ion-item ng-show="connected">Celsius - IR Temperature
+               <p>{{currentCloudant.sensordatavalue.irtemp}}</p>
+            </ion-item>
+            <ion-item ng-show="connected">Optical
+               <p>{{currentCloudant.sensordatavalue.optical}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

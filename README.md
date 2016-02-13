@@ -225,7 +225,8 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   2. In .. **config.xml** – change the ip to match your mfp docker
   3. In … **www/template/watsonbrowseroutput.xml** – change the url and ip
   4. In … **index.html** - change the google api key // you will need to generate a google browser key
-  5. Save your changes
+  6. In … **www/js/ctrl-realtime-data-output.js** – change the url
+  7. Save your changes
 
 ***
 ####  4.2.9  Push the MobileFirst client to the MobileFirst Server on Bluemix
