@@ -49,14 +49,17 @@ angular.module('app.ctrl-reatime-output', ['ngCordova'])
     socket.onmessage = function(msg){
         var sensorData = JSON.parse(msg.data);
         messageCount = messageCount + 1;
+        $scope.connectionStatus = "Connected pending Sensor Data";
+
         if (sensorData !== undefined){
            $scope.currentCloudant = sensorData;
            $scope.messageCount = messageCount;
            $scope.connected = true;
+           $scope.connectionStatus = "Connected getting Sensor Data";
         } else {
            $scope.messageCount = 0;
            $scope.connected = false;
+           $scope.connectionStatus = "Connected no valid Sensor Data";
         }
-        $scope.$apply();
     };
 })
