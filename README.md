@@ -244,7 +244,8 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
 
-  Sample usage:
+***
+  **Sample usage:**
 
   * update geo data
 
@@ -258,10 +259,11 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 
   ![Mobile Get Live Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-getlive-data.jpg)
 
-
+***
 ## 5 Known limitations
 
-1. How to run on real iOS device?_
+***
+1. How to run on real iOS device?
 
   If you want to run the app on a real iOS device, you must follow this steps:
   * a) Disable BitCode
@@ -274,10 +276,14 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
     	   <true/>
     	  </dict>``
 
-2. Photo limitation on iOS_
+***
+2. Photo limitation on iOS
+
   If the photos should be also taken on a iOS device, the module **ctrl-photo.js**
   must be enhanced to do that.
   In this sample **Photo is only working for Android.**
 
-3. Live Message does not work with Safari or the default browser of Android_
+***
+3. Live Message does not work with Safari or the default browser of Android
+
   To get the life messages on the iOS/android devices the chrome or firefox browser must be installed and defined as the default browser on the devices.
