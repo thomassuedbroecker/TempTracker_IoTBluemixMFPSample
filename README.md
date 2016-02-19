@@ -245,6 +245,34 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
 
 ***
+### 4.2.11 **Optional:** Add MQA to Bluemix Application and configure MobileApp
+
+Add the MQA Bluemix service to your Bluemix application following the steps in this ![Guide on Bluemix](https://www.ng.bluemix.net/docs/services/MobileQualityAssurance/index.html?s_tact=C43202QW)
+
+Based on the feedback in ![Stackoverflow](http://stackoverflow.com/questions/34175784/app-start-breaks-when-mobile-quality-assurance-cordova-plugin) you only have to do following steps.
+
+1. Download the latest cordova sdk : http://www-01.ibm.com/support/docview.wss?uid=swg27044490
+2. In the app directory, I add the MQA plugin: "mfp cordova plugin add /path/to/MQA/sdk"
+3. the the **tempTracker/www/js/index.js** file,  add following  MQA code in the **wlCommonInit()** function:
+
+    `MQA.startNewSession({
+             reportOnShakeEnabled: true,
+             mode: 'QA',
+                 ios: {
+                         appKey: "YOU_IOS_KEY",
+                         screenShotsFromGallery: true,
+                       },
+                 android: {
+                         appKey: "YOU_ANDROID_KEY",
+                         screenShotsFromGallery: true,
+                 }
+            },{
+               success: function () {console.log("MQA Session Started successfully");},
+               error: function (string) { console.log("MQA Session error" + string);}
+    });`
+
+
+***
   **Sample usage:**
 
   * update geo data
