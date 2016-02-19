@@ -286,4 +286,6 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ***
 3. Live Message does not work with Safari or the default browser of Android
 
-  To get the life messages on the iOS/android devices the chrome or firefox browser must be installed and defined as the default browser on the devices.
+  To get the life messages on the iOS/android devices.
+  The chrome or firefox browser must be installed and defined as the default browser on the android devices.
+  On iOS it will not work, because no other default browser can be configured.
