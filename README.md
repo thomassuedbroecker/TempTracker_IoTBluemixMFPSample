@@ -247,9 +247,9 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ***
 ### 4.2.11 **Optional:** Add MQA to Bluemix Application and configure MobileApp
 
-Add the MQA Bluemix service to your Bluemix application following the steps in this ![Guide on Bluemix](https://www.ng.bluemix.net/docs/services/MobileQualityAssurance/index.html?s_tact=C43202QW)
+Add the MQA Bluemix service to your Bluemix application following the steps in this [Guide on Bluemix](https://www.ng.bluemix.net/docs/services/MobileQualityAssurance/index.html?s_tact=C43202QW)
 
-Based on the feedback in ![Stackoverflow](http://stackoverflow.com/questions/34175784/app-start-breaks-when-mobile-quality-assurance-cordova-plugin) you only have to do following steps.
+Based on the feedback in [StackOverflow](http://stackoverflow.com/questions/34175784/app-start-breaks-when-mobile-quality-assurance-cordova-plugin) you only have to do following steps.
 
 1. Download the latest cordova sdk : http://www-01.ibm.com/support/docview.wss?uid=swg27044490
 2. In the app directory, I add the MQA plugin: "mfp cordova plugin add /path/to/MQA/sdk"
