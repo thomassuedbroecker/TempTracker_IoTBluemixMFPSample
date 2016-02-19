@@ -14,6 +14,8 @@ For more details you can visit these TempTracker "GitHub WIKI Sites":
   2. [The "TempTracker" sample on YouTube](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#2-the-temptracker-sample-on-youtube)
   3. [Environment Prerequisites to use the full TempTracker sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#3-environment-prerequisites-to-use-the-full-temptracker-sample)
   4. [Concrete Steps to Setup the full TempTracker Sample](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample#4-concrete-steps-to-setup-the-full-temptracker-sample)
+  5. Known limitations
+
 ***
 
 A alternative Introduction can be found here: [A IoT Cloud, Bluemix and MobileFirst Sample – What makes you happy?](https://mfp.help/2016/02/03/iot/)
@@ -256,7 +258,9 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 
   ![Mobile Get Live Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-getlive-data.jpg)
 
-  **NOTE:**
+
+## 5 Known limitations
+
   _1) How to run on real iOS device?_
 
   If you want to run the app on a real iOS device, you must follow this steps:
@@ -271,6 +275,9 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
     	  </dict> '
 
   _2) Photo limitation on iOS_
-  If the photos should be also taken on a iOS device the module **ctrl-photo.js**
+  If the photos should be also taken on a iOS device, the module **ctrl-photo.js**
   must be enhanced to do that.
   In this sample **Photo is only working for Android.**
+
+  _3) Live Message does not work with Safari or the default browser of Android_
+  To get the life messages on the iOS/android devices the chrome or firefox browser must be installed and defined as the default browser on the devices.
