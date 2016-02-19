@@ -255,3 +255,15 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   * get live data
 
   ![Mobile Get Live Data](https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/blob/master/tempTrackerImages/mobile-getlive-data.jpg)
+
+  **NOTE:** If you want to run the app on a real iOS device, you must follow this steps:
+
+  * a) Disable BitCode
+  * b) Disable Security take a look here: ![reason]( http://stackoverflow.com/questions/30731785/how-do-i-load-an-http-url-with-app-transport-security-enabled-in-ios-9)
+  * c) Edit the **TempTracker-Info.plist** under **tempTracker/platforms/ios/TempTracker** in a editor and add this code:
+
+       '<key>NSAppTransportSecurity</key>
+    	   <dict>
+    	    <key>NSAllowsArbitraryLoads</key>
+    	   <true/>
+    	  </dict> '
