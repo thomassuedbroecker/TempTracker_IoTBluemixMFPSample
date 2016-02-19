@@ -291,7 +291,7 @@ Based on the feedback in [StackOverflow](http://stackoverflow.com/questions/3417
 ## 5 Known limitations
 
 ***
-1. How to run on real iOS device?
+1. How to run the App on real iOS device?
 
   If you want to run the app on a real iOS device, you must follow this steps:
   * a) Disable BitCode
@@ -315,3 +315,15 @@ Based on the feedback in [StackOverflow](http://stackoverflow.com/questions/3417
   To get the life messages on the iOS/android devices.
   The chrome or firefox browser must be installed and defined as the default browser on the android devices.
   On iOS it will not work, because no other default browser can be configured.
+
+4. A Chart does show only maximum 25 data entries
+
+  Paging for the Cloudant database is not implemented.
+
+5. A Search does show only maximum 25 data entries
+
+  Paging for the Cloudant database is not implemented.
+
+6. Get sensor data show only 10 entries
+
+  Limit is set to 10 for the Cloudant database.
