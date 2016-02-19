@@ -245,15 +245,15 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
 
 ***
-### 4.2.11 **Optional:** Add MQA to Bluemix Application and configure MobileApp
+#### 4.2.11 **Optional:** Add MQA to Bluemix Application and configure MobileApp
 
-Add the MQA Bluemix service to your Bluemix application following the steps in this [Guide on Bluemix](https://www.ng.bluemix.net/docs/services/MobileQualityAssurance/index.html?s_tact=C43202QW)
+Add the MobileQualityAssurance (_MQA Bluemix service_) to your Bluemix application following the steps in this [Guide on Bluemix](https://www.ng.bluemix.net/docs/services/MobileQualityAssurance/index.html?s_tact=C43202QW)
 
 Based on the feedback in [StackOverflow](http://stackoverflow.com/questions/34175784/app-start-breaks-when-mobile-quality-assurance-cordova-plugin) you only have to do following steps.
 
 1. Download the latest cordova sdk : http://www-01.ibm.com/support/docview.wss?uid=swg27044490
-2. In the app directory, I add the MQA plugin: "mfp cordova plugin add /path/to/MQA/sdk"
-3. the the **tempTracker/www/js/index.js** file,  add following  MQA code in the **wlCommonInit()** function:
+2. In the app directory, MQA plugin: **"mfp cordova plugin add [/your_path/to_the/MQA/sdk]"**
+3. Add follosing code in the **/tempTracker/www/js/index.js** file,  add following  MQA code in the **wlCommonInit()** function:
 
     `MQA.startNewSession({
              reportOnShakeEnabled: true,
@@ -304,14 +304,12 @@ Based on the feedback in [StackOverflow](http://stackoverflow.com/questions/3417
     	   <true/>
     	  </dict>``
 
-***
 2. Photo limitation on iOS
 
   If the photos should be also taken on a iOS device, the module **ctrl-photo.js**
   must be enhanced to do that.
   In this sample **Photo is only working for Android.**
 
-***
 3. Live Message does not work with Safari or the default browser of Android
 
   To get the life messages on the iOS/android devices.
