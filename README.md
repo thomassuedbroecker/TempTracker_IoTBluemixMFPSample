@@ -237,12 +237,32 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
   2. enter: **mfp push BluemixServer**
   3. This will push the changes to the MobileFirst Server in the container on Bluemix
 
+  _NOTE:_ You can verify the Server Configuration in the **config.xml** in
+  **./tempTracker/config.xml**
+
+  The content will be for BluemixServer or the Local MFP Server.
+
+    `<preference name="mfpServerUrl" value="http://YOUR_CONTAINER_IP:YOUR_CONTAINER_PORT" />
+    <preference name="mfpServerRuntime" value="MobileFirstStarter" />
+    <preference name="displayName" value="temptracker" />
+    <preference name="mfpManualInit" value="false" />`
+
+    or
+
+    `<preference name="mfpServerUrl" value="YOUR_LOCAL_IP:10080" />
+    <preference name="mfpServerRuntime" value="tempTrackerServer" />
+    <preference name="displayName" value="temptracker" />
+    <preference name="mfpManualInit" value="false" />`
+
+
 ***
-####  4.2.10  Run the App on the emulator or your MobileFirst preview
+####  4.2.10  Run the App on the emulator or your MobileFirst preview LOCAL
   1. In the Android sdk installation directory  / start “ADV manager.exe” over command line
   2. Create new Android Virtual Device
-  3. Run the emulator using the commandline in the ./tempTracker directory: mfp cordova emulate
+  3. Run the emulator using the commandline in the **./tempTracker** directory: mfp cordova emulate
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
+
+  _NOTE:_  **mfp cordova preview** only works with the local server.
 
 ***
 #### 4.2.11 **Optional:** Add MQA to Bluemix Application and configure MobileApp
