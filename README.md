@@ -126,6 +126,8 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
+  _NOTE:_ Maybe you have to change the device ID in a Node of the flow. Because you will use other devices.
+
 ***
 #### 4.1.3 CloudantDB setup
 
@@ -259,7 +261,7 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ***
 ####  4.2.10  Run the App on the emulator or your MobileFirst preview LOCAL
   1. In the Android sdk installation directory  / start “ADV manager.exe” over command line
-  2. Create new Android Virtual Device
+  2. Create new **Android Virtual Device** and check the emulator is running on your machine.
   3. Run the emulator using the commandline in the **./tempTracker** directory: mfp cordova emulate
   4. Run as preview in the "Chrome Browser" using the command line in the ./tempTracker directory: **mfp cordova preview**
 
