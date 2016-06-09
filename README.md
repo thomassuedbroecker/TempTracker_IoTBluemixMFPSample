@@ -72,6 +72,9 @@ https://www.youtube.com/playlist?list=PLUte4WEyMEjU83oQIjqOKIPm35q9I1eZd
 
 Here are the prerequisites you need to setup the environment, to run the full "TempTracker" sample.
 
+This is just an **overview** for your basic installation tasks.
+The concrete configuration steps you will find in **4. Concrete Steps to Setup the full TempTracker Sample**.
+
 ***
 ### 3.1 Bluemix App related
 
