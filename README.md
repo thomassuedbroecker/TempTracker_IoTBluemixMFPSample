@@ -126,7 +126,16 @@ Here are the prerequisites you need to setup the environment, to run the full "T
   6. Change the Text2Speech node to match your Text2Speech service (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
   7. Change the url in http response for audio, map and cloudant nodes to match your nodeRed http address (https://github.com/thomassuedbroecker/TempTracker_IoTBluemixMFPSample/wiki/Code-to-be-changed)
 
-  _NOTE:_ Maybe you have to change the device ID in a Node of the flow. Because you will use other devices.
+  _NOTE:_ Maybe you have to change the device ID in the Node **Check Temperature and create JSON Data** of the flow. Because you will use other devices.
+
+  And maybe by updates of the TI App the JSON data structure will change.
+  In that case you have to configure your code like this:
+
+      if (msg.payload.d.ambient_temp !== undefined) {
+         temp     = msg.payload.d.ambient_temp;  // Typical Android datastructure
+      }
+
+
 
 ***
 #### 4.1.3 CloudantDB setup
