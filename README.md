@@ -89,8 +89,9 @@ Here are the prerequisites you need to setup the environment, to run the full "T
    3. Install MobileFirstPlatform CLI on your machine (https://developer.ibm.com/mobilefirstplatform/install/
 )
    4. Install Android SDK(http://developer.android.com/sdk/installing/index.html)
-   5. Install a Editor or IDE on your machine (https://atom.io)
-   6. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
+   5. Create a Virtual Android Devices using the avd command ( https://developer.android.com/studio/run/managing-avds.html)
+   6. Install a Editor or IDE on your machine (https://atom.io)
+   7. Install Google Chrome browser to take the advantage of the developer tools (https://developer.chrome.com/devtools)
 
 ***
 ## 4. Concrete Steps to Setup the full TempTracker Sample
