@@ -163,13 +163,13 @@ More details about the used Frameworks? Take a look [here](https://github.com/th
 ***
 #### 4.2.1 Development Environment – MobileFirst locally
 
-   1. Locally install MobileFirst CLI installer  –if you have troubles running the installation directly, here a command line example: install_windows.exe LAX_VM "C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.exe“
-   2. Install an IDE locally – for example Android Studio 1.4 or Atom
-   3. Make sure you have Java JDK, Ant and Android SDK installed
-   4. On a Windows System set environment variables: JAVA_HOME
-   5. Set **ANDROID_HOME** to the installation directory of the Android sdk
+   1. Locally install MobileFirst CLI installer  –if you have troubles running the installation directly, here a command line example: **install_windows.exe LAX_VM "C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.exe“**
+   2. Install an IDE locally – for example Android Studio 1.4 or **Atom**
+   3. Make sure you have **Java JDK**, **Ant** and **Android SDK** installed and working
+   4. On a Windows System set environment variables: **JAVA_HOME**
+   5. Set **ANDROID_HOME** to the installation directory of the **Android sdk**
    6. Set Path : add **ANDROID_HOME/platform-tools** and **ANDROID_HOME/tools** to your path
-   7. Set **ANT_HOME** to the installation directory of your ant
+   7. Set **ANT_HOME** to the installation directory of your **ant**
 
 ***
 #### 4.2.2 Configuration for Front End – MobileFirst locally
